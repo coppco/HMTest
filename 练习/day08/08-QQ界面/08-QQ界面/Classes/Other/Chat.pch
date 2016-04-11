@@ -1,0 +1,14 @@
+//
+//  Chat.pch
+//  08-QQ界面
+//
+//  Created by M-coppco on 16/3/14.
+//  Copyright © 2016年 M-coppco. All rights reserved.
+//
+
+#ifndef Chat_pch
+#define Chat_pch
+
+#import "common.h"
+
+#endif /* Chat_pch */

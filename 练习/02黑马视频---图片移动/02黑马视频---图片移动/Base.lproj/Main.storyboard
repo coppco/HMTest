@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZDf-7S-fyz" userLabel="左">
+                                <rect key="frame" x="31" y="276" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="left_normal"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OiB-u7-bTL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="G7n-Dt-FBE" userLabel="右">
+                                <rect key="frame" x="101" y="276" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="right_normal"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZA-kn-sqT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hW0-Pm-bVd" userLabel="下">
+                                <rect key="frame" x="67" y="314" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="bottom_normal"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnt-9B-9VA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T1I-7b-T9S" userLabel="上">
+                                <rect key="frame" x="67" y="242" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="top_normal"/>
+                                <connections>
+                                    <action selector="move:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tih-Aq-gjn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="udX-VF-cdZ" userLabel="放大">
+                                <rect key="frame" x="214" y="242" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="plus_normal"/>
+                                <state key="highlighted" backgroundImage="plus_highlighted"/>
+                                <connections>
+                                    <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pAT-2z-XfI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1jO-nw-CPO" userLabel="缩小">
+                                <rect key="frame" x="289" y="242" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="minus_normal"/>
+                                <state key="highlighted" backgroundImage="minus_highlighted"/>
+                                <connections>
+                                    <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9g-c9-xPu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0NL-E9-bEJ" userLabel="左旋转">
+                                <rect key="frame" x="214" y="314" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="left_rotate_normal"/>
+                                <state key="highlighted" backgroundImage="left_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="zoom1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pg0-fj-7rA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0dI-No-8V5" userLabel="右旋转">
+                                <rect key="frame" x="289" y="314" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="right_rotate_normal"/>
+                                <state key="highlighted" backgroundImage="right_rotate_highlighted"/>
+                                <connections>
+                                    <action selector="zoom1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4zo-Bi-xqK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" id="Fja-48-fHU">
+                                <rect key="frame" x="137" y="63" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="点我呀" backgroundImage="btn_01">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted" title="点我做啥" backgroundImage="btn_02">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="iconButton" destination="Fja-48-fHU" id="kh4-bd-udd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.06666666666666" y="243.29333333333332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_normal" width="96" height="96"/>
+        <image name="btn_01" width="100" height="100"/>
+        <image name="btn_02" width="100" height="100"/>
+        <image name="left_normal" width="96" height="96"/>
+        <image name="left_rotate_highlighted" width="96" height="96"/>
+        <image name="left_rotate_normal" width="96" height="96"/>
+        <image name="minus_highlighted" width="96" height="96"/>
+        <image name="minus_normal" width="96" height="96"/>
+        <image name="plus_highlighted" width="96" height="96"/>
+        <image name="plus_normal" width="96" height="96"/>
+        <image name="right_normal" width="96" height="96"/>
+        <image name="right_rotate_highlighted" width="96" height="96"/>
+        <image name="right_rotate_normal" width="96" height="96"/>
+        <image name="top_normal" width="96" height="96"/>
+    </resources>
+</document>

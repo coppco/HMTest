@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="HMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wM-wE-Hsj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="倒计时" id="tkV-9e-vMA">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="v1q-Fu-e13"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nif-dw-xq0">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="Tqg-Lh-xf5">
+                                        <connections>
+                                            <action selector="start" destination="vXZ-lx-hvc" id="Kzu-O0-sxY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uXR-cq-8uX"/>
+                                    <barButtonItem systemItem="pause" id="3Zt-uM-pD5">
+                                        <connections>
+                                            <action selector="pause" destination="vXZ-lx-hvc" id="oxe-U7-Qdl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcj-TO-dVb">
+                                <rect key="frame" x="0.0" y="234" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1Vp-eW-Or1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKq-7V-Tve">
+                                <rect key="frame" x="20" y="80" width="280" height="87"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3wM-wE-Hsj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8bD-zN-BT1"/>
+                            <constraint firstAttribute="trailing" secondItem="3wM-wE-Hsj" secondAttribute="trailing" id="DqG-DR-74N"/>
+                            <constraint firstItem="Nif-dw-xq0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="SC0-8f-GaC"/>
+                            <constraint firstAttribute="centerY" secondItem="pcj-TO-dVb" secondAttribute="centerY" id="Uu2-MG-64T"/>
+                            <constraint firstAttribute="trailing" secondItem="pcj-TO-dVb" secondAttribute="trailing" id="ac5-lI-QxV"/>
+                            <constraint firstAttribute="trailing" secondItem="Nif-dw-xq0" secondAttribute="trailing" id="f34-zs-TvK"/>
+                            <constraint firstItem="pcj-TO-dVb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="hiS-Sh-Gb0"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Nif-dw-xq0" secondAttribute="bottom" id="lVL-Ep-C2T"/>
+                            <constraint firstItem="3wM-wE-Hsj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="vpf-y9-RsT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="pcj-TO-dVb" id="wgC-Ro-WGM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

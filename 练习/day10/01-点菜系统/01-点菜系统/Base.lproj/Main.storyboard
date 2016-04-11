@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWR-oS-Jar">
+                                <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UEy-UD-3zq"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="D2N-w2-qEd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="uUA-cW-HX1"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="水果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDJ-dc-gDk" userLabel="水果">
+                                <rect key="frame" x="40" y="420" width="520" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CpO-uV-DyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="主食" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chi-g0-SKF" userLabel="主食">
+                                <rect key="frame" x="40" y="470" width="520" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g9D-Yx-sQ0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="饮料" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-xM-TvD" userLabel="饮料">
+                                <rect key="frame" x="40" y="520" width="520" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zLB-zK-KAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcO-ON-emS">
+                                <rect key="frame" x="0.0" y="40" width="600" height="44"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aiO-gn-ILF"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="点菜系统" id="JNh-aT-CjE">
+                                        <barButtonItem key="leftBarButtonItem" title="随机" id="LMa-n8-kUz">
+                                            <connections>
+                                                <action selector="suiji:" destination="BYZ-38-t0r" id="xdp-bE-oZ3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XcO-ON-emS" secondAttribute="trailing" constant="-20" id="Ahf-Qn-pyu"/>
+                            <constraint firstItem="mDJ-dc-gDk" firstAttribute="top" secondItem="cWR-oS-Jar" secondAttribute="bottom" constant="20" id="Ohg-0m-ltd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cWR-oS-Jar" secondAttribute="trailing" constant="-20" id="Qtu-mu-neN"/>
+                            <constraint firstItem="Chi-g0-SKF" firstAttribute="top" secondItem="mDJ-dc-gDk" secondAttribute="bottom" constant="20" id="Qu3-PG-Vtb"/>
+                            <constraint firstItem="cnT-xM-TvD" firstAttribute="top" secondItem="Chi-g0-SKF" secondAttribute="bottom" constant="20" id="S1N-dD-e46"/>
+                            <constraint firstItem="cnT-xM-TvD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="SqH-eW-y9X"/>
+                            <constraint firstItem="XcO-ON-emS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="TI2-Th-qAu"/>
+                            <constraint firstItem="cWR-oS-Jar" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Y9P-eK-njM"/>
+                            <constraint firstItem="XcO-ON-emS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="YI0-YV-raO"/>
+                            <constraint firstItem="Chi-g0-SKF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="b87-ek-VuV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mDJ-dc-gDk" secondAttribute="trailing" constant="20" id="fNm-Na-m4a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Chi-g0-SKF" secondAttribute="trailing" constant="20" id="hDd-Aq-btu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnT-xM-TvD" secondAttribute="trailing" constant="20" id="nKn-dp-3Nh"/>
+                            <constraint firstItem="cWR-oS-Jar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p0L-vG-b2j"/>
+                            <constraint firstItem="mDJ-dc-gDk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zDJ-dD-al3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="cWR-oS-Jar" id="cGh-3V-z9O"/>
+                        <outlet property="shuiguo" destination="mDJ-dc-gDk" id="Alc-yB-enn"/>
+                        <outlet property="yinliao" destination="cnT-xM-TvD" id="KrY-tD-eq3"/>
+                        <outlet property="zhushi" destination="Chi-g0-SKF" id="qLr-Gu-VIP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="385"/>
+        </scene>
+    </scenes>
+</document>

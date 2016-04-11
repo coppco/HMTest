@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tWu-Gq-jVx">
+                                <rect key="frame" x="0.0" y="40" width="600" height="516"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xGC-Em-EMs"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YJf-rb-UZm"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adM-84-NnM">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat_bottom_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Ghd-Pk-HT0">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <animations/>
+                                    </imageView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Ghd-Pk-HT0" firstAttribute="leading" secondItem="adM-84-NnM" secondAttribute="leading" id="22W-xQ-5Pe"/>
+                                    <constraint firstAttribute="height" constant="44" id="BIc-Ip-fDX"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghd-Pk-HT0" secondAttribute="bottom" id="Xrl-kc-23i"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghd-Pk-HT0" secondAttribute="trailing" id="kB8-j4-Jaq"/>
+                                    <constraint firstItem="Ghd-Pk-HT0" firstAttribute="top" secondItem="adM-84-NnM" secondAttribute="top" id="rsE-i9-ikI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="adM-84-NnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7Oi-se-RZc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="adM-84-NnM" secondAttribute="trailing" constant="-20" id="CPH-ih-a6u"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="adM-84-NnM" secondAttribute="bottom" id="DFl-T5-rrg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tWu-Gq-jVx" secondAttribute="trailing" constant="-20" id="Ihx-K1-Z4q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tWu-Gq-jVx" secondAttribute="bottom" constant="44" id="XcD-hu-nmG"/>
+                            <constraint firstItem="tWu-Gq-jVx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Yr0-7f-fOE"/>
+                            <constraint firstItem="tWu-Gq-jVx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="g4I-pX-9Fn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chat_bottom_bg" width="10" height="42"/>
+    </resources>
+</document>

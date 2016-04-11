@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ztj-O9-tkt">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--第一个控制器-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5n-wa-RHd">
+                                <rect key="frame" x="255" y="195" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="第二个控制器"/>
+                                <connections>
+                                    <segue destination="FzD-0f-Bdq" kind="push" id="den-ca-Vbx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="第一个控制器" id="veu-ga-Dmp">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="UPl-UQ-aDX"/>
+                        <barButtonItem key="leftBarButtonItem" title="照相" style="plain" id="pWS-27-uJ4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" systemItem="search" id="p2g-3X-Q5f"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-467" y="-225"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="acG-7w-i2a">
+            <objects>
+                <viewController id="PHI-tM-I4w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0AO-c5-MY4"/>
+                        <viewControllerLayoutGuide type="bottom" id="uMN-eT-jwy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ovF-xS-nF9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="983-MV-LIX">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="7Hb-ti-aZc">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <animations/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c47-Pa-N3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="215" y="-903"/>
+        </scene>
+        <!--第二个控制器-->
+        <scene sceneID="NQu-Hk-hss">
+            <objects>
+                <viewController id="FzD-0f-Bdq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hnq-2i-eee"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZmJ-aA-dLm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="znE-gd-rWz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzp-XL-9D5">
+                                <rect key="frame" x="255" y="269" width="90" height="30"/>
+                                <animations/>
+                                <state key="normal" title="第三个控制器"/>
+                                <connections>
+                                    <segue destination="PHI-tM-I4w" kind="push" id="kDq-my-Rrt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="1" green="0.36832535500000002" blue="0.21602363290000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="第二个控制器" id="mMe-LP-6vK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfA-c9-alA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="-225"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gIL-jN-Cpu">
+            <objects>
+                <navigationController id="Ztj-O9-tkt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TBx-SC-l8r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EoP-A1-SmI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaz-3b-xNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-467" y="-1016"/>
+        </scene>
+    </scenes>
+</document>

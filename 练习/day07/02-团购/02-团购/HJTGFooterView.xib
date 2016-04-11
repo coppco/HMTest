@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="quZ-0I-00q" customClass="HJTGFooterView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h13-qb-Yaq">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <animations/>
+                    <state key="normal" title="点击开始下载"/>
+                    <connections>
+                        <action selector="click:" destination="quZ-0I-00q" eventType="touchUpInside" id="pum-Kn-a84"/>
+                    </connections>
+                </button>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPW-d0-HnM" userLabel="提示视图">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1TF-OB-xpG">
+                            <rect key="frame" x="45" y="3" width="37" height="37"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="A3M-VW-Kjr"/>
+                                <constraint firstAttribute="width" constant="37" id="xCJ-ZT-Fde"/>
+                            </constraints>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在玩命加载中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caa-AJ-Ip8">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="caa-AJ-Ip8" firstAttribute="top" secondItem="YPW-d0-HnM" secondAttribute="top" id="He4-R8-qNK"/>
+                        <constraint firstItem="1TF-OB-xpG" firstAttribute="leading" secondItem="YPW-d0-HnM" secondAttribute="leading" constant="45" id="Kgr-qS-WbN"/>
+                        <constraint firstAttribute="bottom" secondItem="caa-AJ-Ip8" secondAttribute="bottom" id="iM9-M5-9cC"/>
+                        <constraint firstItem="1TF-OB-xpG" firstAttribute="top" secondItem="YPW-d0-HnM" secondAttribute="top" constant="3" id="kHH-eE-fhw"/>
+                        <constraint firstAttribute="trailing" secondItem="caa-AJ-Ip8" secondAttribute="trailing" id="pNk-On-tQY"/>
+                        <constraint firstItem="caa-AJ-Ip8" firstAttribute="leading" secondItem="YPW-d0-HnM" secondAttribute="leading" id="vZu-k4-BWa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" red="1" green="0.36832535500000002" blue="0.21602363290000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="h13-qb-Yaq" secondAttribute="trailing" id="2RG-Mz-Waw"/>
+                <constraint firstItem="YPW-d0-HnM" firstAttribute="top" secondItem="quZ-0I-00q" secondAttribute="top" id="34e-Se-SxA"/>
+                <constraint firstItem="h13-qb-Yaq" firstAttribute="top" secondItem="quZ-0I-00q" secondAttribute="top" id="SrT-4Y-ftg"/>
+                <constraint firstItem="YPW-d0-HnM" firstAttribute="leading" secondItem="quZ-0I-00q" secondAttribute="leading" id="Yfz-cH-lxk"/>
+                <constraint firstAttribute="bottom" secondItem="h13-qb-Yaq" secondAttribute="bottom" id="dUZ-yi-ijH"/>
+                <constraint firstItem="h13-qb-Yaq" firstAttribute="leading" secondItem="quZ-0I-00q" secondAttribute="leading" id="dcZ-fx-LCZ"/>
+                <constraint firstAttribute="trailing" secondItem="YPW-d0-HnM" secondAttribute="trailing" id="erT-fm-Dpk"/>
+                <constraint firstAttribute="bottom" secondItem="YPW-d0-HnM" secondAttribute="bottom" id="nmn-wo-AIJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loadMore" destination="h13-qb-Yaq" id="KFV-c2-EbL"/>
+                <outlet property="tips" destination="YPW-d0-HnM" id="3F4-Qy-skb"/>
+            </connections>
+            <point key="canvasLocation" x="444" y="213"/>
+        </view>
+    </objects>
+</document>

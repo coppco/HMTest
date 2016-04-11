@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  MeasuringTool
+
+  Created by M-coppco on 16/3/13.
+  Copyright © 2016年 M-coppco. All rights reserved.
+*/
+
+CFBundleDisplayName = "计算工具";
