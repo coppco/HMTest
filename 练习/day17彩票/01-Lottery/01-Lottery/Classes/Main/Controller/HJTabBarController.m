@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     HJTabBar *tabBar = [[HJTabBar alloc] init];
-    tabBar.frame = self.tabBar.frame;
+    tabBar.frame = self.tabBar.bounds;
     [tabBar setClickBlock:^(NSInteger index) {
         self.selectedIndex = index;
     }];
@@ -29,9 +29,11 @@
         image = [NSString stringWithFormat:@"TabBar%d", i + 1];
         [tabBar addTabBarButtonWithNormalBGImage:image selectBGImage:selectImage];
     }
+    //因为系统自动隐藏的是系统的自带的tabbar,添加到自身的tabbar上,自身的隐藏自己的也会隐藏
+    [self.tabBar addSubview:tabBar];
+//    [self.view addSubview:tabBar];
+//    [self.tabBar removeFromSuperview];
     
-    [self.view addSubview:tabBar];
-    [self.tabBar removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {

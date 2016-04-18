@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4420A9EA1CC13BCB00307BAF /* HJSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4420A9E91CC13BCB00307BAF /* HJSettingItem.m */; };
+		443E26AE1CC27BBD002A3507 /* HJSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E26AD1CC27BBD002A3507 /* HJSettingCell.m */; };
+		443E6B1E1CC12BE60006F9B5 /* HJMyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E6B1D1CC12BE60006F9B5 /* HJMyController.m */; };
+		443E6B281CC135730006F9B5 /* HJSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E6B271CC135730006F9B5 /* HJSettingTableViewController.m */; };
 		44415E1E1CBBD45C003E6407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E1D1CBBD45C003E6407 /* ViewController.m */; };
 		44415E211CBBD45C003E6407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44415E1F1CBBD45C003E6407 /* Main.storyboard */; };
 		44415E231CBBD45C003E6407 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44415E221CBBD45C003E6407 /* Assets.xcassets */; };
@@ -19,6 +23,18 @@
 		44415E6E1CBBE278003E6407 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E6D1CBBE278003E6407 /* HJTabBar.m */; };
 		44415E711CBBE2A1003E6407 /* HJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E701CBBE2A1003E6407 /* HJTabBarController.m */; };
 		44415E741CBBE6F0003E6407 /* HJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E731CBBE6F0003E6407 /* HJTabBarButton.m */; };
+		44563D5D1CC3BB220058C5B2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D591CC3BB220058C5B2 /* MBProgressHUD+MJ.m */; };
+		44563D5E1CC3BB220058C5B2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44563D5A1CC3BB220058C5B2 /* MBProgressHUD.bundle */; };
+		44563D5F1CC3BB220058C5B2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D5C1CC3BB220058C5B2 /* MBProgressHUD.m */; };
+		44563D631CC3C5550058C5B2 /* HJProducCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D621CC3C5550058C5B2 /* HJProducCollectionViewController.m */; };
+		44563D681CC3C5AE0058C5B2 /* cywt.json in Resources */ = {isa = PBXBuildFile; fileRef = 44563D651CC3C5AE0058C5B2 /* cywt.json */; };
+		44563D691CC3C5AE0058C5B2 /* help.json in Resources */ = {isa = PBXBuildFile; fileRef = 44563D661CC3C5AE0058C5B2 /* help.json */; };
+		44563D6A1CC3C5AE0058C5B2 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 44563D671CC3C5AE0058C5B2 /* products.json */; };
+		44563D6D1CC3C5D10058C5B2 /* HJProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D6C1CC3C5D10058C5B2 /* HJProduct.m */; };
+		44563D711CC3CB820058C5B2 /* HJCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D6F1CC3CB820058C5B2 /* HJCollectionViewCell.m */; };
+		44563D721CC3CB820058C5B2 /* HJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44563D701CC3CB820058C5B2 /* HJCollectionViewCell.xib */; };
+		446925A41CBE91E40028BF83 /* HJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446925A31CBE91E40028BF83 /* HJNavigationController.m */; };
+		446925A71CBE9CD00028BF83 /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 446925A61CBE9CD00028BF83 /* HJTitleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +55,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4420A9E81CC13BCB00307BAF /* HJSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSettingItem.h; sourceTree = "<group>"; };
+		4420A9E91CC13BCB00307BAF /* HJSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSettingItem.m; sourceTree = "<group>"; };
+		443E26AC1CC27BBD002A3507 /* HJSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSettingCell.h; sourceTree = "<group>"; };
+		443E26AD1CC27BBD002A3507 /* HJSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSettingCell.m; sourceTree = "<group>"; };
+		443E6B1C1CC12BE60006F9B5 /* HJMyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMyController.h; sourceTree = "<group>"; };
+		443E6B1D1CC12BE60006F9B5 /* HJMyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMyController.m; sourceTree = "<group>"; };
+		443E6B261CC135730006F9B5 /* HJSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSettingTableViewController.h; sourceTree = "<group>"; };
+		443E6B271CC135730006F9B5 /* HJSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSettingTableViewController.m; sourceTree = "<group>"; };
 		44415E131CBBD45C003E6407 /* 01-Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "01-Lottery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44415E1C1CBBD45C003E6407 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		44415E1D1CBBD45C003E6407 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -61,6 +85,25 @@
 		44415E701CBBE2A1003E6407 /* HJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarController.m; sourceTree = "<group>"; };
 		44415E721CBBE6F0003E6407 /* HJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBarButton.h; sourceTree = "<group>"; };
 		44415E731CBBE6F0003E6407 /* HJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarButton.m; sourceTree = "<group>"; };
+		44563D581CC3BB220058C5B2 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		44563D591CC3BB220058C5B2 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		44563D5A1CC3BB220058C5B2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		44563D5B1CC3BB220058C5B2 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		44563D5C1CC3BB220058C5B2 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		44563D611CC3C5550058C5B2 /* HJProducCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJProducCollectionViewController.h; sourceTree = "<group>"; };
+		44563D621CC3C5550058C5B2 /* HJProducCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJProducCollectionViewController.m; sourceTree = "<group>"; };
+		44563D651CC3C5AE0058C5B2 /* cywt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cywt.json; sourceTree = "<group>"; };
+		44563D661CC3C5AE0058C5B2 /* help.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = help.json; sourceTree = "<group>"; };
+		44563D671CC3C5AE0058C5B2 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		44563D6B1CC3C5D10058C5B2 /* HJProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJProduct.h; sourceTree = "<group>"; };
+		44563D6C1CC3C5D10058C5B2 /* HJProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJProduct.m; sourceTree = "<group>"; };
+		44563D6E1CC3CB820058C5B2 /* HJCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCollectionViewCell.h; sourceTree = "<group>"; };
+		44563D6F1CC3CB820058C5B2 /* HJCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCollectionViewCell.m; sourceTree = "<group>"; };
+		44563D701CC3CB820058C5B2 /* HJCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJCollectionViewCell.xib; sourceTree = "<group>"; };
+		446925A21CBE91E40028BF83 /* HJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJNavigationController.h; sourceTree = "<group>"; };
+		446925A31CBE91E40028BF83 /* HJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJNavigationController.m; sourceTree = "<group>"; };
+		446925A51CBE9CD00028BF83 /* HJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTitleButton.h; sourceTree = "<group>"; };
+		446925A61CBE9CD00028BF83 /* HJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTitleButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +131,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		443E6B1F1CC1354E0006F9B5 /* Setting(设置) */ = {
+			isa = PBXGroup;
+			children = (
+				443E6B201CC1354E0006F9B5 /* Controller */,
+				443E6B211CC1354E0006F9B5 /* Model */,
+				443E6B221CC1354E0006F9B5 /* View */,
+			);
+			path = "Setting(设置)";
+			sourceTree = "<group>";
+		};
+		443E6B201CC1354E0006F9B5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				443E6B261CC135730006F9B5 /* HJSettingTableViewController.h */,
+				443E6B271CC135730006F9B5 /* HJSettingTableViewController.m */,
+				44563D601CC3C51D0058C5B2 /* Product */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		443E6B211CC1354E0006F9B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4420A9E81CC13BCB00307BAF /* HJSettingItem.h */,
+				4420A9E91CC13BCB00307BAF /* HJSettingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		443E6B221CC1354E0006F9B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				443E26AC1CC27BBD002A3507 /* HJSettingCell.h */,
+				443E26AD1CC27BBD002A3507 /* HJSettingCell.m */,
+				44563D6E1CC3CB820058C5B2 /* HJCollectionViewCell.h */,
+				44563D6F1CC3CB820058C5B2 /* HJCollectionViewCell.m */,
+				44563D701CC3CB820058C5B2 /* HJCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		44415E0A1CBBD45C003E6407 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +210,7 @@
 		44415E161CBBD45C003E6407 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44563D641CC3C5AE0058C5B2 /* Data */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -151,6 +236,7 @@
 		44415E491CBBDF2B003E6407 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				443E6B1F1CC1354E0006F9B5 /* Setting(设置) */,
 				44415E4A1CBBDF2B003E6407 /* Award(开奖信息) */,
 				44415E4E1CBBDF2B003E6407 /* Buy(合买信息) */,
 				44415E521CBBDF2B003E6407 /* Hall(购彩大厅) */,
@@ -220,6 +306,8 @@
 		44415E511CBBDF2B003E6407 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				446925A51CBE9CD00028BF83 /* HJTitleButton.h */,
+				446925A61CBE9CD00028BF83 /* HJTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -278,6 +366,8 @@
 		44415E581CBBDF2B003E6407 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				443E6B1C1CC12BE60006F9B5 /* HJMyController.h */,
+				443E6B1D1CC12BE60006F9B5 /* HJMyController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,6 +389,7 @@
 		44415E5B1CBBDF2B003E6407 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				44563D571CC3BB220058C5B2 /* MBProgressHUD */,
 				44415E5C1CBBDF2B003E6407 /* AppDelegate.h */,
 				44415E5D1CBBDF2B003E6407 /* AppDelegate.m */,
 				44415E5F1CBBDF2B003E6407 /* main.m */,
@@ -342,6 +433,8 @@
 			children = (
 				44415E6F1CBBE2A1003E6407 /* HJTabBarController.h */,
 				44415E701CBBE2A1003E6407 /* HJTabBarController.m */,
+				446925A21CBE91E40028BF83 /* HJNavigationController.h */,
+				446925A31CBE91E40028BF83 /* HJNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -362,6 +455,39 @@
 				44415E731CBBE6F0003E6407 /* HJTabBarButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		44563D571CC3BB220058C5B2 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				44563D581CC3BB220058C5B2 /* MBProgressHUD+MJ.h */,
+				44563D591CC3BB220058C5B2 /* MBProgressHUD+MJ.m */,
+				44563D5A1CC3BB220058C5B2 /* MBProgressHUD.bundle */,
+				44563D5B1CC3BB220058C5B2 /* MBProgressHUD.h */,
+				44563D5C1CC3BB220058C5B2 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		44563D601CC3C51D0058C5B2 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				44563D611CC3C5550058C5B2 /* HJProducCollectionViewController.h */,
+				44563D621CC3C5550058C5B2 /* HJProducCollectionViewController.m */,
+				44563D6B1CC3C5D10058C5B2 /* HJProduct.h */,
+				44563D6C1CC3C5D10058C5B2 /* HJProduct.m */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		44563D641CC3C5AE0058C5B2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				44563D651CC3C5AE0058C5B2 /* cywt.json */,
+				44563D661CC3C5AE0058C5B2 /* help.json */,
+				44563D671CC3C5AE0058C5B2 /* products.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,10 +594,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44563D681CC3C5AE0058C5B2 /* cywt.json in Resources */,
+				44563D721CC3CB820058C5B2 /* HJCollectionViewCell.xib in Resources */,
+				44563D6A1CC3C5AE0058C5B2 /* products.json in Resources */,
 				44415E261CBBD45C003E6407 /* LaunchScreen.storyboard in Resources */,
 				44415E231CBBD45C003E6407 /* Assets.xcassets in Resources */,
+				44563D5E1CC3BB220058C5B2 /* MBProgressHUD.bundle in Resources */,
 				44415E681CBBDFC9003E6407 /* Info.plist in Resources */,
 				44415E211CBBD45C003E6407 /* Main.storyboard in Resources */,
+				44563D691CC3C5AE0058C5B2 /* help.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,12 +627,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44563D711CC3CB820058C5B2 /* HJCollectionViewCell.m in Sources */,
+				443E26AE1CC27BBD002A3507 /* HJSettingCell.m in Sources */,
 				44415E641CBBDF2B003E6407 /* AppDelegate.m in Sources */,
+				446925A41CBE91E40028BF83 /* HJNavigationController.m in Sources */,
+				446925A71CBE9CD00028BF83 /* HJTitleButton.m in Sources */,
 				44415E711CBBE2A1003E6407 /* HJTabBarController.m in Sources */,
+				44563D631CC3C5550058C5B2 /* HJProducCollectionViewController.m in Sources */,
+				44563D5D1CC3BB220058C5B2 /* MBProgressHUD+MJ.m in Sources */,
 				44415E661CBBDF2B003E6407 /* main.m in Sources */,
+				4420A9EA1CC13BCB00307BAF /* HJSettingItem.m in Sources */,
+				44563D6D1CC3C5D10058C5B2 /* HJProduct.m in Sources */,
 				44415E741CBBE6F0003E6407 /* HJTabBarButton.m in Sources */,
 				44415E1E1CBBD45C003E6407 /* ViewController.m in Sources */,
+				443E6B1E1CC12BE60006F9B5 /* HJMyController.m in Sources */,
 				44415E6E1CBBE278003E6407 /* HJTabBar.m in Sources */,
+				443E6B281CC135730006F9B5 /* HJSettingTableViewController.m in Sources */,
+				44563D5F1CC3BB220058C5B2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "01-Lottery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.-1-Lottery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -655,6 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "01-Lottery/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "M-coppco.-1-Lottery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -729,6 +873,7 @@
 				44415E421CBBD45C003E6407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44415E431CBBD45C003E6407 /* Build configuration list for PBXNativeTarget "01-LotteryTests" */ = {
 			isa = XCConfigurationList;
@@ -737,6 +882,7 @@
 				44415E451CBBD45C003E6407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44415E461CBBD45C003E6407 /* Build configuration list for PBXNativeTarget "01-LotteryUITests" */ = {
 			isa = XCConfigurationList;
@@ -745,6 +891,7 @@
 				44415E481CBBD45C003E6407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
