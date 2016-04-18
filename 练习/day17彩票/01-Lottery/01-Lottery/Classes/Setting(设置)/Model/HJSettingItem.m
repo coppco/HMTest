@@ -9,18 +9,19 @@
 #import "HJSettingItem.h"
 
 @implementation HJSettingItem
-- (instancetype)initWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type selected:(void (^)())selected; {
+- (instancetype)initWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type labelText:(NSString *)labelText selected:(void (^)())selected; {
     self = [super init];
     if (self) {
         _type = type;
         self.title = title;
         self.image = image;
+        self.labelText = labelText;
         _selected = selected;
     }
     return self;
 }
-+ (instancetype)settingItemWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type selected:(void (^)())selected; {
-    return [[self alloc] initWithTitle:title image:image type:type selected:selected];
++ (instancetype)settingItemWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type labelText:(NSString *)labelText selected:(void (^)())selected; {
+    return [[self alloc] initWithTitle:title image:image type:type labelText:labelText selected:selected];
 }
 @end
 

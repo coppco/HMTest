@@ -13,13 +13,15 @@
 typedef enum : NSUInteger {
     HJSettingItemTypeSwitch,  //switch开关
     HJSettingItemTypeArrow,  //箭头
+    HJSettingItemTypeLabel,  //文本
 } HJSettingItemType;
 
 @interface HJSettingItem : NSObject
 @property (nonatomic, copy)NSString *title;//标题
 @property (nonatomic, copy)NSString *image; //图片
+@property (nonatomic, copy)NSString *labelText; //label的文字
 @property (nonatomic, assign)HJSettingItemType type;  //右侧的类型
-@property (nonatomic, copy)void (^selected)();  //功能
+@property (nonatomic, copy)void (^selected)();  //选中的block
 /**
  *  初始化方法
  *
@@ -30,8 +32,8 @@ typedef enum : NSUInteger {
  *
  *  @return
  */
-- (instancetype)initWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type selected:(void (^)())selected;
-+ (instancetype)settingItemWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type selected:(void (^)())selected;
+- (instancetype)initWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type labelText:(NSString *)labelText selected:(void (^)())selected;
++ (instancetype)settingItemWithTitle:(NSString *)title image:(NSString *)image type:(HJSettingItemType)type labelText:(NSString *)labelText selected:(void (^)())selected;
 @end
 
 /**

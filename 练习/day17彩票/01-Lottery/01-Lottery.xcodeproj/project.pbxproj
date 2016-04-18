@@ -23,6 +23,9 @@
 		44415E6E1CBBE278003E6407 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E6D1CBBE278003E6407 /* HJTabBar.m */; };
 		44415E711CBBE2A1003E6407 /* HJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E701CBBE2A1003E6407 /* HJTabBarController.m */; };
 		44415E741CBBE6F0003E6407 /* HJTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44415E731CBBE6F0003E6407 /* HJTabBarButton.m */; };
+		4441DFB51CC51ACF00AA1D0E /* HJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4441DFB41CC51ACF00AA1D0E /* HJBaseTableViewController.m */; };
+		4441DFB91CC51CE100AA1D0E /* HJPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4441DFB81CC51CE100AA1D0E /* HJPushViewController.m */; };
+		4441DFBC1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4441DFBB1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m */; };
 		44563D5D1CC3BB220058C5B2 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D591CC3BB220058C5B2 /* MBProgressHUD+MJ.m */; };
 		44563D5E1CC3BB220058C5B2 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44563D5A1CC3BB220058C5B2 /* MBProgressHUD.bundle */; };
 		44563D5F1CC3BB220058C5B2 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 44563D5C1CC3BB220058C5B2 /* MBProgressHUD.m */; };
@@ -85,6 +88,12 @@
 		44415E701CBBE2A1003E6407 /* HJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarController.m; sourceTree = "<group>"; };
 		44415E721CBBE6F0003E6407 /* HJTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBarButton.h; sourceTree = "<group>"; };
 		44415E731CBBE6F0003E6407 /* HJTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarButton.m; sourceTree = "<group>"; };
+		4441DFB31CC51ACF00AA1D0E /* HJBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJBaseTableViewController.h; sourceTree = "<group>"; };
+		4441DFB41CC51ACF00AA1D0E /* HJBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJBaseTableViewController.m; sourceTree = "<group>"; };
+		4441DFB71CC51CE100AA1D0E /* HJPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPushViewController.h; sourceTree = "<group>"; };
+		4441DFB81CC51CE100AA1D0E /* HJPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJPushViewController.m; sourceTree = "<group>"; };
+		4441DFBA1CC51F5B00AA1D0E /* HJScoreNoticeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJScoreNoticeViewController.h; sourceTree = "<group>"; };
+		4441DFBB1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJScoreNoticeViewController.m; sourceTree = "<group>"; };
 		44563D581CC3BB220058C5B2 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		44563D591CC3BB220058C5B2 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		44563D5A1CC3BB220058C5B2 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -144,9 +153,12 @@
 		443E6B201CC1354E0006F9B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4441DFB31CC51ACF00AA1D0E /* HJBaseTableViewController.h */,
+				4441DFB41CC51ACF00AA1D0E /* HJBaseTableViewController.m */,
 				443E6B261CC135730006F9B5 /* HJSettingTableViewController.h */,
 				443E6B271CC135730006F9B5 /* HJSettingTableViewController.m */,
 				44563D601CC3C51D0058C5B2 /* Product */,
+				4441DFB61CC51CCB00AA1D0E /* Push */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,6 +469,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		4441DFB61CC51CCB00AA1D0E /* Push */ = {
+			isa = PBXGroup;
+			children = (
+				4441DFB71CC51CE100AA1D0E /* HJPushViewController.h */,
+				4441DFB81CC51CE100AA1D0E /* HJPushViewController.m */,
+				4441DFBA1CC51F5B00AA1D0E /* HJScoreNoticeViewController.h */,
+				4441DFBB1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m */,
+			);
+			path = Push;
+			sourceTree = "<group>";
+		};
 		44563D571CC3BB220058C5B2 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,13 +652,16 @@
 			files = (
 				44563D711CC3CB820058C5B2 /* HJCollectionViewCell.m in Sources */,
 				443E26AE1CC27BBD002A3507 /* HJSettingCell.m in Sources */,
+				4441DFB51CC51ACF00AA1D0E /* HJBaseTableViewController.m in Sources */,
 				44415E641CBBDF2B003E6407 /* AppDelegate.m in Sources */,
 				446925A41CBE91E40028BF83 /* HJNavigationController.m in Sources */,
 				446925A71CBE9CD00028BF83 /* HJTitleButton.m in Sources */,
 				44415E711CBBE2A1003E6407 /* HJTabBarController.m in Sources */,
+				4441DFBC1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m in Sources */,
 				44563D631CC3C5550058C5B2 /* HJProducCollectionViewController.m in Sources */,
 				44563D5D1CC3BB220058C5B2 /* MBProgressHUD+MJ.m in Sources */,
 				44415E661CBBDF2B003E6407 /* main.m in Sources */,
+				4441DFB91CC51CE100AA1D0E /* HJPushViewController.m in Sources */,
 				4420A9EA1CC13BCB00307BAF /* HJSettingItem.m in Sources */,
 				44563D6D1CC3C5D10058C5B2 /* HJProduct.m in Sources */,
 				44415E741CBBE6F0003E6407 /* HJTabBarButton.m in Sources */,

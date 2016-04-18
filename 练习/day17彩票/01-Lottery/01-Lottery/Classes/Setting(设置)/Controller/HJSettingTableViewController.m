@@ -8,27 +8,17 @@
 
 #import "HJSettingTableViewController.h"
 #import "HJSettingItem.h"   //模型
-#import "HJSettingCell.h"
+
 #import "MBProgressHUD+MJ.h"
-#import "HJProducCollectionViewController.h"
+#import "HJProducCollectionViewController.h"  //推广产品
+#import "HJPushViewController.h"  //推送
 @interface HJSettingTableViewController ()
-@property (nonatomic, strong)NSMutableArray *dataList;
+
 @end
 
 @implementation HJSettingTableViewController
-//懒加载
-- (NSMutableArray *)dataList {
-    if (_dataList == nil) {
-        _dataList = [NSMutableArray array];
-    }
-    return _dataList;
-}
-- (instancetype)init {
-    self = [super initWithStyle:(UITableViewStyleGrouped)];
-    if (self) {
-    }
-    return self;
-}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,15 +28,17 @@
 }
 - (void)addFirstSection {
     //推送提醒
-    HJSettingItem *item = [HJSettingItem settingItemWithTitle:@"推送和提醒" image:@"MorePush" type:(HJSettingItemTypeArrow) selected:^() {
-        
+    HJSettingItem *item = [HJSettingItem settingItemWithTitle:@"推送和提醒" image:@"MorePush" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
+        HJPushViewController *push = [[HJPushViewController alloc] init];
+        push.title = @"推送和提醒" ;
+        [self.navigationController pushViewController:push animated:YES];
     }];
     //摇一摇
-    HJSettingItem *item1 = [HJSettingItem settingItemWithTitle:@"摇一摇" image:@"handShake" type:(HJSettingItemTypeSwitch) selected:^() {
+    HJSettingItem *item1 = [HJSettingItem settingItemWithTitle:@"摇一摇" image:@"handShake" type:(HJSettingItemTypeSwitch) labelText:nil selected:^() {
         
     }];
     //声音效果
-    HJSettingItem *item2 = [HJSettingItem settingItemWithTitle:@"声音效果" image:@"sound_Effect" type:(HJSettingItemTypeSwitch) selected:^() {
+    HJSettingItem *item2 = [HJSettingItem settingItemWithTitle:@"声音效果" image:@"sound_Effect" type:(HJSettingItemTypeSwitch) labelText:nil selected:^() {
         
     }];
     HJSettingGroup *group1 = [HJSettingGroup settingGroupWithHeaderTitle:@"" items:@[item,item1,item2].mutableCopy footerTitle:@""];
@@ -54,7 +46,7 @@
 }
 - (void)addSecondSection {
     //检查最新版本
-    HJSettingItem *item = [HJSettingItem settingItemWithTitle:@"检查最新版本" image:@"MoreUpdate" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item = [HJSettingItem settingItemWithTitle:@"检查最新版本" image:@"MoreUpdate" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         [MBProgressHUD showMessage:@"正在加载"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [MBProgressHUD hideHUD];
@@ -63,24 +55,24 @@
         });
     }];
     //帮助
-    HJSettingItem *item1 = [HJSettingItem settingItemWithTitle:@"帮助" image:@"MoreHelp" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item1 = [HJSettingItem settingItemWithTitle:@"帮助" image:@"MoreHelp" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         
     }];
     //分享
-    HJSettingItem *item2 = [HJSettingItem settingItemWithTitle:@"分享" image:@"MoreShare" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item2 = [HJSettingItem settingItemWithTitle:@"分享" image:@"MoreShare" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         
     }];
     //查看消息
-    HJSettingItem *item3 = [HJSettingItem settingItemWithTitle:@"查看消息" image:@"MoreMessage" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item3 = [HJSettingItem settingItemWithTitle:@"查看消息" image:@"MoreMessage" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         
     }];
     //产品推广
-    HJSettingItem *item4 = [HJSettingItem settingItemWithTitle:@"产品推广" image:@"MoreNetease" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item4 = [HJSettingItem settingItemWithTitle:@"产品推广" image:@"MoreNetease" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         HJProducCollectionViewController *productVC = [[HJProducCollectionViewController alloc] init];
         [self.navigationController pushViewController:productVC animated:YES];
     }];
     //关于
-    HJSettingItem *item5 = [HJSettingItem settingItemWithTitle:@"关于" image:@"MoreAbout" type:(HJSettingItemTypeArrow) selected:^() {
+    HJSettingItem *item5 = [HJSettingItem settingItemWithTitle:@"关于" image:@"MoreAbout" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
         
     }];
     HJSettingGroup *group2 = [HJSettingGroup settingGroupWithHeaderTitle:@"" items:@[item,item1,item2,item3,item4,item5].mutableCopy footerTitle:@""];
@@ -88,29 +80,5 @@
 }
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataList.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HJSettingGroup *group = self.dataList[section];
-    return group.items.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HJSettingCell *cell = [HJSettingCell settingCellWithTableView:tableView];
-    HJSettingGroup *group = self.dataList[indexPath.section];
-    cell.settingItem = group.items[indexPath.row];
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES]; //取消选中
-    HJSettingGroup *group = self.dataList[indexPath.section];
-    HJSettingItem *item = group.items[indexPath.row];
-    if (item.selected) {
-        item.selected();
-    }
-}
 
 @end

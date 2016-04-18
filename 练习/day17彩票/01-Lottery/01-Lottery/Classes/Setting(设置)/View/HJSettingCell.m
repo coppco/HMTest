@@ -12,6 +12,7 @@
 @interface HJSettingCell ()
 @property (nonatomic, strong)UISwitch *switchView; //开关
 @property (nonatomic, strong)UIImageView *imageV; //图片
+@property (nonatomic, strong)UILabel *label;
 @end
 
 
@@ -28,6 +29,15 @@
         _imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"CellArrow"]];
     }
     return _imageV;
+}
+- (UILabel *)label {
+    if (_label == nil) {
+        CGRect bound = [self.settingItem.labelText boundingRectWithSize:CGSizeMake(10000, self.frame.size.height) options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil];
+        _label = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width - 20 - bound.size.width, 0, bound.size.width, bound.size.height)];
+        _label.font = [UIFont systemFontOfSize:15];
+        _label.text = self.settingItem.labelText;
+    }
+    return _label;
 }
 //setter方法
 - (void)setSettingItem:(HJSettingItem *)settingItem {
@@ -54,6 +64,12 @@
             self.selectionStyle = UITableViewCellSelectionStyleNone;
         }
             break;
+        case HJSettingItemTypeLabel:
+        {
+            self.accessoryView = self.label;
+            self.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+            break;
         default:
         {
             self.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -63,7 +79,9 @@
 }
 - (void)updateLeft {
     self.textLabel.text = _settingItem.title;
-    self.imageView.image = [UIImage imageNamed:_settingItem.image];
+    if (_settingItem.image.length != 0) {
+        self.imageView.image = [UIImage imageNamed:_settingItem.image];
+    }
 }
 + (instancetype)settingCellWithTableView:(UITableView *)tableView {
     static NSString *indentify = @"cell";
