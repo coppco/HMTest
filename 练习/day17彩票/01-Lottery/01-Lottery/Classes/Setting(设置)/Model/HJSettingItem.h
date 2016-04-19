@@ -20,6 +20,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, copy)NSString *title;//标题
 @property (nonatomic, copy)NSString *image; //图片
 @property (nonatomic, copy)NSString *labelText; //label的文字
+@property (nonatomic, copy)NSString *subTitle;
 @property (nonatomic, assign)HJSettingItemType type;  //右侧的类型
 @property (nonatomic, copy)void (^selected)();  //选中的block
 /**

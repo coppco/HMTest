@@ -38,6 +38,41 @@
 		44563D721CC3CB820058C5B2 /* HJCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44563D701CC3CB820058C5B2 /* HJCollectionViewCell.xib */; };
 		446925A41CBE91E40028BF83 /* HJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446925A31CBE91E40028BF83 /* HJNavigationController.m */; };
 		446925A71CBE9CD00028BF83 /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 446925A61CBE9CD00028BF83 /* HJTitleButton.m */; };
+		44F85BC41CC66090007B6CFD /* HJHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F85BC31CC66090007B6CFD /* HJHelpViewController.m */; };
+		44F85BC71CC66198007B6CFD /* HJHelpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F85BC61CC66198007B6CFD /* HJHelpModel.m */; };
+		44F85BCA1CC6641A007B6CFD /* HJHTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F85BC91CC6641A007B6CFD /* HJHTMLViewController.m */; };
+		44F85BE91CC6685F007B6CFD /* bjdc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BCC1CC6685F007B6CFD /* bjdc_howto.html */; };
+		44F85BEA1CC6685F007B6CFD /* coupon_help.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BCD1CC6685F007B6CFD /* coupon_help.html */; };
+		44F85BEB1CC6685F007B6CFD /* credit_help.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BCE1CC6685F007B6CFD /* credit_help.html */; };
+		44F85BEC1CC6685F007B6CFD /* dlt_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BCF1CC6685F007B6CFD /* dlt_howto.html */; };
+		44F85BED1CC6685F007B6CFD /* f9_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD01CC6685F007B6CFD /* f9_howto.html */; };
+		44F85BEE1CC6685F007B6CFD /* gdy11_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD11CC6685F007B6CFD /* gdy11_howto.html */; };
+		44F85BEF1CC6685F007B6CFD /* group_record.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD21CC6685F007B6CFD /* group_record.html */; };
+		44F85BF01CC6685F007B6CFD /* help.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD31CC6685F007B6CFD /* help.html */; };
+		44F85BF11CC6685F007B6CFD /* helpGroupBuy.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD41CC6685F007B6CFD /* helpGroupBuy.html */; };
+		44F85BF21CC6685F007B6CFD /* jclq_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD51CC6685F007B6CFD /* jclq_howto.html */; };
+		44F85BF31CC6685F007B6CFD /* jczq_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD61CC6685F007B6CFD /* jczq_howto.html */; };
+		44F85BF41CC6685F007B6CFD /* jxssc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD71CC6685F007B6CFD /* jxssc_howto.html */; };
+		44F85BF51CC6685F007B6CFD /* jxy11_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD81CC6685F007B6CFD /* jxy11_howto.html */; };
+		44F85BF61CC6685F007B6CFD /* k2_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BD91CC6685F007B6CFD /* k2_howto.html */; };
+		44F85BF71CC6685F007B6CFD /* k3_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDA1CC6685F007B6CFD /* k3_howto.html */; };
+		44F85BF81CC6685F007B6CFD /* kl8_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDB1CC6685F007B6CFD /* kl8_howto.html */; };
+		44F85BF91CC6685F007B6CFD /* lk11_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDC1CC6685F007B6CFD /* lk11_howto.html */; };
+		44F85BFA1CC6685F007B6CFD /* networkconnectedfailed.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDD1CC6685F007B6CFD /* networkconnectedfailed.html */; };
+		44F85BFB1CC6685F007B6CFD /* pl3_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDE1CC6685F007B6CFD /* pl3_howto.html */; };
+		44F85BFC1CC6685F007B6CFD /* pl5_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BDF1CC6685F007B6CFD /* pl5_howto.html */; };
+		44F85BFD1CC6685F007B6CFD /* qlc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE01CC6685F007B6CFD /* qlc_howto.html */; };
+		44F85BFE1CC6685F007B6CFD /* qxc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE11CC6685F007B6CFD /* qxc_howto.html */; };
+		44F85BFF1CC6685F007B6CFD /* rule.css in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE21CC6685F007B6CFD /* rule.css */; };
+		44F85C001CC6685F007B6CFD /* sfc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE31CC6685F007B6CFD /* sfc_howto.html */; };
+		44F85C011CC6685F007B6CFD /* ssc_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE41CC6685F007B6CFD /* ssc_howto.html */; };
+		44F85C021CC6685F007B6CFD /* ssq_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE51CC6685F007B6CFD /* ssq_howto.html */; };
+		44F85C031CC6685F007B6CFD /* x3d_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE61CC6685F007B6CFD /* x3d_howto.html */; };
+		44F85C041CC6685F007B6CFD /* y11_howto.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE71CC6685F007B6CFD /* y11_howto.html */; };
+		44F85C051CC6685F007B6CFD /* znzh.html in Resources */ = {isa = PBXBuildFile; fileRef = 44F85BE81CC6685F007B6CFD /* znzh.html */; };
+		44F85C091CC66EB9007B6CFD /* HJShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F85C081CC66EB9007B6CFD /* HJShareViewController.m */; };
+		44F85C0D1CC6710B007B6CFD /* HJAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F85C0C1CC6710B007B6CFD /* HJAboutViewController.m */; };
+		44F85C101CC6723B007B6CFD /* HJAboutHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44F85C0F1CC6723B007B6CFD /* HJAboutHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +148,46 @@
 		446925A31CBE91E40028BF83 /* HJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJNavigationController.m; sourceTree = "<group>"; };
 		446925A51CBE9CD00028BF83 /* HJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTitleButton.h; sourceTree = "<group>"; };
 		446925A61CBE9CD00028BF83 /* HJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTitleButton.m; sourceTree = "<group>"; };
+		44F85BC21CC66090007B6CFD /* HJHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJHelpViewController.h; sourceTree = "<group>"; };
+		44F85BC31CC66090007B6CFD /* HJHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJHelpViewController.m; sourceTree = "<group>"; };
+		44F85BC51CC66198007B6CFD /* HJHelpModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJHelpModel.h; sourceTree = "<group>"; };
+		44F85BC61CC66198007B6CFD /* HJHelpModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJHelpModel.m; sourceTree = "<group>"; };
+		44F85BC81CC6641A007B6CFD /* HJHTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJHTMLViewController.h; sourceTree = "<group>"; };
+		44F85BC91CC6641A007B6CFD /* HJHTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJHTMLViewController.m; sourceTree = "<group>"; };
+		44F85BCC1CC6685F007B6CFD /* bjdc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = bjdc_howto.html; sourceTree = "<group>"; };
+		44F85BCD1CC6685F007B6CFD /* coupon_help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = coupon_help.html; sourceTree = "<group>"; };
+		44F85BCE1CC6685F007B6CFD /* credit_help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = credit_help.html; sourceTree = "<group>"; };
+		44F85BCF1CC6685F007B6CFD /* dlt_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = dlt_howto.html; sourceTree = "<group>"; };
+		44F85BD01CC6685F007B6CFD /* f9_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = f9_howto.html; sourceTree = "<group>"; };
+		44F85BD11CC6685F007B6CFD /* gdy11_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = gdy11_howto.html; sourceTree = "<group>"; };
+		44F85BD21CC6685F007B6CFD /* group_record.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = group_record.html; sourceTree = "<group>"; };
+		44F85BD31CC6685F007B6CFD /* help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = help.html; sourceTree = "<group>"; };
+		44F85BD41CC6685F007B6CFD /* helpGroupBuy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = helpGroupBuy.html; sourceTree = "<group>"; };
+		44F85BD51CC6685F007B6CFD /* jclq_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jclq_howto.html; sourceTree = "<group>"; };
+		44F85BD61CC6685F007B6CFD /* jczq_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jczq_howto.html; sourceTree = "<group>"; };
+		44F85BD71CC6685F007B6CFD /* jxssc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jxssc_howto.html; sourceTree = "<group>"; };
+		44F85BD81CC6685F007B6CFD /* jxy11_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = jxy11_howto.html; sourceTree = "<group>"; };
+		44F85BD91CC6685F007B6CFD /* k2_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = k2_howto.html; sourceTree = "<group>"; };
+		44F85BDA1CC6685F007B6CFD /* k3_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = k3_howto.html; sourceTree = "<group>"; };
+		44F85BDB1CC6685F007B6CFD /* kl8_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = kl8_howto.html; sourceTree = "<group>"; };
+		44F85BDC1CC6685F007B6CFD /* lk11_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lk11_howto.html; sourceTree = "<group>"; };
+		44F85BDD1CC6685F007B6CFD /* networkconnectedfailed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = networkconnectedfailed.html; sourceTree = "<group>"; };
+		44F85BDE1CC6685F007B6CFD /* pl3_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pl3_howto.html; sourceTree = "<group>"; };
+		44F85BDF1CC6685F007B6CFD /* pl5_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = pl5_howto.html; sourceTree = "<group>"; };
+		44F85BE01CC6685F007B6CFD /* qlc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = qlc_howto.html; sourceTree = "<group>"; };
+		44F85BE11CC6685F007B6CFD /* qxc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = qxc_howto.html; sourceTree = "<group>"; };
+		44F85BE21CC6685F007B6CFD /* rule.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = rule.css; sourceTree = "<group>"; };
+		44F85BE31CC6685F007B6CFD /* sfc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sfc_howto.html; sourceTree = "<group>"; };
+		44F85BE41CC6685F007B6CFD /* ssc_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ssc_howto.html; sourceTree = "<group>"; };
+		44F85BE51CC6685F007B6CFD /* ssq_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ssq_howto.html; sourceTree = "<group>"; };
+		44F85BE61CC6685F007B6CFD /* x3d_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = x3d_howto.html; sourceTree = "<group>"; };
+		44F85BE71CC6685F007B6CFD /* y11_howto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = y11_howto.html; sourceTree = "<group>"; };
+		44F85BE81CC6685F007B6CFD /* znzh.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = znzh.html; sourceTree = "<group>"; };
+		44F85C071CC66EB9007B6CFD /* HJShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJShareViewController.h; sourceTree = "<group>"; };
+		44F85C081CC66EB9007B6CFD /* HJShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJShareViewController.m; sourceTree = "<group>"; };
+		44F85C0B1CC6710B007B6CFD /* HJAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJAboutViewController.h; sourceTree = "<group>"; };
+		44F85C0C1CC6710B007B6CFD /* HJAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJAboutViewController.m; sourceTree = "<group>"; };
+		44F85C0F1CC6723B007B6CFD /* HJAboutHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJAboutHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +234,9 @@
 				443E6B271CC135730006F9B5 /* HJSettingTableViewController.m */,
 				44563D601CC3C51D0058C5B2 /* Product */,
 				4441DFB61CC51CCB00AA1D0E /* Push */,
+				44F85BC11CC6607C007B6CFD /* Help */,
+				44F85C061CC66EA6007B6CFD /* Share */,
+				44F85C0A1CC670FC007B6CFD /* About */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,11 +584,88 @@
 		44563D641CC3C5AE0058C5B2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				44F85BCB1CC6685F007B6CFD /* Html */,
 				44563D651CC3C5AE0058C5B2 /* cywt.json */,
 				44563D661CC3C5AE0058C5B2 /* help.json */,
 				44563D671CC3C5AE0058C5B2 /* products.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		44F85BC11CC6607C007B6CFD /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				44F85BC21CC66090007B6CFD /* HJHelpViewController.h */,
+				44F85BC31CC66090007B6CFD /* HJHelpViewController.m */,
+				44F85BC51CC66198007B6CFD /* HJHelpModel.h */,
+				44F85BC61CC66198007B6CFD /* HJHelpModel.m */,
+				44F85BC81CC6641A007B6CFD /* HJHTMLViewController.h */,
+				44F85BC91CC6641A007B6CFD /* HJHTMLViewController.m */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		44F85BCB1CC6685F007B6CFD /* Html */ = {
+			isa = PBXGroup;
+			children = (
+				44F85BCC1CC6685F007B6CFD /* bjdc_howto.html */,
+				44F85BCD1CC6685F007B6CFD /* coupon_help.html */,
+				44F85BCE1CC6685F007B6CFD /* credit_help.html */,
+				44F85BCF1CC6685F007B6CFD /* dlt_howto.html */,
+				44F85BD01CC6685F007B6CFD /* f9_howto.html */,
+				44F85BD11CC6685F007B6CFD /* gdy11_howto.html */,
+				44F85BD21CC6685F007B6CFD /* group_record.html */,
+				44F85BD31CC6685F007B6CFD /* help.html */,
+				44F85BD41CC6685F007B6CFD /* helpGroupBuy.html */,
+				44F85BD51CC6685F007B6CFD /* jclq_howto.html */,
+				44F85BD61CC6685F007B6CFD /* jczq_howto.html */,
+				44F85BD71CC6685F007B6CFD /* jxssc_howto.html */,
+				44F85BD81CC6685F007B6CFD /* jxy11_howto.html */,
+				44F85BD91CC6685F007B6CFD /* k2_howto.html */,
+				44F85BDA1CC6685F007B6CFD /* k3_howto.html */,
+				44F85BDB1CC6685F007B6CFD /* kl8_howto.html */,
+				44F85BDC1CC6685F007B6CFD /* lk11_howto.html */,
+				44F85BDD1CC6685F007B6CFD /* networkconnectedfailed.html */,
+				44F85BDE1CC6685F007B6CFD /* pl3_howto.html */,
+				44F85BDF1CC6685F007B6CFD /* pl5_howto.html */,
+				44F85BE01CC6685F007B6CFD /* qlc_howto.html */,
+				44F85BE11CC6685F007B6CFD /* qxc_howto.html */,
+				44F85BE21CC6685F007B6CFD /* rule.css */,
+				44F85BE31CC6685F007B6CFD /* sfc_howto.html */,
+				44F85BE41CC6685F007B6CFD /* ssc_howto.html */,
+				44F85BE51CC6685F007B6CFD /* ssq_howto.html */,
+				44F85BE61CC6685F007B6CFD /* x3d_howto.html */,
+				44F85BE71CC6685F007B6CFD /* y11_howto.html */,
+				44F85BE81CC6685F007B6CFD /* znzh.html */,
+			);
+			path = Html;
+			sourceTree = "<group>";
+		};
+		44F85C061CC66EA6007B6CFD /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				44F85C071CC66EB9007B6CFD /* HJShareViewController.h */,
+				44F85C081CC66EB9007B6CFD /* HJShareViewController.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		44F85C0A1CC670FC007B6CFD /* About */ = {
+			isa = PBXGroup;
+			children = (
+				44F85C0E1CC67223007B6CFD /* HJAboutHeaderView */,
+				44F85C0B1CC6710B007B6CFD /* HJAboutViewController.h */,
+				44F85C0C1CC6710B007B6CFD /* HJAboutViewController.m */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		44F85C0E1CC67223007B6CFD /* HJAboutHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				44F85C0F1CC6723B007B6CFD /* HJAboutHeaderView.xib */,
+			);
+			path = HJAboutHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,15 +772,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F85BF11CC6685F007B6CFD /* helpGroupBuy.html in Resources */,
+				44F85BF61CC6685F007B6CFD /* k2_howto.html in Resources */,
+				44F85BFA1CC6685F007B6CFD /* networkconnectedfailed.html in Resources */,
 				44563D681CC3C5AE0058C5B2 /* cywt.json in Resources */,
+				44F85C041CC6685F007B6CFD /* y11_howto.html in Resources */,
 				44563D721CC3CB820058C5B2 /* HJCollectionViewCell.xib in Resources */,
+				44F85C051CC6685F007B6CFD /* znzh.html in Resources */,
 				44563D6A1CC3C5AE0058C5B2 /* products.json in Resources */,
+				44F85C011CC6685F007B6CFD /* ssc_howto.html in Resources */,
 				44415E261CBBD45C003E6407 /* LaunchScreen.storyboard in Resources */,
 				44415E231CBBD45C003E6407 /* Assets.xcassets in Resources */,
+				44F85BF81CC6685F007B6CFD /* kl8_howto.html in Resources */,
+				44F85BF01CC6685F007B6CFD /* help.html in Resources */,
+				44F85BED1CC6685F007B6CFD /* f9_howto.html in Resources */,
 				44563D5E1CC3BB220058C5B2 /* MBProgressHUD.bundle in Resources */,
+				44F85BFB1CC6685F007B6CFD /* pl3_howto.html in Resources */,
+				44F85C001CC6685F007B6CFD /* sfc_howto.html in Resources */,
+				44F85BEB1CC6685F007B6CFD /* credit_help.html in Resources */,
+				44F85C031CC6685F007B6CFD /* x3d_howto.html in Resources */,
+				44F85BF31CC6685F007B6CFD /* jczq_howto.html in Resources */,
+				44F85BFC1CC6685F007B6CFD /* pl5_howto.html in Resources */,
+				44F85BEC1CC6685F007B6CFD /* dlt_howto.html in Resources */,
+				44F85BFD1CC6685F007B6CFD /* qlc_howto.html in Resources */,
+				44F85C101CC6723B007B6CFD /* HJAboutHeaderView.xib in Resources */,
 				44415E681CBBDFC9003E6407 /* Info.plist in Resources */,
+				44F85BF91CC6685F007B6CFD /* lk11_howto.html in Resources */,
 				44415E211CBBD45C003E6407 /* Main.storyboard in Resources */,
+				44F85C021CC6685F007B6CFD /* ssq_howto.html in Resources */,
+				44F85BEE1CC6685F007B6CFD /* gdy11_howto.html in Resources */,
+				44F85BEA1CC6685F007B6CFD /* coupon_help.html in Resources */,
+				44F85BFF1CC6685F007B6CFD /* rule.css in Resources */,
 				44563D691CC3C5AE0058C5B2 /* help.json in Resources */,
+				44F85BE91CC6685F007B6CFD /* bjdc_howto.html in Resources */,
+				44F85BFE1CC6685F007B6CFD /* qxc_howto.html in Resources */,
+				44F85BF51CC6685F007B6CFD /* jxy11_howto.html in Resources */,
+				44F85BEF1CC6685F007B6CFD /* group_record.html in Resources */,
+				44F85BF41CC6685F007B6CFD /* jxssc_howto.html in Resources */,
+				44F85BF71CC6685F007B6CFD /* k3_howto.html in Resources */,
+				44F85BF21CC6685F007B6CFD /* jclq_howto.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,19 +841,24 @@
 				44415E641CBBDF2B003E6407 /* AppDelegate.m in Sources */,
 				446925A41CBE91E40028BF83 /* HJNavigationController.m in Sources */,
 				446925A71CBE9CD00028BF83 /* HJTitleButton.m in Sources */,
+				44F85C091CC66EB9007B6CFD /* HJShareViewController.m in Sources */,
 				44415E711CBBE2A1003E6407 /* HJTabBarController.m in Sources */,
 				4441DFBC1CC51F5B00AA1D0E /* HJScoreNoticeViewController.m in Sources */,
 				44563D631CC3C5550058C5B2 /* HJProducCollectionViewController.m in Sources */,
 				44563D5D1CC3BB220058C5B2 /* MBProgressHUD+MJ.m in Sources */,
+				44F85BCA1CC6641A007B6CFD /* HJHTMLViewController.m in Sources */,
+				44F85BC41CC66090007B6CFD /* HJHelpViewController.m in Sources */,
 				44415E661CBBDF2B003E6407 /* main.m in Sources */,
 				4441DFB91CC51CE100AA1D0E /* HJPushViewController.m in Sources */,
 				4420A9EA1CC13BCB00307BAF /* HJSettingItem.m in Sources */,
 				44563D6D1CC3C5D10058C5B2 /* HJProduct.m in Sources */,
+				44F85C0D1CC6710B007B6CFD /* HJAboutViewController.m in Sources */,
 				44415E741CBBE6F0003E6407 /* HJTabBarButton.m in Sources */,
 				44415E1E1CBBD45C003E6407 /* ViewController.m in Sources */,
 				443E6B1E1CC12BE60006F9B5 /* HJMyController.m in Sources */,
 				44415E6E1CBBE278003E6407 /* HJTabBar.m in Sources */,
 				443E6B281CC135730006F9B5 /* HJSettingTableViewController.m in Sources */,
+				44F85BC71CC66198007B6CFD /* HJHelpModel.m in Sources */,
 				44563D5F1CC3BB220058C5B2 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

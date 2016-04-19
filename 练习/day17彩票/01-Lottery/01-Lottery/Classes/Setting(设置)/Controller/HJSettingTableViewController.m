@@ -12,6 +12,9 @@
 #import "MBProgressHUD+MJ.h"
 #import "HJProducCollectionViewController.h"  //推广产品
 #import "HJPushViewController.h"  //推送
+#import "HJHelpViewController.h" //帮助
+#import "HJShareViewController.h"  //分享
+#import "HJAboutViewController.h"
 @interface HJSettingTableViewController ()
 
 @end
@@ -56,11 +59,14 @@
     }];
     //帮助
     HJSettingItem *item1 = [HJSettingItem settingItemWithTitle:@"帮助" image:@"MoreHelp" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
-        
+        HJHelpViewController *help = [[HJHelpViewController alloc] init];
+        help.title = @"帮助";
+        [self.navigationController pushViewController:help animated:YES];
     }];
     //分享
     HJSettingItem *item2 = [HJSettingItem settingItemWithTitle:@"分享" image:@"MoreShare" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
-        
+        HJShareViewController *share = [[HJShareViewController alloc] init];
+        [self.navigationController pushViewController:share animated:YES];
     }];
     //查看消息
     HJSettingItem *item3 = [HJSettingItem settingItemWithTitle:@"查看消息" image:@"MoreMessage" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
@@ -73,7 +79,8 @@
     }];
     //关于
     HJSettingItem *item5 = [HJSettingItem settingItemWithTitle:@"关于" image:@"MoreAbout" type:(HJSettingItemTypeArrow) labelText:nil selected:^() {
-        
+        HJAboutViewController *about = [[HJAboutViewController alloc] init];
+        [self.navigationController pushViewController:about animated:YES];
     }];
     HJSettingGroup *group2 = [HJSettingGroup settingGroupWithHeaderTitle:@"" items:@[item,item1,item2,item3,item4,item5].mutableCopy footerTitle:@""];
     [self.dataList addObject:group2];

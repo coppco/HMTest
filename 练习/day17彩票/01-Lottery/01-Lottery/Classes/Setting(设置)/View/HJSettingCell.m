@@ -79,6 +79,7 @@
 }
 - (void)updateLeft {
     self.textLabel.text = _settingItem.title;
+    self.detailTextLabel.text = _settingItem.subTitle;
     if (_settingItem.image.length != 0) {
         self.imageView.image = [UIImage imageNamed:_settingItem.image];
     }
@@ -87,7 +88,7 @@
     static NSString *indentify = @"cell";
     HJSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:indentify];
     if (!cell) {
-        cell = [[HJSettingCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:indentify];
+        cell = [[HJSettingCell alloc] initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:indentify];
     }
     return cell;
 }
