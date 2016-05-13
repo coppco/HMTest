@@ -1,0 +1,1080 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44233A361CD3982300520A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44233A351CD3982300520A10 /* Assets.xcassets */; };
+		44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A3D1CD3994D00520A10 /* HJNavigationController.m */; };
+		44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */; };
+		44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A471CD3B61F00520A10 /* HJTabBarController.m */; };
+		443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443D28AD1CD6309100AF3683 /* HJTabBar.m */; };
+		443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79E71CD4E97400F07C68 /* HJSearchBar.m */; };
+		443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79EB1CD4F53300F07C68 /* KxMenu.m */; };
+		4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4454B4991CE607D60007A222 /* InfoPlist.strings */; };
+		445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445B42E61CE0BA21001F552F /* HJGuideController.m */; };
+		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
+		CC7A2EC81CD328A20005A5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EC71CD328A20005A5F7 /* main.m */; };
+		CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */; };
+		CC7A2EE11CD328A20005A5F7 /* MyWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EE01CD328A20005A5F7 /* MyWeiBoTests.m */; };
+		CC7A2EEC1CD328A20005A5F7 /* MyWeiBoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EEB1CD328A20005A5F7 /* MyWeiBoUITests.m */; };
+		CC7A2F3E1CD33A680005A5F7 /* HJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2F281CD33A680005A5F7 /* HJAppDelegate.m */; };
+		CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2F401CD33AA70005A5F7 /* HJDiscoverViewController.m */; };
+		CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2F431CD33B910005A5F7 /* HJHomeViewController.m */; };
+		CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2F461CD33BA10005A5F7 /* HJMessageViewController.m */; };
+		CC7A2F4A1CD33BB00005A5F7 /* HJMyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2F491CD33BB00005A5F7 /* HJMyViewController.m */; };
+		CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28D21CD361B8006CA741 /* NSArray+ ZXPUnicode.m */; };
+		CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28D61CD361B8006CA741 /* NSDictionary+ZXPUnicode.m */; };
+		CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28D91CD361B8006CA741 /* NSObject+HJProperties.m */; };
+		CCAA28EC1CD361B8006CA741 /* NSObject+ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28DB1CD361B8006CA741 /* NSObject+ZXPUnicode.m */; };
+		CCAA28ED1CD361B8006CA741 /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28DF1CD361B8006CA741 /* NSTimer+Block.m */; };
+		CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28E21CD361B8006CA741 /* UIView+HJExtension.m */; };
+		CCAA28EF1CD361B8006CA741 /* HJTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28E81CD361B8006CA741 /* HJTool.m */; };
+		CCAA28F41CD3620C006CA741 /* region.db in Resources */ = {isa = PBXBuildFile; fileRef = CCAA28F11CD3620C006CA741 /* region.db */; };
+		CCAA28F51CD3620C006CA741 /* RegionSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28F31CD3620C006CA741 /* RegionSearch.m */; };
+		CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28F81CD363AE006CA741 /* HJFMDBHandle.m */; };
+		CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA28FB1CD363AE006CA741 /* HJHttpRequestTool.m */; };
+		CCAA28FF1CD363CE006CA741 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CCAA28FE1CD363CE006CA741 /* libz.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CC7A2EDD1CD328A20005A5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7A2EBB1CD328A20005A5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC7A2EC21CD328A20005A5F7;
+			remoteInfo = MyWeiBo;
+		};
+		CC7A2EE81CD328A20005A5F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC7A2EBB1CD328A20005A5F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC7A2EC21CD328A20005A5F7;
+			remoteInfo = MyWeiBo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44233A351CD3982300520A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44233A3C1CD3994D00520A10 /* HJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJNavigationController.h; sourceTree = "<group>"; };
+		44233A3D1CD3994D00520A10 /* HJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJNavigationController.m; sourceTree = "<group>"; };
+		44233A431CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HJExtension.h"; sourceTree = "<group>"; };
+		44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HJExtension.m"; sourceTree = "<group>"; };
+		44233A461CD3B61F00520A10 /* HJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBarController.h; sourceTree = "<group>"; };
+		44233A471CD3B61F00520A10 /* HJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarController.m; sourceTree = "<group>"; };
+		443D28AC1CD6309100AF3683 /* HJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBar.h; sourceTree = "<group>"; };
+		443D28AD1CD6309100AF3683 /* HJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBar.m; sourceTree = "<group>"; };
+		443E79E61CD4E97400F07C68 /* HJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSearchBar.h; sourceTree = "<group>"; };
+		443E79E71CD4E97400F07C68 /* HJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSearchBar.m; sourceTree = "<group>"; };
+		443E79EA1CD4F53300F07C68 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		443E79EB1CD4F53300F07C68 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		4454B4991CE607D60007A222 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		445B42E51CE0BA21001F552F /* HJGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGuideController.h; sourceTree = "<group>"; };
+		445B42E61CE0BA21001F552F /* HJGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGuideController.m; sourceTree = "<group>"; };
+		79137DF3F01326EC74570CC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF9102BEAE395CC40E57332B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CAFE3BE580459636279B50A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CC7A2EC31CD328A20005A5F7 /* MyWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7A2EC71CD328A20005A5F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CC7A2ED51CD328A20005A5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC7A2ED71CD328A20005A5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7A2EDC1CD328A20005A5F7 /* MyWeiBoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWeiBoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7A2EE01CD328A20005A5F7 /* MyWeiBoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWeiBoTests.m; sourceTree = "<group>"; };
+		CC7A2EE21CD328A20005A5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7A2EE71CD328A20005A5F7 /* MyWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC7A2EEB1CD328A20005A5F7 /* MyWeiBoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyWeiBoUITests.m; sourceTree = "<group>"; };
+		CC7A2EED1CD328A20005A5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC7A2F0A1CD331B80005A5F7 /* HJPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJPrefix.pch; sourceTree = "<group>"; };
+		CC7A2F271CD33A680005A5F7 /* HJAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJAppDelegate.h; sourceTree = "<group>"; };
+		CC7A2F281CD33A680005A5F7 /* HJAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJAppDelegate.m; sourceTree = "<group>"; };
+		CC7A2F3F1CD33AA70005A5F7 /* HJDiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJDiscoverViewController.h; sourceTree = "<group>"; };
+		CC7A2F401CD33AA70005A5F7 /* HJDiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJDiscoverViewController.m; sourceTree = "<group>"; };
+		CC7A2F421CD33B910005A5F7 /* HJHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJHomeViewController.h; sourceTree = "<group>"; };
+		CC7A2F431CD33B910005A5F7 /* HJHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJHomeViewController.m; sourceTree = "<group>"; };
+		CC7A2F451CD33BA10005A5F7 /* HJMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMessageViewController.h; sourceTree = "<group>"; };
+		CC7A2F461CD33BA10005A5F7 /* HJMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMessageViewController.m; sourceTree = "<group>"; };
+		CC7A2F481CD33BB00005A5F7 /* HJMyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJMyViewController.h; sourceTree = "<group>"; };
+		CC7A2F491CD33BB00005A5F7 /* HJMyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJMyViewController.m; sourceTree = "<group>"; };
+		CCAA28D21CD361B8006CA741 /* NSArray+ ZXPUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ ZXPUnicode.m"; sourceTree = "<group>"; };
+		CCAA28D31CD361B8006CA741 /* NSArray+ZXPUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZXPUnicode.h"; sourceTree = "<group>"; };
+		CCAA28D51CD361B8006CA741 /* NSDictionary+ZXPUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ZXPUnicode.h"; sourceTree = "<group>"; };
+		CCAA28D61CD361B8006CA741 /* NSDictionary+ZXPUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ZXPUnicode.m"; sourceTree = "<group>"; };
+		CCAA28D81CD361B8006CA741 /* NSObject+HJProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HJProperties.h"; sourceTree = "<group>"; };
+		CCAA28D91CD361B8006CA741 /* NSObject+HJProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HJProperties.m"; sourceTree = "<group>"; };
+		CCAA28DA1CD361B8006CA741 /* NSObject+ZXPUnicode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZXPUnicode.h"; sourceTree = "<group>"; };
+		CCAA28DB1CD361B8006CA741 /* NSObject+ZXPUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZXPUnicode.m"; sourceTree = "<group>"; };
+		CCAA28DE1CD361B8006CA741 /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
+		CCAA28DF1CD361B8006CA741 /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		CCAA28E11CD361B8006CA741 /* UIView+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HJExtension.h"; sourceTree = "<group>"; };
+		CCAA28E21CD361B8006CA741 /* UIView+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HJExtension.m"; sourceTree = "<group>"; };
+		CCAA28E41CD361B8006CA741 /* HJCommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCommonDefine.h; sourceTree = "<group>"; };
+		CCAA28E51CD361B8006CA741 /* XHJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHJTool.h; sourceTree = "<group>"; };
+		CCAA28E71CD361B8006CA741 /* HJTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTool.h; sourceTree = "<group>"; };
+		CCAA28E81CD361B8006CA741 /* HJTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTool.m; sourceTree = "<group>"; };
+		CCAA28F11CD3620C006CA741 /* region.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = region.db; sourceTree = "<group>"; };
+		CCAA28F21CD3620C006CA741 /* RegionSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionSearch.h; sourceTree = "<group>"; };
+		CCAA28F31CD3620C006CA741 /* RegionSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionSearch.m; sourceTree = "<group>"; };
+		CCAA28F71CD363AE006CA741 /* HJFMDBHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJFMDBHandle.h; sourceTree = "<group>"; };
+		CCAA28F81CD363AE006CA741 /* HJFMDBHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJFMDBHandle.m; sourceTree = "<group>"; };
+		CCAA28FA1CD363AE006CA741 /* HJHttpRequestTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJHttpRequestTool.h; sourceTree = "<group>"; };
+		CCAA28FB1CD363AE006CA741 /* HJHttpRequestTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJHttpRequestTool.m; sourceTree = "<group>"; };
+		CCAA28FE1CD363CE006CA741 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CC7A2EC01CD328A20005A5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAA28FF1CD363CE006CA741 /* libz.tbd in Frameworks */,
+				790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2ED91CD328A20005A5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2EE41CD328A20005A5F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D67A350E0A0268DB0564035 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE3BE580459636279B50A9 /* Pods.debug.xcconfig */,
+				AF9102BEAE395CC40E57332B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44233A371CD398C000520A10 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				44233A381CD398C000520A10 /* Controller */,
+				44233A391CD398C000520A10 /* Model */,
+				44233A3A1CD398C000520A10 /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		44233A381CD398C000520A10 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44233A3C1CD3994D00520A10 /* HJNavigationController.h */,
+				44233A3D1CD3994D00520A10 /* HJNavigationController.m */,
+				44233A461CD3B61F00520A10 /* HJTabBarController.h */,
+				44233A471CD3B61F00520A10 /* HJTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44233A391CD398C000520A10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44233A3A1CD398C000520A10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				443D28AC1CD6309100AF3683 /* HJTabBar.h */,
+				443D28AD1CD6309100AF3683 /* HJTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44233A3B1CD398CA00520A10 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				443E79E91CD4F53300F07C68 /* kxmenu */,
+			);
+			path = Third;
+			sourceTree = "<group>";
+		};
+		44233A421CD3AAF600520A10 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				44233A431CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.h */,
+				44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		443E79E51CD4E94300F07C68 /* HJControl */ = {
+			isa = PBXGroup;
+			children = (
+				443E79E61CD4E97400F07C68 /* HJSearchBar.h */,
+				443E79E71CD4E97400F07C68 /* HJSearchBar.m */,
+			);
+			path = HJControl;
+			sourceTree = "<group>";
+		};
+		443E79E91CD4F53300F07C68 /* kxmenu */ = {
+			isa = PBXGroup;
+			children = (
+				443E79EA1CD4F53300F07C68 /* KxMenu.h */,
+				443E79EB1CD4F53300F07C68 /* KxMenu.m */,
+			);
+			path = kxmenu;
+			sourceTree = "<group>";
+		};
+		445B42E11CE0B9D8001F552F /* Guide(引导页) */ = {
+			isa = PBXGroup;
+			children = (
+				445B42E21CE0B9F3001F552F /* Controller */,
+				445B42E31CE0B9F3001F552F /* Model */,
+				445B42E41CE0B9F3001F552F /* View */,
+			);
+			path = "Guide(引导页)";
+			sourceTree = "<group>";
+		};
+		445B42E21CE0B9F3001F552F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				445B42E51CE0BA21001F552F /* HJGuideController.h */,
+				445B42E61CE0BA21001F552F /* HJGuideController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		445B42E31CE0B9F3001F552F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		445B42E41CE0B9F3001F552F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC7A2EBA1CD328A20005A5F7 = {
+			isa = PBXGroup;
+			children = (
+				CC7A2EC51CD328A20005A5F7 /* MyWeiBo */,
+				CC7A2EDF1CD328A20005A5F7 /* MyWeiBoTests */,
+				CC7A2EEA1CD328A20005A5F7 /* MyWeiBoUITests */,
+				CC7A2EC41CD328A20005A5F7 /* Products */,
+				2D67A350E0A0268DB0564035 /* Pods */,
+				FB27C25859E1BFD3EF274449 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CC7A2EC41CD328A20005A5F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2EC31CD328A20005A5F7 /* MyWeiBo.app */,
+				CC7A2EDC1CD328A20005A5F7 /* MyWeiBoTests.xctest */,
+				CC7A2EE71CD328A20005A5F7 /* MyWeiBoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC7A2EC51CD328A20005A5F7 /* MyWeiBo */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F251CD33A680005A5F7 /* Class */,
+				CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */,
+				CC7A2ED71CD328A20005A5F7 /* Info.plist */,
+				44233A351CD3982300520A10 /* Assets.xcassets */,
+				CC7A2EC61CD328A20005A5F7 /* Supporting Files */,
+				4454B4991CE607D60007A222 /* InfoPlist.strings */,
+			);
+			path = MyWeiBo;
+			sourceTree = "<group>";
+		};
+		CC7A2EC61CD328A20005A5F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2EC71CD328A20005A5F7 /* main.m */,
+				CC7A2F0A1CD331B80005A5F7 /* HJPrefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CC7A2EDF1CD328A20005A5F7 /* MyWeiBoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2EE01CD328A20005A5F7 /* MyWeiBoTests.m */,
+				CC7A2EE21CD328A20005A5F7 /* Info.plist */,
+			);
+			path = MyWeiBoTests;
+			sourceTree = "<group>";
+		};
+		CC7A2EEA1CD328A20005A5F7 /* MyWeiBoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2EEB1CD328A20005A5F7 /* MyWeiBoUITests.m */,
+				CC7A2EED1CD328A20005A5F7 /* Info.plist */,
+			);
+			path = MyWeiBoUITests;
+			sourceTree = "<group>";
+		};
+		CC7A2F251CD33A680005A5F7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28CF1CD361B8006CA741 /* HJMethod */,
+				CC7A2F261CD33A680005A5F7 /* App */,
+				44233A3B1CD398CA00520A10 /* Third */,
+				445B42E11CE0B9D8001F552F /* Guide(引导页) */,
+				44233A371CD398C000520A10 /* Base */,
+				CC7A2F311CD33A680005A5F7 /* Home(主页) */,
+				CC7A2F2D1CD33A680005A5F7 /* Discover(发现) */,
+				CC7A2F351CD33A680005A5F7 /* Message(消息) */,
+				CC7A2F391CD33A680005A5F7 /* My(我的) */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		CC7A2F261CD33A680005A5F7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F271CD33A680005A5F7 /* HJAppDelegate.h */,
+				CC7A2F281CD33A680005A5F7 /* HJAppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CC7A2F2D1CD33A680005A5F7 /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F2E1CD33A680005A5F7 /* Controller */,
+				CC7A2F2F1CD33A680005A5F7 /* Model */,
+				CC7A2F301CD33A680005A5F7 /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		CC7A2F2E1CD33A680005A5F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F3F1CD33AA70005A5F7 /* HJDiscoverViewController.h */,
+				CC7A2F401CD33AA70005A5F7 /* HJDiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC7A2F2F1CD33A680005A5F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC7A2F301CD33A680005A5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC7A2F311CD33A680005A5F7 /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F321CD33A680005A5F7 /* Controller */,
+				CC7A2F331CD33A680005A5F7 /* Model */,
+				CC7A2F341CD33A680005A5F7 /* View */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		CC7A2F321CD33A680005A5F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F421CD33B910005A5F7 /* HJHomeViewController.h */,
+				CC7A2F431CD33B910005A5F7 /* HJHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC7A2F331CD33A680005A5F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC7A2F341CD33A680005A5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC7A2F351CD33A680005A5F7 /* Message(消息) */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F361CD33A680005A5F7 /* Controller */,
+				CC7A2F371CD33A680005A5F7 /* Model */,
+				CC7A2F381CD33A680005A5F7 /* View */,
+			);
+			path = "Message(消息)";
+			sourceTree = "<group>";
+		};
+		CC7A2F361CD33A680005A5F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F451CD33BA10005A5F7 /* HJMessageViewController.h */,
+				CC7A2F461CD33BA10005A5F7 /* HJMessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC7A2F371CD33A680005A5F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC7A2F381CD33A680005A5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC7A2F391CD33A680005A5F7 /* My(我的) */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F3A1CD33A680005A5F7 /* Controller */,
+				CC7A2F3B1CD33A680005A5F7 /* Model */,
+				CC7A2F3C1CD33A680005A5F7 /* View */,
+			);
+			path = "My(我的)";
+			sourceTree = "<group>";
+		};
+		CC7A2F3A1CD33A680005A5F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC7A2F481CD33BB00005A5F7 /* HJMyViewController.h */,
+				CC7A2F491CD33BB00005A5F7 /* HJMyViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC7A2F3B1CD33A680005A5F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC7A2F3C1CD33A680005A5F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCAA28CF1CD361B8006CA741 /* HJMethod */ = {
+			isa = PBXGroup;
+			children = (
+				443E79E51CD4E94300F07C68 /* HJControl */,
+				CCAA28F61CD363AE006CA741 /* HJFMDBHandle */,
+				CCAA28F91CD363AE006CA741 /* HJHttpRequestTool */,
+				CCAA28F01CD3620C006CA741 /* Region */,
+				CCAA28D01CD361B8006CA741 /* Category */,
+				CCAA28E31CD361B8006CA741 /* Defines */,
+				CCAA28E61CD361B8006CA741 /* HJTool */,
+			);
+			path = HJMethod;
+			sourceTree = "<group>";
+		};
+		CCAA28D01CD361B8006CA741 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				44233A421CD3AAF600520A10 /* UIBarButtonItem */,
+				CCAA28D11CD361B8006CA741 /* NSArray */,
+				CCAA28D41CD361B8006CA741 /* NSDictionary */,
+				CCAA28D71CD361B8006CA741 /* NSObject */,
+				CCAA28DC1CD361B8006CA741 /* NSString */,
+				CCAA28DD1CD361B8006CA741 /* NSTimer */,
+				CCAA28E01CD361B8006CA741 /* UIView */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CCAA28D11CD361B8006CA741 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28D21CD361B8006CA741 /* NSArray+ ZXPUnicode.m */,
+				CCAA28D31CD361B8006CA741 /* NSArray+ZXPUnicode.h */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		CCAA28D41CD361B8006CA741 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28D51CD361B8006CA741 /* NSDictionary+ZXPUnicode.h */,
+				CCAA28D61CD361B8006CA741 /* NSDictionary+ZXPUnicode.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		CCAA28D71CD361B8006CA741 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28D81CD361B8006CA741 /* NSObject+HJProperties.h */,
+				CCAA28D91CD361B8006CA741 /* NSObject+HJProperties.m */,
+				CCAA28DA1CD361B8006CA741 /* NSObject+ZXPUnicode.h */,
+				CCAA28DB1CD361B8006CA741 /* NSObject+ZXPUnicode.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		CCAA28DC1CD361B8006CA741 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		CCAA28DD1CD361B8006CA741 /* NSTimer */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28DE1CD361B8006CA741 /* NSTimer+Block.h */,
+				CCAA28DF1CD361B8006CA741 /* NSTimer+Block.m */,
+			);
+			path = NSTimer;
+			sourceTree = "<group>";
+		};
+		CCAA28E01CD361B8006CA741 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28E11CD361B8006CA741 /* UIView+HJExtension.h */,
+				CCAA28E21CD361B8006CA741 /* UIView+HJExtension.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		CCAA28E31CD361B8006CA741 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28E41CD361B8006CA741 /* HJCommonDefine.h */,
+				CCAA28E51CD361B8006CA741 /* XHJTool.h */,
+			);
+			path = Defines;
+			sourceTree = "<group>";
+		};
+		CCAA28E61CD361B8006CA741 /* HJTool */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28E71CD361B8006CA741 /* HJTool.h */,
+				CCAA28E81CD361B8006CA741 /* HJTool.m */,
+			);
+			path = HJTool;
+			sourceTree = "<group>";
+		};
+		CCAA28F01CD3620C006CA741 /* Region */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28F11CD3620C006CA741 /* region.db */,
+				CCAA28F21CD3620C006CA741 /* RegionSearch.h */,
+				CCAA28F31CD3620C006CA741 /* RegionSearch.m */,
+			);
+			path = Region;
+			sourceTree = "<group>";
+		};
+		CCAA28F61CD363AE006CA741 /* HJFMDBHandle */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28F71CD363AE006CA741 /* HJFMDBHandle.h */,
+				CCAA28F81CD363AE006CA741 /* HJFMDBHandle.m */,
+			);
+			path = HJFMDBHandle;
+			sourceTree = "<group>";
+		};
+		CCAA28F91CD363AE006CA741 /* HJHttpRequestTool */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28FA1CD363AE006CA741 /* HJHttpRequestTool.h */,
+				CCAA28FB1CD363AE006CA741 /* HJHttpRequestTool.m */,
+			);
+			path = HJHttpRequestTool;
+			sourceTree = "<group>";
+		};
+		FB27C25859E1BFD3EF274449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCAA28FE1CD363CE006CA741 /* libz.tbd */,
+				79137DF3F01326EC74570CC9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CC7A2EC21CD328A20005A5F7 /* MyWeiBo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7A2EF01CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBo" */;
+			buildPhases = (
+				B7985E752D79273BCFD0D6CA /* Check Pods Manifest.lock */,
+				CC7A2EBF1CD328A20005A5F7 /* Sources */,
+				CC7A2EC01CD328A20005A5F7 /* Frameworks */,
+				CC7A2EC11CD328A20005A5F7 /* Resources */,
+				9987BB6C8E302B2147D5DF93 /* Embed Pods Frameworks */,
+				43C6297BC0522D3816340D15 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyWeiBo;
+			productName = MyWeiBo;
+			productReference = CC7A2EC31CD328A20005A5F7 /* MyWeiBo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC7A2EDB1CD328A20005A5F7 /* MyWeiBoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7A2EF31CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBoTests" */;
+			buildPhases = (
+				CC7A2ED81CD328A20005A5F7 /* Sources */,
+				CC7A2ED91CD328A20005A5F7 /* Frameworks */,
+				CC7A2EDA1CD328A20005A5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC7A2EDE1CD328A20005A5F7 /* PBXTargetDependency */,
+			);
+			name = MyWeiBoTests;
+			productName = MyWeiBoTests;
+			productReference = CC7A2EDC1CD328A20005A5F7 /* MyWeiBoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC7A2EE61CD328A20005A5F7 /* MyWeiBoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC7A2EF61CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBoUITests" */;
+			buildPhases = (
+				CC7A2EE31CD328A20005A5F7 /* Sources */,
+				CC7A2EE41CD328A20005A5F7 /* Frameworks */,
+				CC7A2EE51CD328A20005A5F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC7A2EE91CD328A20005A5F7 /* PBXTargetDependency */,
+			);
+			name = MyWeiBoUITests;
+			productName = MyWeiBoUITests;
+			productReference = CC7A2EE71CD328A20005A5F7 /* MyWeiBoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CC7A2EBB1CD328A20005A5F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HJ;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = XHJ;
+				TargetAttributes = {
+					CC7A2EC21CD328A20005A5F7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					CC7A2EDB1CD328A20005A5F7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CC7A2EC21CD328A20005A5F7;
+					};
+					CC7A2EE61CD328A20005A5F7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = CC7A2EC21CD328A20005A5F7;
+					};
+				};
+			};
+			buildConfigurationList = CC7A2EBE1CD328A20005A5F7 /* Build configuration list for PBXProject "MyWeiBo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CC7A2EBA1CD328A20005A5F7;
+			productRefGroup = CC7A2EC41CD328A20005A5F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CC7A2EC21CD328A20005A5F7 /* MyWeiBo */,
+				CC7A2EDB1CD328A20005A5F7 /* MyWeiBoTests */,
+				CC7A2EE61CD328A20005A5F7 /* MyWeiBoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CC7A2EC11CD328A20005A5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAA28F41CD3620C006CA741 /* region.db in Resources */,
+				4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */,
+				44233A361CD3982300520A10 /* Assets.xcassets in Resources */,
+				CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2EDA1CD328A20005A5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2EE51CD328A20005A5F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43C6297BC0522D3816340D15 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9987BB6C8E302B2147D5DF93 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7985E752D79273BCFD0D6CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC7A2EBF1CD328A20005A5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */,
+				445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */,
+				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
+				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
+				CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */,
+				443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */,
+				CC7A2F4A1CD33BB00005A5F7 /* HJMyViewController.m in Sources */,
+				443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */,
+				CC7A2F3E1CD33A680005A5F7 /* HJAppDelegate.m in Sources */,
+				CCAA28EF1CD361B8006CA741 /* HJTool.m in Sources */,
+				443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */,
+				CCAA28EC1CD361B8006CA741 /* NSObject+ZXPUnicode.m in Sources */,
+				CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */,
+				CC7A2EC81CD328A20005A5F7 /* main.m in Sources */,
+				CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */,
+				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
+				44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */,
+				44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */,
+				CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */,
+				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,
+				CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */,
+				CCAA28ED1CD361B8006CA741 /* NSTimer+Block.m in Sources */,
+				CCAA28F51CD3620C006CA741 /* RegionSearch.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2ED81CD328A20005A5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7A2EE11CD328A20005A5F7 /* MyWeiBoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC7A2EE31CD328A20005A5F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC7A2EEC1CD328A20005A5F7 /* MyWeiBoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CC7A2EDE1CD328A20005A5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC7A2EC21CD328A20005A5F7 /* MyWeiBo */;
+			targetProxy = CC7A2EDD1CD328A20005A5F7 /* PBXContainerItemProxy */;
+		};
+		CC7A2EE91CD328A20005A5F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC7A2EC21CD328A20005A5F7 /* MyWeiBo */;
+			targetProxy = CC7A2EE81CD328A20005A5F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC7A2ED51CD328A20005A5F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CC7A2EEE1CD328A20005A5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC7A2EEF1CD328A20005A5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC7A2EF11CD328A20005A5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFE3BE580459636279B50A9 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWeiBo/HJPrefix.pch";
+				INFOPLIST_FILE = MyWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CC7A2EF21CD328A20005A5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF9102BEAE395CC40E57332B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWeiBo/HJPrefix.pch";
+				INFOPLIST_FILE = MyWeiBo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CC7A2EF41CD328A20005A5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyWeiBoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyWeiBo.app/MyWeiBo";
+			};
+			name = Debug;
+		};
+		CC7A2EF51CD328A20005A5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyWeiBoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyWeiBo.app/MyWeiBo";
+			};
+			name = Release;
+		};
+		CC7A2EF71CD328A20005A5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyWeiBoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyWeiBo;
+			};
+			name = Debug;
+		};
+		CC7A2EF81CD328A20005A5F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MyWeiBoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MyWeiBo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CC7A2EBE1CD328A20005A5F7 /* Build configuration list for PBXProject "MyWeiBo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7A2EEE1CD328A20005A5F7 /* Debug */,
+				CC7A2EEF1CD328A20005A5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7A2EF01CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7A2EF11CD328A20005A5F7 /* Debug */,
+				CC7A2EF21CD328A20005A5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7A2EF31CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7A2EF41CD328A20005A5F7 /* Debug */,
+				CC7A2EF51CD328A20005A5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC7A2EF61CD328A20005A5F7 /* Build configuration list for PBXNativeTarget "MyWeiBoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC7A2EF71CD328A20005A5F7 /* Debug */,
+				CC7A2EF81CD328A20005A5F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CC7A2EBB1CD328A20005A5F7 /* Project object */;
+}
