@@ -22,6 +22,11 @@
 		443B03171CE6C393005EBE83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B03161CE6C393005EBE83 /* CoreGraphics.framework */; };
 		443B03191CE6C3A1005EBE83 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B03181CE6C3A1005EBE83 /* libsqlite3.tbd */; };
 		443B03201CE6C78C005EBE83 /* HJOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B031F1CE6C78C005EBE83 /* HJOAuthViewController.m */; };
+		443B51F11CE9F9450067AAEF /* HJAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B51F01CE9F9450067AAEF /* HJAccount.m */; };
+		443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B51FD1CE9FCC60067AAEF /* MBProgressHUD+MJ.m */; };
+		443B52021CE9FCC60067AAEF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B51FE1CE9FCC60067AAEF /* MBProgressHUD.bundle */; };
+		443B52061CEA00D70067AAEF /* HJAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B52051CEA00D70067AAEF /* HJAccountTool.m */; };
+		443B52091CEA084A0067AAEF /* UIWindow+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 443B52081CEA084A0067AAEF /* UIWindow+HJExtension.m */; };
 		443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443D28AD1CD6309100AF3683 /* HJTabBar.m */; };
 		443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79E71CD4E97400F07C68 /* HJSearchBar.m */; };
 		443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79EB1CD4F53300F07C68 /* KxMenu.m */; };
@@ -99,6 +104,15 @@
 		443B03181CE6C3A1005EBE83 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		443B031E1CE6C78C005EBE83 /* HJOAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJOAuthViewController.h; sourceTree = "<group>"; };
 		443B031F1CE6C78C005EBE83 /* HJOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJOAuthViewController.m; sourceTree = "<group>"; };
+		443B51EF1CE9F9450067AAEF /* HJAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJAccount.h; sourceTree = "<group>"; };
+		443B51F01CE9F9450067AAEF /* HJAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJAccount.m; sourceTree = "<group>"; };
+		443B51FC1CE9FCC60067AAEF /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		443B51FD1CE9FCC60067AAEF /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		443B51FE1CE9FCC60067AAEF /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		443B52041CEA00D70067AAEF /* HJAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJAccountTool.h; sourceTree = "<group>"; };
+		443B52051CEA00D70067AAEF /* HJAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJAccountTool.m; sourceTree = "<group>"; };
+		443B52071CEA084A0067AAEF /* UIWindow+HJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+HJExtension.h"; sourceTree = "<group>"; };
+		443B52081CEA084A0067AAEF /* UIWindow+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+HJExtension.m"; sourceTree = "<group>"; };
 		443D28AC1CD6309100AF3683 /* HJTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBar.h; sourceTree = "<group>"; };
 		443D28AD1CD6309100AF3683 /* HJTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBar.m; sourceTree = "<group>"; };
 		443E79E61CD4E97400F07C68 /* HJSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSearchBar.h; sourceTree = "<group>"; };
@@ -244,6 +258,7 @@
 		44233A3B1CD398CA00520A10 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				443B51FB1CE9FCC60067AAEF /* MBProgressHUD */,
 				443B02FA1CE6C24B005EBE83 /* libWeiboSDK */,
 				443E79E91CD4F53300F07C68 /* kxmenu */,
 			);
@@ -301,6 +316,10 @@
 		443B031C1CE6C771005EBE83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				443B51EF1CE9F9450067AAEF /* HJAccount.h */,
+				443B51F01CE9F9450067AAEF /* HJAccount.m */,
+				443B52041CEA00D70067AAEF /* HJAccountTool.h */,
+				443B52051CEA00D70067AAEF /* HJAccountTool.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -310,6 +329,16 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		443B51FB1CE9FCC60067AAEF /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				443B51FC1CE9FCC60067AAEF /* MBProgressHUD+MJ.h */,
+				443B51FD1CE9FCC60067AAEF /* MBProgressHUD+MJ.m */,
+				443B51FE1CE9FCC60067AAEF /* MBProgressHUD.bundle */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 		443E79E51CD4E94300F07C68 /* HJControl */ = {
@@ -447,6 +476,8 @@
 			children = (
 				CC7A2F271CD33A680005A5F7 /* HJAppDelegate.h */,
 				CC7A2F281CD33A680005A5F7 /* HJAppDelegate.m */,
+				443B52071CEA084A0067AAEF /* UIWindow+HJExtension.h */,
+				443B52081CEA084A0067AAEF /* UIWindow+HJExtension.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -841,6 +872,7 @@
 				443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */,
 				44233A361CD3982300520A10 /* Assets.xcassets in Resources */,
 				CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */,
+				443B52021CE9FCC60067AAEF /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,6 +947,7 @@
 			files = (
 				CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */,
 				445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */,
+				443B51F11CE9F9450067AAEF /* HJAccount.m in Sources */,
 				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
 				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
 				443B03201CE6C78C005EBE83 /* HJOAuthViewController.m in Sources */,
@@ -926,11 +959,14 @@
 				CCAA28EF1CD361B8006CA741 /* HJTool.m in Sources */,
 				443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */,
 				CCAA28EC1CD361B8006CA741 /* NSObject+ZXPUnicode.m in Sources */,
+				443B52061CEA00D70067AAEF /* HJAccountTool.m in Sources */,
 				CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */,
 				CC7A2EC81CD328A20005A5F7 /* main.m in Sources */,
 				CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */,
 				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
+				443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */,
 				44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */,
+				443B52091CEA084A0067AAEF /* UIWindow+HJExtension.m in Sources */,
 				44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */,
 				CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */,
 				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,

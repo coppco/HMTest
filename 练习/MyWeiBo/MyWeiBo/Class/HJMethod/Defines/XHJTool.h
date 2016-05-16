@@ -17,6 +17,7 @@
 #import "NSObject+ZXPUnicode.h"
 
 #import "UIBarButtonItem+HJExtension.h"  //UIBarButtonItem分类
+#import "UIWindow+HJExtension.h"  //选择控制器
 
 #import "HJHttpRequestTool.h"  //网络请求类
 
@@ -26,5 +27,5 @@
 #import <masonry.h>  //代码自动布局
 
 #import "APPRequest.h"  //应用请求定义
-
+#import "MBProgressHUD+MJ.h"  //菊花
 #endif /* XHJTool_h */

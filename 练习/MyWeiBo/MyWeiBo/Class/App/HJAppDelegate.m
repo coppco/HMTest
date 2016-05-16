@@ -7,11 +7,9 @@
 //
 
 #import "HJAppDelegate.h"
-#import "HJTabBarController.h"
-#import "HJGuideController.h"
-
 #import <Availability.h>
-
+#import "HJAccount.h"
+#import "HJAccountTool.h"
 
 @interface HJAppDelegate ()
 
@@ -26,18 +24,16 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    if ([[HJTool getCFBundleVersonFromNSBundle] isEqualToString:[[NSUserDefaults standardUserDefaults] stringForKey:@"CFBundleVersion"]]) {
-//        HJTabBarController *tabBarVC = [[HJTabBarController alloc] init];
-//        self.window.rootViewController = tabBarVC;
-        
-        HJOAuthViewController *tabBarVC = [[HJOAuthViewController alloc] init];
-        self.window.rootViewController = tabBarVC;
-        
-    } else {
-        HJGuideController *guideVC = [[HJGuideController alloc] init];
-        self.window.rootViewController = guideVC;
-    }
+    HJOAuthViewController *oauth = [[HJOAuthViewController alloc] init];
+    HJAccount *account = [HJAccountTool getAccount];
+    
     [self.window makeKeyAndVisible];
+    
+    if (account) { //登录过
+        [self.window switchRootController];
+    } else {//没有登陆过,登录授权页面
+        self.window.rootViewController = oauth;
+    }
     return YES;
 }
 - (void)registerThird {

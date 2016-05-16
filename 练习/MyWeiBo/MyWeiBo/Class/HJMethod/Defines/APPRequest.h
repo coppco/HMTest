@@ -11,5 +11,5 @@
 
 #define kSinaAppKey @"3448046727"
 #define kSinaAppSecret @"e308c6d031d2212bd95d1e6d32d28030"
-
+#define kSinaPlist pathDocumentsFileName(@"sina.data")
 #endif /* APPRequest_h */
