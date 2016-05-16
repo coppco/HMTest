@@ -13,8 +13,6 @@
     if (!account) {
         return;
     }
-    account.create_Date = [NSDate date];
-    
     //自定义类写沙盒需要遵循协议 NSCoding协议
     [NSKeyedArchiver archiveRootObject:account toFile:kSinaPlist];
 
@@ -30,8 +28,7 @@
     
     //当前时间
     NSDate *current_date = [NSDate date];
-    
-    XHJLog(@"%@===%@", current_date, expries_date);
+
     if ([expries_date compare:current_date] != NSOrderedDescending) {
         return nil;
     }

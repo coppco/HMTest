@@ -48,10 +48,12 @@
                                                                               @"text/javascript",
                                                                               @"text/xml",
                                                                               @"image/*"]];
+    
     //3⃣️设置请求类型,默认HTTP
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.requestSerializer.timeoutInterval = 30;  //请求时间30s, 默认60s
     manager.requestSerializer.cachePolicy = NSURLRequestUseProtocolCachePolicy;  //默认缓存策略
+     
     /*
      //4⃣️添加header头信息, 需要根据具体情况添加
      srand((unsigned)time(0));  //随机种子

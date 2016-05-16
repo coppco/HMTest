@@ -22,11 +22,13 @@
     [aCoder encodeObject:self.expires_in forKey:@"expires_in"];
     [aCoder encodeObject:self.uid forKey:@"uid"];
     [aCoder encodeObject:self.create_Date forKey:@"create_Date"];
+    [aCoder encodeObject:self.name forKey:@"name"];
 }
 //反归档方法
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self) {
+        self.name = [aDecoder decodeObjectForKey:@"name"];
         self.uid = [aDecoder decodeObjectForKey:@"uid"];
         self.access_token = [aDecoder decodeObjectForKey:@"access_token"];
         self.expires_in = [aDecoder decodeObjectForKey:@"expires_in"];

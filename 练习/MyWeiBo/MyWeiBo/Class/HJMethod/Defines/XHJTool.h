@@ -28,4 +28,8 @@
 
 #import "APPRequest.h"  //应用请求定义
 #import "MBProgressHUD+MJ.h"  //菊花
+
+#import "HJAccountTool.h"
+#import "HJAccount.h"
+
 #endif /* XHJTool_h */

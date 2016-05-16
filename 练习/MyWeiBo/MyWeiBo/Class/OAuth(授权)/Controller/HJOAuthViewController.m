@@ -75,25 +75,14 @@
     params[@"code"] = code;
     params[@"redirect_uri"] = @"http://www.baidu.com";
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithArray:@[@"application/json",
-                                                                              @"text/html",
-                                                                              @"text/json",
-                                                                              @"text/plain",
-                                                                              @"text/javascript",
-                                                                              @"text/xml",
-                                                                              @"image/*"]];
-
-    [manager POST:@"https://api.weibo.com/oauth2/access_token" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
-        [MBProgressHUD hideHUD];
-        XHJLog(@"%@", kSinaPlist);
+    [HJHttpRequestTool requestWithType:(HJHttpRequestTypePOST) URLString:kSinaToken params:params showHUD:NO progress:nil success:^(id response) {
         //保存到沙盒
-        HJAccount *account = [[HJAccount alloc] initWithDictionary:responseObject error:nil];
+        HJAccount *account = [[HJAccount alloc] initWithDictionary:response error:nil];
+        account.create_Date = [NSDate date];
         [HJAccountTool saveAccount:account];
         //切换root
         [getAppWindow() switchRootController];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failed:^(NSError *error) {
         [MBProgressHUD hideHUD];
     }];
 }

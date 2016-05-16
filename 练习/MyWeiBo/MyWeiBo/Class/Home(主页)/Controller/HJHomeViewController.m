@@ -8,6 +8,7 @@
 
 #import "HJHomeViewController.h"
 #import "KxMenu.h"
+
 @interface HJHomeViewController ()
 @property (nonatomic, strong)NSArray*menuArray;
 @end
@@ -27,6 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self navigation];
+    NSString *name = [HJAccountTool getAccount].name;
+    name.length != 0 ? [self setTitleViewWithTitle:name] : [self getUserData];
+}
+/*设置导航栏*/
+- (void)navigation {
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItemWithTarget:self action:nil mage:@"navigationbar_friendsearch" hightlighted:@"navigationbar_friendsearch_highlighted"];
     
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItemWithTarget:self action:nil mage:@"navigationbar_pop" hightlighted:@"navigationbar_pop_highlighted"];
@@ -35,17 +42,35 @@
     button.size = CGSizeMake(150, 30);
     [button addTarget:self action:@selector(click:) forControlEvents:(UIControlEventTouchUpInside)];
     [button setTitle:@"Coppco" forState:(UIControlStateNormal)];
-    button.titleLabel.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:25];
+    button.titleLabel.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:15];
     [button setTitleColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
     [button setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:(UIControlStateNormal)];
     
-//    button.titleLabel.backgroundColor = [UIColor greenColor];
-//    button.imageView.backgroundColor = [UIColor blueColor];
+    //    button.titleLabel.backgroundColor = [UIColor greenColor];
+    //    button.imageView.backgroundColor = [UIColor blueColor];
     /*调整按钮里面的文字和图片的位置*/
-    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 10);
+    button.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
     button.imageEdgeInsets = UIEdgeInsetsMake(0, 120, 0, 0);
     
     self.navigationItem.titleView = button;
+}
+/*获取用户数据*/
+- (void)getUserData {
+    
+    HJAccount *account = [HJAccountTool getAccount];
+    [HJHttpRequestTool requestWithType:(HJHttpRequestTypeGET) URLString:@"https://api.weibo.com/2/users/show.json" params:@{@"access_token":account.access_token, @"uid":account.uid} showHUD:NO progress:nil success:^(id response) {
+        [self setTitleViewWithTitle:response[@"screen_name"]];
+        //存储昵称到沙盒
+        XHJLog(@"%@", response[@"screen_name"]);
+        account.name = response[@"screen_name"];
+        [HJAccountTool saveAccount:account];
+    } failed:^(NSError *error) {
+        
+    }];
+}
+- (void)setTitleViewWithTitle:(NSString *)title {
+    UIButton *bu = (UIButton *)self.navigationItem.titleView;
+    [bu setTitle:title forState:(UIControlStateNormal)];
 }
 - (void)click:(UIButton *)button {
     [KxMenu showMenuInView:[UIApplication sharedApplication].windows.lastObject fromRect:CGRectMake(button.centerX, button.y + 60, 0, 0) menuItems:self.menuArray];
