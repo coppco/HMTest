@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WeiboSDK.h"
+#import "HJOAuthViewController.h"
 
-@interface HJAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HJAppDelegate : UIResponder <UIApplicationDelegate, WeiboSDKDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) HJOAuthViewController *viewController;
+
+@property (strong, nonatomic) NSString *wbtoken;
+@property (strong, nonatomic) NSString *wbRefreshToken;
+@property (strong, nonatomic) NSString *wbCurrentUserID;
 
 
 @end

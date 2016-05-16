@@ -25,4 +25,6 @@
 #import "HJTool.h"   //常用方法
 #import <masonry.h>  //代码自动布局
 
+#import "APPRequest.h"  //应用请求定义
+
 #endif /* XHJTool_h */
