@@ -501,6 +501,7 @@ static void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v )
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy年MM月dd日 HH时mm分ss秒SSSS毫秒"];
+    formatter.locale = [NSLocale currentLocale];
     NSString *string = [formatter stringFromDate:date];
     return string;
 }
@@ -516,11 +517,111 @@ static void RGBtoHSV( float r, float g, float b, float *h, float *s, float *v )
     NSTimeInterval interval = (timestamp.length == 10 ? [timestamp doubleValue] : (timestamp.length == 13 ? [timestamp doubleValue] * 0.001 : [[NSDate date] timeIntervalSince1970])); //时间间隔
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:interval]; //nsdate
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];  //nsdateformatter对象
+    formatter.locale = [NSLocale currentLocale];
     if (!dateFormatter) {
         dateFormatter = @"yyyy-MM-dd HH:mm:ss";
     }
     [formatter setDateFormat:dateFormatter];
     return [formatter stringFromDate:date];
+}
+#pragma - mark 获取和现在时间的一个间隔:如1小时前、5个月前等
+NSString *timeAgoFromDate(NSDate *date) {
+    if (!date) {
+        return nil;
+    }
+    //当前时间
+    NSDate *currentDate = [NSDate date];
+    
+    //日历对象
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    //需要得到比较的结果
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond; //年月日时分秒
+    NSDateComponents *components = [calendar components:unit fromDate:date toDate:currentDate options:0];//比较结果
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
+    formatter.locale = [NSLocale currentLocale];
+    //不是当年, 显示具体时间
+    if (![HJTool isCurrentYear:date]) {
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    } else {//当年
+        if ([HJTool isYesterDay:date]) {//昨天
+            formatter.dateFormat = @"昨天 HH:mm";
+        } else if ([HJTool isToday:date]) {//今天
+            if (components.hour != 0) {//几小时前
+                formatter.dateFormat = STR(@"%ld小时前", (long)components.hour);
+            } else if (components.minute != 0){//几分钟前
+                formatter.dateFormat = STR(@"%ld分钟前", (long)components.minute);
+            } else {
+                formatter.dateFormat = @"刚刚";
+            }
+        } else {//今年其他日子
+            formatter.dateFormat = @"MM-dd HH:mm";
+        }
+    }
+    return [formatter stringFromDate:date];
+}
+/*
+ 是否为当前年
+ */
++ (BOOL)isCurrentYear:(NSDate *)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitYear;
+    NSDateComponents *componentCurrent = [calendar components:unit fromDate:[NSDate date]];//当前日期的结果
+    NSDateComponents *componentDate = [calendar components:unit fromDate:date];//以前时间的结果
+    return componentDate.year == componentCurrent.year;
+}
+/*
+ 是否是昨天
+ */
++ (BOOL)isYesterDay:(NSDate *)date {
+    /*2016-05-31 14:50:30-------->2016-05-31再比较day相差1 year和month相差0 就是昨天*/
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.locale = [NSLocale currentLocale];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    
+    NSString *dateStr = [formatter stringFromDate:date];
+    
+    NSString *nowStr = [formatter stringFromDate:[NSDate date]];
+    
+    date = [formatter dateFromString:dateStr];
+    NSDate *nowDate = [formatter dateFromString:nowStr];
+    
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSCalendarUnit unit = NSCalendarUnitDay | NSCalendarUnitYear | NSCalendarUnitMonth;
+    NSDateComponents *components = [calendar components:unit fromDate:date toDate:nowDate options:0];
+    return components.day == 1 && components.year == 0 && components.month == 0;
+}
+/*
+ 是否是今天
+ */
++ (BOOL)isToday:(NSDate *)date {
+    /*2016-05-31 14:50:30-------->2016-05-31两个字符串相同就是今天*/
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.locale = [NSLocale currentLocale];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    
+    NSString *dateStr = [formatter stringFromDate:date];
+    NSString *nowStr = [formatter stringFromDate:[NSDate date]];
+    
+    return [dateStr isEqualToString:nowStr];
+}
+//从时间戳获取刚刚、1分钟前等
+NSString *timeAgoFromTimestamp(NSString *timestamp) {
+    if (timestamp.length != 10 && timestamp.length != 13) {
+        return nil;
+    }
+    NSTimeInterval timeInterval = timestamp.length == 10 ? [timestamp longLongValue] : (timestamp.length == 13 ? [timestamp longLongValue] * 0.001 : [[NSDate date] timeIntervalSince1970]);
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    return timeAgoFromDate(date);
+}
+NSString *timeAgoFromTimeString(NSString *timeString) {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    formatter.locale = [NSLocale currentLocale];
+    NSDate *date = [formatter dateFromString:timeString];
+    return timeAgoFromDate(date);
 }
 #pragma mark - UIImage
 //从颜色生成图片

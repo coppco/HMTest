@@ -9,6 +9,12 @@
 #ifndef HJPrefix_pch
 #define HJPrefix_pch
 
-#import "XHJTool.h"
+#import "XHJTool.h"  //工具类
+
+#import <UIImageView+WebCache.h>  //web图片处理
+
+#import <JSONModel.h>  //字典模型库
+
+#import <MJRefresh.h>  //刷新控件
 
 #endif /* HJPrefix_pch */

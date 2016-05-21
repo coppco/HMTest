@@ -10,6 +10,7 @@
 #import <Availability.h>
 #import "HJAccount.h"
 #import "HJAccountTool.h"
+#import <SDWebImageManager.h>
 
 @interface HJAppDelegate ()
 
@@ -50,6 +51,14 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    //向操作系统申请后台申请,  但是时间是不确定的
+    UIBackgroundTaskIdentifier task = [application beginBackgroundTaskWithExpirationHandler:^{
+        //当申请的后台时间到的时候会调用这个block
+        [application endBackgroundTask:task];
+    }];
+    
+    //在target --capabilities里面的backgroundmode里面添加后台播放
+    //这里在播放一个0KB的音频文件
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -155,5 +164,15 @@
         }
         [alert show];
     }
+}
+//收到内存警告
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    
+    //取消正在下载的图片
+    [manager cancelAll];
+    
+    //清除内存中的所有图片
+    [manager.imageCache clearMemory];
 }
 @end

@@ -75,6 +75,7 @@
                     progress(downloadProgress.completedUnitCount, downloadProgress.totalUnitCount);
                 }
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                XHJLog(@"%@", task.response.URL);
                 if (success) {
                     success(responseObject);
                 }

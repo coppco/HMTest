@@ -27,7 +27,7 @@
 			<string>com.weibo1</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wb3448046727</string>
+				<string>wb3278306158</string>
 			</array>
 		</dict>
 	</array>
@@ -47,6 +47,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -11,6 +11,11 @@
 		44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A3D1CD3994D00520A10 /* HJNavigationController.m */; };
 		44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */; };
 		44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A471CD3B61F00520A10 /* HJTabBarController.m */; };
+		44341FEA1CEC8E57009B6C9A /* HJSinaUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 44341FE91CEC8E57009B6C9A /* HJSinaUser.m */; };
+		44341FED1CEC903F009B6C9A /* HJSinaStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 44341FEC1CEC903F009B6C9A /* HJSinaStatus.m */; };
+		44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */; };
+		44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */; };
+		4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CB591CEDFF9B008B2949 /* HJStatusCell.m */; };
 		443B03081CE6C24B005EBE83 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */; };
 		443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B03051CE6C24B005EBE83 /* WeiboSDK.bundle */; };
 		443B030B1CE6C369005EBE83 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B030A1CE6C369005EBE83 /* QuartzCore.framework */; };
@@ -30,8 +35,13 @@
 		443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443D28AD1CD6309100AF3683 /* HJTabBar.m */; };
 		443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79E71CD4E97400F07C68 /* HJSearchBar.m */; };
 		443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79EB1CD4F53300F07C68 /* KxMenu.m */; };
+		444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */; };
+		444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */; };
 		4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4454B4991CE607D60007A222 /* InfoPlist.strings */; };
+		44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44565CB01CEB568D0068A22A /* HJTitleButton.m */; };
 		445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445B42E61CE0BA21001F552F /* HJGuideController.m */; };
+		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
+		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
 		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
 		CC7A2EC81CD328A20005A5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EC71CD328A20005A5F7 /* main.m */; };
 		CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */; };
@@ -81,6 +91,15 @@
 		44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HJExtension.m"; sourceTree = "<group>"; };
 		44233A461CD3B61F00520A10 /* HJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTabBarController.h; sourceTree = "<group>"; };
 		44233A471CD3B61F00520A10 /* HJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTabBarController.m; sourceTree = "<group>"; };
+		44341FE81CEC8E57009B6C9A /* HJSinaUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSinaUser.h; sourceTree = "<group>"; };
+		44341FE91CEC8E57009B6C9A /* HJSinaUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSinaUser.m; sourceTree = "<group>"; };
+		44341FEB1CEC903F009B6C9A /* HJSinaStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJSinaStatus.h; sourceTree = "<group>"; };
+		44341FEC1CEC903F009B6C9A /* HJSinaStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSinaStatus.m; sourceTree = "<group>"; };
+		44341FEE1CECAF55009B6C9A /* HJLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJLoadMoreFooter.h; sourceTree = "<group>"; };
+		44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJLoadMoreFooter.m; sourceTree = "<group>"; };
+		44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJLoadMoreFooter.xib; sourceTree = "<group>"; };
+		4434CB581CEDFF9B008B2949 /* HJStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusCell.h; sourceTree = "<group>"; };
+		4434CB591CEDFF9B008B2949 /* HJStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusCell.m; sourceTree = "<group>"; };
 		443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		443B02FC1CE6C24B005EBE83 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
 		443B02FD1CE6C24B005EBE83 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
@@ -119,10 +138,20 @@
 		443E79E71CD4E97400F07C68 /* HJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSearchBar.m; sourceTree = "<group>"; };
 		443E79EA1CD4F53300F07C68 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		443E79EB1CD4F53300F07C68 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		444FBBD71CF006BF00FD718B /* HJStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusToolBar.h; sourceTree = "<group>"; };
+		444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusToolBar.m; sourceTree = "<group>"; };
+		444FBBDA1CF067B400FD718B /* HJStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusPhotoView.h; sourceTree = "<group>"; };
+		444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusPhotoView.m; sourceTree = "<group>"; };
 		4454B4991CE607D60007A222 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		4454B49B1CE60D260007A222 /* APPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPRequest.h; sourceTree = "<group>"; };
+		44565CAF1CEB568D0068A22A /* HJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTitleButton.h; sourceTree = "<group>"; };
+		44565CB01CEB568D0068A22A /* HJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTitleButton.m; sourceTree = "<group>"; };
 		445B42E51CE0BA21001F552F /* HJGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGuideController.h; sourceTree = "<group>"; };
 		445B42E61CE0BA21001F552F /* HJGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGuideController.m; sourceTree = "<group>"; };
+		44F2D8491CEF4F220004A033 /* HJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPhoto.h; sourceTree = "<group>"; };
+		44F2D84A1CEF4F220004A033 /* HJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJPhoto.m; sourceTree = "<group>"; };
+		44F6D1A51CEE7CE600EF1617 /* HJStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusFrame.h; sourceTree = "<group>"; };
+		44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusFrame.m; sourceTree = "<group>"; };
 		79137DF3F01326EC74570CC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9102BEAE395CC40E57332B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CAFE3BE580459636279B50A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -537,6 +566,14 @@
 		CC7A2F331CD33A680005A5F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44341FE81CEC8E57009B6C9A /* HJSinaUser.h */,
+				44341FE91CEC8E57009B6C9A /* HJSinaUser.m */,
+				44341FEB1CEC903F009B6C9A /* HJSinaStatus.h */,
+				44341FEC1CEC903F009B6C9A /* HJSinaStatus.m */,
+				44F6D1A51CEE7CE600EF1617 /* HJStatusFrame.h */,
+				44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */,
+				44F2D8491CEF4F220004A033 /* HJPhoto.h */,
+				44F2D84A1CEF4F220004A033 /* HJPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +581,17 @@
 		CC7A2F341CD33A680005A5F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44565CAF1CEB568D0068A22A /* HJTitleButton.h */,
+				44565CB01CEB568D0068A22A /* HJTitleButton.m */,
+				44341FEE1CECAF55009B6C9A /* HJLoadMoreFooter.h */,
+				44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */,
+				44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */,
+				4434CB581CEDFF9B008B2949 /* HJStatusCell.h */,
+				4434CB591CEDFF9B008B2949 /* HJStatusCell.m */,
+				444FBBD71CF006BF00FD718B /* HJStatusToolBar.h */,
+				444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */,
+				444FBBDA1CF067B400FD718B /* HJStatusPhotoView.h */,
+				444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -831,6 +879,11 @@
 				TargetAttributes = {
 					CC7A2EC21CD328A20005A5F7 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					CC7A2EDB1CD328A20005A5F7 = {
 						CreatedOnToolsVersion = 7.3;
@@ -868,6 +921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAA28F41CD3620C006CA741 /* region.db in Resources */,
+				44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */,
 				4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */,
 				443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */,
 				44233A361CD3982300520A10 /* Assets.xcassets in Resources */,
@@ -946,8 +1000,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */,
+				44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */,
 				445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */,
+				444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */,
+				44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */,
 				443B51F11CE9F9450067AAEF /* HJAccount.m in Sources */,
+				44341FEA1CEC8E57009B6C9A /* HJSinaUser.m in Sources */,
 				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
 				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
 				443B03201CE6C78C005EBE83 /* HJOAuthViewController.m in Sources */,
@@ -963,14 +1021,19 @@
 				CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */,
 				CC7A2EC81CD328A20005A5F7 /* main.m in Sources */,
 				CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */,
+				444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */,
+				44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */,
 				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
 				443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */,
 				44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */,
 				443B52091CEA084A0067AAEF /* UIWindow+HJExtension.m in Sources */,
+				4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */,
+				44341FED1CEC903F009B6C9A /* HJSinaStatus.m in Sources */,
 				44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */,
 				CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */,
 				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,
 				CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */,
+				44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */,
 				CCAA28ED1CD361B8006CA741 /* NSTimer+Block.m in Sources */,
 				CCAA28F51CD3620C006CA741 /* RegionSearch.m in Sources */,
 			);

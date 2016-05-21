@@ -299,10 +299,10 @@ typedef NS_ENUM(NSInteger, DirectionType) {
  *  @param timestamp     时间戳10位和13位
  *  @param dateFormatter 日期格式
  G  公元
- yy 年后两位 yyyy 年后四位
- M 1~12  MM  01~12两位不足补零 MMM 英文缩写   MMMM英文全写
- d 1~31 dd 01~31两位不足补零
- EEE 英文缩写   EEEE 英文全写
+ yy 年后两位 yyyy 年后四位  年
+ M 1~12  MM  01~12两位不足补零 MMM 英文缩写   MMMM英文全写   月份
+ d 1~31 dd 01~31两位不足补零  日
+ EEE 英文缩写   EEEE 英文全写 星期
  aa  显示AM/PM
  H  0~23 (24小时制) HH 00~23两位不足补零(24小时制) K 0~12(12小时制) KK 00~12 两位不足补零(12小时制)
  m 显示0~59，1位数或2位数  mm显示00~59，不足2位数会补0
@@ -310,7 +310,37 @@ typedef NS_ENUM(NSInteger, DirectionType) {
  zzzz：Pacific Daylight Time   Z / ZZ / ZZZ ：-0800   ZZZZ：GMT -08:00  v：PT vvvv：Pacific Time
  */
 + (NSString *)timestampTransformToDateStringWithTimestamp:(NSString *)timestamp formatter:(NSString *)dateFormatter;
-
+#pragma - mark 获取和现在时间的一个间隔:如1小时前、5个月前等
+/**
+ *  @author XHJ, 16-05-21 15:05:24
+ *
+ *  从NSDate获取和现在时间的相距:如刚刚、3分钟前、3小时前等
+ *
+ *  @param date 日期
+ *
+ *  @return
+ */
+NSString *timeAgoFromDate(NSDate *date);
+/**
+ *  @author XHJ, 16-05-21 15:05:53
+ *
+ *  从时间戳获取和现在时间的相距:如刚刚、3分钟前、3小时前等
+ *
+ *  @param timestamp 时间戳
+ *
+ *  @return
+ */
+NSString *timeAgoFromTimestamp(NSString *timestamp);
+/**
+ *  @author XHJ, 16-05-21 15:05:23
+ *
+ *  从一个时间的字符串获取和现在时间的相距:如刚刚、3分钟前、3小时前等  格式为yyyy-MM-dd HH:mm:ss
+ *
+ *  @param timeString 时间字符串 如yyyy-MM-dd HH:mm:ss格式的字符串
+ *
+ *  @return
+ */
+NSString *timeAgoFromTimeString(NSString *timeString);
 #pragma mark - UIImage从颜色生成图片
 /**
  *  从一个颜色color生成图片
