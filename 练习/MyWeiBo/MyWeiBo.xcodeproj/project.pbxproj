@@ -40,6 +40,9 @@
 		4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4454B4991CE607D60007A222 /* InfoPlist.strings */; };
 		44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44565CB01CEB568D0068A22A /* HJTitleButton.m */; };
 		445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445B42E61CE0BA21001F552F /* HJGuideController.m */; };
+		44CDBE121CF32DE100FC2F11 /* HJIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE111CF32DE100FC2F11 /* HJIconView.m */; };
+		44CDBE191CF33E7700FC2F11 /* HJConposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE181CF33E7700FC2F11 /* HJConposeController.m */; };
+		44CDBE1F1CF3554100FC2F11 /* HJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE1E1CF3554100FC2F11 /* HJTextView.m */; };
 		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
 		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
 		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
@@ -148,6 +151,12 @@
 		44565CB01CEB568D0068A22A /* HJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTitleButton.m; sourceTree = "<group>"; };
 		445B42E51CE0BA21001F552F /* HJGuideController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJGuideController.h; sourceTree = "<group>"; };
 		445B42E61CE0BA21001F552F /* HJGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGuideController.m; sourceTree = "<group>"; };
+		44CDBE101CF32DE100FC2F11 /* HJIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJIconView.h; sourceTree = "<group>"; };
+		44CDBE111CF32DE100FC2F11 /* HJIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJIconView.m; sourceTree = "<group>"; };
+		44CDBE171CF33E7700FC2F11 /* HJConposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJConposeController.h; sourceTree = "<group>"; };
+		44CDBE181CF33E7700FC2F11 /* HJConposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJConposeController.m; sourceTree = "<group>"; };
+		44CDBE1D1CF3554100FC2F11 /* HJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTextView.h; sourceTree = "<group>"; };
+		44CDBE1E1CF3554100FC2F11 /* HJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTextView.m; sourceTree = "<group>"; };
 		44F2D8491CEF4F220004A033 /* HJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPhoto.h; sourceTree = "<group>"; };
 		44F2D84A1CEF4F220004A033 /* HJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJPhoto.m; sourceTree = "<group>"; };
 		44F6D1A51CEE7CE600EF1617 /* HJStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusFrame.h; sourceTree = "<group>"; };
@@ -421,6 +430,64 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		44CDBE131CF33E5A00FC2F11 /* Conpose(发微博) */ = {
+			isa = PBXGroup;
+			children = (
+				44CDBE141CF33E5A00FC2F11 /* Controller */,
+				44CDBE151CF33E5A00FC2F11 /* Model */,
+				44CDBE161CF33E5A00FC2F11 /* View */,
+			);
+			path = "Conpose(发微博)";
+			sourceTree = "<group>";
+		};
+		44CDBE141CF33E5A00FC2F11 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				44CDBE171CF33E7700FC2F11 /* HJConposeController.h */,
+				44CDBE181CF33E7700FC2F11 /* HJConposeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44CDBE151CF33E5A00FC2F11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44CDBE161CF33E5A00FC2F11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44CDBE1A1CF3552200FC2F11 /* HJLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				44CDBE1B1CF3552200FC2F11 /* View */,
+			);
+			path = HJLibrary;
+			sourceTree = "<group>";
+		};
+		44CDBE1B1CF3552200FC2F11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				44CDBE1C1CF3552200FC2F11 /* HJTextView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44CDBE1C1CF3552200FC2F11 /* HJTextView */ = {
+			isa = PBXGroup;
+			children = (
+				44CDBE1D1CF3554100FC2F11 /* HJTextView.h */,
+				44CDBE1E1CF3554100FC2F11 /* HJTextView.m */,
+			);
+			path = HJTextView;
+			sourceTree = "<group>";
+		};
 		CC7A2EBA1CD328A20005A5F7 = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +556,7 @@
 				CCAA28CF1CD361B8006CA741 /* HJMethod */,
 				CC7A2F261CD33A680005A5F7 /* App */,
 				44233A3B1CD398CA00520A10 /* Third */,
+				44CDBE131CF33E5A00FC2F11 /* Conpose(发微博) */,
 				443B031A1CE6C771005EBE83 /* OAuth(授权) */,
 				445B42E11CE0B9D8001F552F /* Guide(引导页) */,
 				44233A371CD398C000520A10 /* Base */,
@@ -586,6 +654,8 @@
 				44341FEE1CECAF55009B6C9A /* HJLoadMoreFooter.h */,
 				44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */,
 				44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */,
+				44CDBE101CF32DE100FC2F11 /* HJIconView.h */,
+				44CDBE111CF32DE100FC2F11 /* HJIconView.m */,
 				4434CB581CEDFF9B008B2949 /* HJStatusCell.h */,
 				4434CB591CEDFF9B008B2949 /* HJStatusCell.m */,
 				444FBBD71CF006BF00FD718B /* HJStatusToolBar.h */,
@@ -665,6 +735,7 @@
 		CCAA28CF1CD361B8006CA741 /* HJMethod */ = {
 			isa = PBXGroup;
 			children = (
+				44CDBE1A1CF3552200FC2F11 /* HJLibrary */,
 				443E79E51CD4E94300F07C68 /* HJControl */,
 				CCAA28F61CD363AE006CA741 /* HJFMDBHandle */,
 				CCAA28F91CD363AE006CA741 /* HJHttpRequestTool */,
@@ -1017,11 +1088,14 @@
 				CCAA28EF1CD361B8006CA741 /* HJTool.m in Sources */,
 				443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */,
 				CCAA28EC1CD361B8006CA741 /* NSObject+ZXPUnicode.m in Sources */,
+				44CDBE191CF33E7700FC2F11 /* HJConposeController.m in Sources */,
 				443B52061CEA00D70067AAEF /* HJAccountTool.m in Sources */,
 				CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */,
 				CC7A2EC81CD328A20005A5F7 /* main.m in Sources */,
+				44CDBE121CF32DE100FC2F11 /* HJIconView.m in Sources */,
 				CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */,
 				444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */,
+				44CDBE1F1CF3554100FC2F11 /* HJTextView.m in Sources */,
 				44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */,
 				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
 				443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */,

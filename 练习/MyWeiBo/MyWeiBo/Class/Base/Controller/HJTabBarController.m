@@ -13,6 +13,7 @@
 #import "HJDiscoverViewController.h"  //发现
 #import "HJNavigationController.h"
 #import "HJTabBar.h"
+#import "HJConposeController.h"  //发微博
 @interface HJTabBarController ()
 
 @end
@@ -30,7 +31,9 @@
     //利用KVC  使用自定义类
     HJTabBar *tabBar = [[HJTabBar alloc] init];
     [tabBar setClick:^{
-        XHJLog(@"111");
+        HJConposeController *conpose = [[HJConposeController alloc] init];
+        HJNavigationController *navi = [[HJNavigationController alloc] initWithRootViewController:conpose];
+        [self presentViewController:navi animated:YES completion:nil];
     }];
     [self setValue:tabBar forKeyPath:@"tabBar"];
     

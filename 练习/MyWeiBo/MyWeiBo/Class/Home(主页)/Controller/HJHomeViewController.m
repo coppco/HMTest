@@ -141,7 +141,6 @@
     }
 
     [HJHttpRequestTool requestWithType:(HJHttpRequestTypeGET) URLString:kSinaFriends params:dic showHUD:NO progress:nil success:^(id response) {
-        XHJLog(@"%@", response);
         [_control endRefreshing];
         NSArray *array = [HJSinaStatus arrayOfModelsFromDictionaries:response[@"statuses"]];
         //这里提示一下

@@ -12,11 +12,12 @@
 #import "HJSinaUser.h"
 #import "HJStatusToolBar.h"
 #import "HJStatusPhotoView.h"  //配图
+#import "HJIconView.h"  //头像
 @interface HJStatusCell ()
 /*原创微博整体*/
 @property (nonatomic, strong)UIView  *originalView;
 /*头像*/
-@property (nonatomic, strong)UIImageView  *iconImageV;
+@property (nonatomic, strong)HJIconView  *iconImageV;
 /*配图*/
 @property (nonatomic, strong)HJStatusPhotoView  *photoImageV;
 /*VIP*/
@@ -79,7 +80,7 @@
     self.originalView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.originalView];
     /*头像*/
-    self.iconImageV = [[UIImageView alloc] init];
+    self.iconImageV = [[HJIconView alloc] init];
     [self.originalView addSubview:self.iconImageV];
     /*配图*/
     self.photoImageV = [[HJStatusPhotoView alloc] init];
@@ -130,7 +131,7 @@
     
     //头像
     self.iconImageV.frame = statusFrame.iconImageF;
-    [self.iconImageV sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
+    self.iconImageV.user = statusFrame.status.user;
     /*VIP*/
     self.vipImageV.frame = statusFrame.vipImageF;
     
