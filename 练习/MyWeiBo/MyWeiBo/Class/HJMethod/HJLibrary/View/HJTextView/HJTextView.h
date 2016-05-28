@@ -11,6 +11,8 @@
 @interface HJTextView : UITextView
 /**占位符*/
 @property (nonatomic, copy)NSString *placeholder;
-/**占位符颜色*/
-@property (nonatomic, copy)NSString *placeholderColor;
+/**占位符颜色,默认grayColor*/
+@property (nonatomic, strong)UIColor *placeholderColor;
+
+@property (nonatomic, strong)UIImage  *image;
 @end

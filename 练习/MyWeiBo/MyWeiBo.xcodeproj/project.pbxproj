@@ -16,6 +16,8 @@
 		44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */; };
 		44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */; };
 		4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CB591CEDFF9B008B2949 /* HJStatusCell.m */; };
+		44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB01CF4888E00E89401 /* HJComposeTool.m */; };
+		44377EB41CF4942B00E89401 /* HJComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB31CF4942B00E89401 /* HJComposeController.m */; };
 		443B03081CE6C24B005EBE83 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */; };
 		443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B03051CE6C24B005EBE83 /* WeiboSDK.bundle */; };
 		443B030B1CE6C369005EBE83 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B030A1CE6C369005EBE83 /* QuartzCore.framework */; };
@@ -41,7 +43,6 @@
 		44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44565CB01CEB568D0068A22A /* HJTitleButton.m */; };
 		445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445B42E61CE0BA21001F552F /* HJGuideController.m */; };
 		44CDBE121CF32DE100FC2F11 /* HJIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE111CF32DE100FC2F11 /* HJIconView.m */; };
-		44CDBE191CF33E7700FC2F11 /* HJConposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE181CF33E7700FC2F11 /* HJConposeController.m */; };
 		44CDBE1F1CF3554100FC2F11 /* HJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE1E1CF3554100FC2F11 /* HJTextView.m */; };
 		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
 		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
@@ -103,6 +104,10 @@
 		44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJLoadMoreFooter.xib; sourceTree = "<group>"; };
 		4434CB581CEDFF9B008B2949 /* HJStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusCell.h; sourceTree = "<group>"; };
 		4434CB591CEDFF9B008B2949 /* HJStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusCell.m; sourceTree = "<group>"; };
+		44377EAF1CF4888E00E89401 /* HJComposeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJComposeTool.h; sourceTree = "<group>"; };
+		44377EB01CF4888E00E89401 /* HJComposeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJComposeTool.m; sourceTree = "<group>"; };
+		44377EB21CF4942B00E89401 /* HJComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJComposeController.h; sourceTree = "<group>"; };
+		44377EB31CF4942B00E89401 /* HJComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJComposeController.m; sourceTree = "<group>"; };
 		443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		443B02FC1CE6C24B005EBE83 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
 		443B02FD1CE6C24B005EBE83 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
@@ -153,8 +158,6 @@
 		445B42E61CE0BA21001F552F /* HJGuideController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJGuideController.m; sourceTree = "<group>"; };
 		44CDBE101CF32DE100FC2F11 /* HJIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJIconView.h; sourceTree = "<group>"; };
 		44CDBE111CF32DE100FC2F11 /* HJIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJIconView.m; sourceTree = "<group>"; };
-		44CDBE171CF33E7700FC2F11 /* HJConposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJConposeController.h; sourceTree = "<group>"; };
-		44CDBE181CF33E7700FC2F11 /* HJConposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJConposeController.m; sourceTree = "<group>"; };
 		44CDBE1D1CF3554100FC2F11 /* HJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTextView.h; sourceTree = "<group>"; };
 		44CDBE1E1CF3554100FC2F11 /* HJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTextView.m; sourceTree = "<group>"; };
 		44F2D8491CEF4F220004A033 /* HJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPhoto.h; sourceTree = "<group>"; };
@@ -443,8 +446,8 @@
 		44CDBE141CF33E5A00FC2F11 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				44CDBE171CF33E7700FC2F11 /* HJConposeController.h */,
-				44CDBE181CF33E7700FC2F11 /* HJConposeController.m */,
+				44377EB21CF4942B00E89401 /* HJComposeController.h */,
+				44377EB31CF4942B00E89401 /* HJComposeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -459,6 +462,8 @@
 		44CDBE161CF33E5A00FC2F11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44377EAF1CF4888E00E89401 /* HJComposeTool.h */,
+				44377EB01CF4888E00E89401 /* HJComposeTool.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1076,6 +1081,7 @@
 				444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */,
 				44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */,
 				443B51F11CE9F9450067AAEF /* HJAccount.m in Sources */,
+				44377EB41CF4942B00E89401 /* HJComposeController.m in Sources */,
 				44341FEA1CEC8E57009B6C9A /* HJSinaUser.m in Sources */,
 				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
 				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
@@ -1083,12 +1089,12 @@
 				CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */,
 				443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */,
 				CC7A2F4A1CD33BB00005A5F7 /* HJMyViewController.m in Sources */,
+				44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */,
 				443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */,
 				CC7A2F3E1CD33A680005A5F7 /* HJAppDelegate.m in Sources */,
 				CCAA28EF1CD361B8006CA741 /* HJTool.m in Sources */,
 				443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */,
 				CCAA28EC1CD361B8006CA741 /* NSObject+ZXPUnicode.m in Sources */,
-				44CDBE191CF33E7700FC2F11 /* HJConposeController.m in Sources */,
 				443B52061CEA00D70067AAEF /* HJAccountTool.m in Sources */,
 				CCAA28EA1CD361B8006CA741 /* NSDictionary+ZXPUnicode.m in Sources */,
 				CC7A2EC81CD328A20005A5F7 /* main.m in Sources */,

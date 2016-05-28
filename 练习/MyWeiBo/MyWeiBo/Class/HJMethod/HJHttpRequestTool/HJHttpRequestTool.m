@@ -167,6 +167,7 @@
             [formData appendPartWithFileData:data name:nameKey fileName:fileName mimeType:@"image/png"];
         }
     } progress:^(NSProgress * _Nonnull uploadProgress) {
+        XHJLog(@"%lld-%lld", uploadProgress.completedUnitCount, uploadProgress.totalUnitCount);
         if (progress) {
             progress(uploadProgress.completedUnitCount,uploadProgress.totalUnitCount);
         }

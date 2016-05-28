@@ -1,5 +1,5 @@
 //
-//  HJConposeController.h
+//  HJComposeController.h
 //  MyWeiBo
 //
 //  Created by M-coppco on 16/5/23.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HJConposeController : UIViewController
+@interface HJComposeController : UIViewController
 
 @end

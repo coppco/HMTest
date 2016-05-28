@@ -17,4 +17,5 @@
 
 #import <MJRefresh.h>  //刷新控件
 
+#import <ReactiveCocoa.h>  //函数响应式编程
 #endif /* HJPrefix_pch */
