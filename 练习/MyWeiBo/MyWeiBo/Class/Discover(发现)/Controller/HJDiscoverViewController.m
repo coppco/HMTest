@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     HJSearchBar *searchBar = [HJSearchBar searchBarWithFrame:CGRectMake(0, 0, self.view.width - 20, 30)];
-    searchBar.placeholder = @"请输入搜索内容";
+    searchBar.placeholder = NSLocalizedString(@"请输入搜索内容", nil);
     searchBar.leftImage = @"searchbar_textfield_search_icon";
     self.navigationItem.titleView = searchBar;
     

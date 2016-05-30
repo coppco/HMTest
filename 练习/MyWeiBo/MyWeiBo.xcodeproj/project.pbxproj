@@ -18,6 +18,10 @@
 		4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CB591CEDFF9B008B2949 /* HJStatusCell.m */; };
 		44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB01CF4888E00E89401 /* HJComposeTool.m */; };
 		44377EB41CF4942B00E89401 /* HJComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB31CF4942B00E89401 /* HJComposeController.m */; };
+		443913F71CFA96AD00D66F0A /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 443913F61CFA96AD00D66F0A /* EmotionIcons */; };
+		443913FA1CFAAB9400D66F0A /* HJEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 443913F91CFAAB9400D66F0A /* HJEmoticon.m */; };
+		443914001CFAFC3100D66F0A /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */; };
+		443914031CFAFE6700D66F0A /* HJEmoticonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 443914021CFAFE6700D66F0A /* HJEmoticonCell.m */; };
 		443B03081CE6C24B005EBE83 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */; };
 		443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B03051CE6C24B005EBE83 /* WeiboSDK.bundle */; };
 		443B030B1CE6C369005EBE83 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B030A1CE6C369005EBE83 /* QuartzCore.framework */; };
@@ -39,11 +43,16 @@
 		443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79EB1CD4F53300F07C68 /* KxMenu.m */; };
 		444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */; };
 		444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */; };
-		4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4454B4991CE607D60007A222 /* InfoPlist.strings */; };
 		44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44565CB01CEB568D0068A22A /* HJTitleButton.m */; };
 		445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */ = {isa = PBXBuildFile; fileRef = 445B42E61CE0BA21001F552F /* HJGuideController.m */; };
 		44CDBE121CF32DE100FC2F11 /* HJIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE111CF32DE100FC2F11 /* HJIconView.m */; };
 		44CDBE1F1CF3554100FC2F11 /* HJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CDBE1E1CF3554100FC2F11 /* HJTextView.m */; };
+		44F1455A1CF9B88200DA3429 /* HJEmoticonKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F145591CF9B88200DA3429 /* HJEmoticonKeyboard.m */; };
+		44F1455D1CF9B97D00DA3429 /* HJEmoticonBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F1455C1CF9B97D00DA3429 /* HJEmoticonBottom.m */; };
+		44F145601CF9BA1700DA3429 /* HJEmoticonListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F1455F1CF9BA1700DA3429 /* HJEmoticonListView.m */; };
+		44F145621CF9CCBE00DA3429 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F145641CF9CCBE00DA3429 /* InfoPlist.strings */; };
+		44F145681CF9CD8A00DA3429 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F1456A1CF9CD8A00DA3429 /* Localizable.strings */; };
+		44F1456D1CF9DBF400DA3429 /* HJRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */; };
 		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
 		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
 		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
@@ -108,6 +117,13 @@
 		44377EB01CF4888E00E89401 /* HJComposeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJComposeTool.m; sourceTree = "<group>"; };
 		44377EB21CF4942B00E89401 /* HJComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJComposeController.h; sourceTree = "<group>"; };
 		44377EB31CF4942B00E89401 /* HJComposeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJComposeController.m; sourceTree = "<group>"; };
+		443913F61CFA96AD00D66F0A /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
+		443913F81CFAAB9400D66F0A /* HJEmoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticon.h; sourceTree = "<group>"; };
+		443913F91CFAAB9400D66F0A /* HJEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticon.m; sourceTree = "<group>"; };
+		443913FE1CFAFC3100D66F0A /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Emoji.h"; path = "../../../../../../../../../../Volumes/五音六律/百度云下载/1黑马2期视频压缩版/黑马IOS就业班2014年8-12月2/day37/1022/代码/黑马微博2期43-发微博07-显示表情/黑马微博2期/Classes/Main(主要)/Category/NSString+Emoji.h"; sourceTree = "<group>"; };
+		443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Emoji.m"; path = "../../../../../../../../../../Volumes/五音六律/百度云下载/1黑马2期视频压缩版/黑马IOS就业班2014年8-12月2/day37/1022/代码/黑马微博2期43-发微博07-显示表情/黑马微博2期/Classes/Main(主要)/Category/NSString+Emoji.m"; sourceTree = "<group>"; };
+		443914011CFAFE6700D66F0A /* HJEmoticonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonCell.h; sourceTree = "<group>"; };
+		443914021CFAFE6700D66F0A /* HJEmoticonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonCell.m; sourceTree = "<group>"; };
 		443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
 		443B02FC1CE6C24B005EBE83 /* WBHttpRequest+WeiboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboGame.h"; sourceTree = "<group>"; };
 		443B02FD1CE6C24B005EBE83 /* WBHttpRequest+WeiboShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WBHttpRequest+WeiboShare.h"; sourceTree = "<group>"; };
@@ -150,7 +166,6 @@
 		444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusToolBar.m; sourceTree = "<group>"; };
 		444FBBDA1CF067B400FD718B /* HJStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusPhotoView.h; sourceTree = "<group>"; };
 		444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusPhotoView.m; sourceTree = "<group>"; };
-		4454B4991CE607D60007A222 /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		4454B49B1CE60D260007A222 /* APPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPRequest.h; sourceTree = "<group>"; };
 		44565CAF1CEB568D0068A22A /* HJTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTitleButton.h; sourceTree = "<group>"; };
 		44565CB01CEB568D0068A22A /* HJTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTitleButton.m; sourceTree = "<group>"; };
@@ -160,6 +175,18 @@
 		44CDBE111CF32DE100FC2F11 /* HJIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJIconView.m; sourceTree = "<group>"; };
 		44CDBE1D1CF3554100FC2F11 /* HJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTextView.h; sourceTree = "<group>"; };
 		44CDBE1E1CF3554100FC2F11 /* HJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTextView.m; sourceTree = "<group>"; };
+		44F145581CF9B88200DA3429 /* HJEmoticonKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonKeyboard.h; sourceTree = "<group>"; };
+		44F145591CF9B88200DA3429 /* HJEmoticonKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonKeyboard.m; sourceTree = "<group>"; };
+		44F1455B1CF9B97D00DA3429 /* HJEmoticonBottom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonBottom.h; sourceTree = "<group>"; };
+		44F1455C1CF9B97D00DA3429 /* HJEmoticonBottom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonBottom.m; sourceTree = "<group>"; };
+		44F1455E1CF9BA1700DA3429 /* HJEmoticonListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonListView.h; sourceTree = "<group>"; };
+		44F1455F1CF9BA1700DA3429 /* HJEmoticonListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonListView.m; sourceTree = "<group>"; };
+		44F145611CF9CA4100DA3429 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		44F145631CF9CCBE00DA3429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44F145651CF9CCC600DA3429 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		44F145691CF9CD8A00DA3429 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		44F1456B1CF9DBF400DA3429 /* HJRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJRemoveButton.h; sourceTree = "<group>"; };
+		44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJRemoveButton.m; sourceTree = "<group>"; };
 		44F2D8491CEF4F220004A033 /* HJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPhoto.h; sourceTree = "<group>"; };
 		44F2D84A1CEF4F220004A033 /* HJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJPhoto.m; sourceTree = "<group>"; };
 		44F6D1A51CEE7CE600EF1617 /* HJStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusFrame.h; sourceTree = "<group>"; };
@@ -455,6 +482,8 @@
 		44CDBE151CF33E5A00FC2F11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				443913F81CFAAB9400D66F0A /* HJEmoticon.h */,
+				443913F91CFAAB9400D66F0A /* HJEmoticon.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -464,6 +493,16 @@
 			children = (
 				44377EAF1CF4888E00E89401 /* HJComposeTool.h */,
 				44377EB01CF4888E00E89401 /* HJComposeTool.m */,
+				44F145581CF9B88200DA3429 /* HJEmoticonKeyboard.h */,
+				44F145591CF9B88200DA3429 /* HJEmoticonKeyboard.m */,
+				44F1455B1CF9B97D00DA3429 /* HJEmoticonBottom.h */,
+				44F1455C1CF9B97D00DA3429 /* HJEmoticonBottom.m */,
+				44F1455E1CF9BA1700DA3429 /* HJEmoticonListView.h */,
+				44F1455F1CF9BA1700DA3429 /* HJEmoticonListView.m */,
+				443914011CFAFE6700D66F0A /* HJEmoticonCell.h */,
+				443914021CFAFE6700D66F0A /* HJEmoticonCell.m */,
+				44F1456B1CF9DBF400DA3429 /* HJRemoveButton.h */,
+				44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,7 +562,7 @@
 				CC7A2ED71CD328A20005A5F7 /* Info.plist */,
 				44233A351CD3982300520A10 /* Assets.xcassets */,
 				CC7A2EC61CD328A20005A5F7 /* Supporting Files */,
-				4454B4991CE607D60007A222 /* InfoPlist.strings */,
+				44F145641CF9CCBE00DA3429 /* InfoPlist.strings */,
 			);
 			path = MyWeiBo;
 			sourceTree = "<group>";
@@ -531,8 +570,10 @@
 		CC7A2EC61CD328A20005A5F7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				443913F61CFA96AD00D66F0A /* EmotionIcons */,
 				CC7A2EC71CD328A20005A5F7 /* main.m */,
 				CC7A2F0A1CD331B80005A5F7 /* HJPrefix.pch */,
+				44F1456A1CF9CD8A00DA3429 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -798,6 +839,8 @@
 		CCAA28DC1CD361B8006CA741 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				443913FE1CFAFC3100D66F0A /* NSString+Emoji.h */,
+				443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -955,6 +998,7 @@
 				TargetAttributes = {
 					CC7A2EC21CD328A20005A5F7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3Y92XXLNT8;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -978,6 +1022,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = CC7A2EBA1CD328A20005A5F7;
 			productRefGroup = CC7A2EC41CD328A20005A5F7 /* Products */;
@@ -998,9 +1043,11 @@
 			files = (
 				CCAA28F41CD3620C006CA741 /* region.db in Resources */,
 				44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */,
-				4454B49A1CE607D60007A222 /* InfoPlist.strings in Resources */,
+				44F145621CF9CCBE00DA3429 /* InfoPlist.strings in Resources */,
 				443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */,
 				44233A361CD3982300520A10 /* Assets.xcassets in Resources */,
+				44F145681CF9CD8A00DA3429 /* Localizable.strings in Resources */,
+				443913F71CFA96AD00D66F0A /* EmotionIcons in Resources */,
 				CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */,
 				443B52021CE9FCC60067AAEF /* MBProgressHUD.bundle in Resources */,
 			);
@@ -1078,6 +1125,7 @@
 				CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */,
 				44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */,
 				445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */,
+				443913FA1CFAAB9400D66F0A /* HJEmoticon.m in Sources */,
 				444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */,
 				44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */,
 				443B51F11CE9F9450067AAEF /* HJAccount.m in Sources */,
@@ -1085,8 +1133,10 @@
 				44341FEA1CEC8E57009B6C9A /* HJSinaUser.m in Sources */,
 				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
 				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
+				443914031CFAFE6700D66F0A /* HJEmoticonCell.m in Sources */,
 				443B03201CE6C78C005EBE83 /* HJOAuthViewController.m in Sources */,
 				CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */,
+				44F1455A1CF9B88200DA3429 /* HJEmoticonKeyboard.m in Sources */,
 				443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */,
 				CC7A2F4A1CD33BB00005A5F7 /* HJMyViewController.m in Sources */,
 				44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */,
@@ -1102,17 +1152,21 @@
 				CC7A2F411CD33AA70005A5F7 /* HJDiscoverViewController.m in Sources */,
 				444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */,
 				44CDBE1F1CF3554100FC2F11 /* HJTextView.m in Sources */,
+				44F1455D1CF9B97D00DA3429 /* HJEmoticonBottom.m in Sources */,
 				44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */,
 				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
 				443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */,
 				44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */,
 				443B52091CEA084A0067AAEF /* UIWindow+HJExtension.m in Sources */,
 				4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */,
+				44F1456D1CF9DBF400DA3429 /* HJRemoveButton.m in Sources */,
 				44341FED1CEC903F009B6C9A /* HJSinaStatus.m in Sources */,
 				44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */,
 				CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */,
+				44F145601CF9BA1700DA3429 /* HJEmoticonListView.m in Sources */,
 				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,
 				CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */,
+				443914001CFAFC3100D66F0A /* NSString+Emoji.m in Sources */,
 				44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */,
 				CCAA28ED1CD361B8006CA741 /* NSTimer+Block.m in Sources */,
 				CCAA28F51CD3620C006CA741 /* RegionSearch.m in Sources */,
@@ -1151,10 +1205,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		44F145641CF9CCBE00DA3429 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44F145631CF9CCBE00DA3429 /* en */,
+				44F145651CF9CCC600DA3429 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		44F1456A1CF9CD8A00DA3429 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44F145691CF9CD8A00DA3429 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CC7A2ED51CD328A20005A5F7 /* Base */,
+				44F145611CF9CA4100DA3429 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1252,6 +1324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWeiBo/HJPrefix.pch";
 				INFOPLIST_FILE = MyWeiBo/Info.plist;
@@ -1273,6 +1346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MyWeiBo/HJPrefix.pch";
 				INFOPLIST_FILE = MyWeiBo/Info.plist;

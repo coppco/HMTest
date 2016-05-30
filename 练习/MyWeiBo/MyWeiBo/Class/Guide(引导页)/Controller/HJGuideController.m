@@ -67,6 +67,14 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     //跳转
     getAppWindow().rootViewController = [[HJTabBarController alloc] init];
+    if (ISIOS_8_0) {
+        //注册通知
+        UIUserNotificationSettings* settings=[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    } else {
+        UIRemoteNotificationType type = UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound;
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:type];
+    }
 }
 - (void)getImages {
     self.images = [NSMutableArray array];

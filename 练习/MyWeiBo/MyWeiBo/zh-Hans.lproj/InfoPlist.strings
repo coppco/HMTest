@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  MyWeiBo
+
+  Created by M-coppco on 16/5/13.
+  Copyright © 2016年 XHJ. All rights reserved.
+*/
+
+
+/*应用名字*/
+CFBundleDisplayName = "Coppco";

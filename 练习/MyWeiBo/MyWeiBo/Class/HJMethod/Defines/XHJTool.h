@@ -16,6 +16,9 @@
 #import "NSDictionary+ZXPUnicode.h"
 #import "NSObject+ZXPUnicode.h"
 
+#import "NSString+Emoji.h"  //Emoji
+
+
 #import "UIBarButtonItem+HJExtension.h"  //UIBarButtonItem分类
 #import "UIWindow+HJExtension.h"  //选择控制器
 

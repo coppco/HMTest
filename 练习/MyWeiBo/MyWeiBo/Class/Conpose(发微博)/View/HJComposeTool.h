@@ -30,6 +30,8 @@ typedef void(^EmoticonBlock)(HJComposeTool *tool, UIButton *button);
 @property (nonatomic, copy)CameraBlock cameraButtonHasClicked;
 /**@点击*/
 @property (nonatomic, copy)MentionBlock mentionButtonHasClicked;
-
+/**切换图片*/
+@property (nonatomic, assign)BOOL  switchImage;
 + (instancetype)toolbar;
+
 @end

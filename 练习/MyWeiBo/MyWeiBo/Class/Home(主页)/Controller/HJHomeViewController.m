@@ -91,7 +91,7 @@
     
     HJTitleButton *button = [[HJTitleButton alloc] init];
     [button addTarget:self action:@selector(click:) forControlEvents:(UIControlEventTouchUpInside)];
-    [button setTitle:@"首页" forState:(UIControlStateNormal)];
+    [button setTitle:NSLocalizedString(@"首页", nil) forState:(UIControlStateNormal)];
     button.titleLabel.font = [UIFont fontWithName:@"SnellRoundhand-Black" size:15];
     [button setTitleColor:[UIColor orangeColor] forState:(UIControlStateNormal)];
     [button setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:(UIControlStateNormal)];
@@ -212,7 +212,6 @@
     
     [HJHttpRequestTool requestWithType:(HJHttpRequestTypeGET) URLString:@"https://rm.api.weibo.com/2/remind/unread_count.json" params:params showHUD:NO progress:nil success:^(id response) {
         NSString *status = [response[@"status"] description];
-
         if ([status isEqualToString:@"0"]) { // 如果是0，得清空数字
             self.tabBarItem.badgeValue = nil; //设置tabbaritem的角标
             [UIApplication sharedApplication].applicationIconBadgeNumber = 0; //程序角标

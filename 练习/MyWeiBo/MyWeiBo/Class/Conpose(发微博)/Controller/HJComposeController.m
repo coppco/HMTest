@@ -13,11 +13,14 @@
 #import "HJComposeTool.h"  //工具条
 #import <AssetsLibrary/AssetsLibrary.h> //检测相册访问权限
 #import <AVFoundation/AVFoundation.h>//检测摄像头访问权限
+#import "HJEmoticonKeyboard.h"  //自定义键盘
 
 @interface HJComposeController ()<UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong)HJTextView  *textView;
 @property (nonatomic, strong)HJComposeTool  *toolbar;
 @property (nonatomic, strong)UIImage  *image;
+/**表情键盘*/
+@property (nonatomic, strong)HJEmoticonKeyboard  *emoticonKeyboard;
 @end
 
 @implementation HJComposeController
@@ -42,6 +45,12 @@
     } completion:^(BOOL finished) {
     }];
  
+}
+- (HJEmoticonKeyboard *)emoticonKeyboard {
+    if (!_emoticonKeyboard) {
+        _emoticonKeyboard  = [[HJEmoticonKeyboard alloc] init];
+    }
+    return _emoticonKeyboard;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,19 +83,36 @@
     self.toolbar.frame = CGRectMake(0, KMainScreenHeight - 44, KMainScreenWidth, 44);
     //工具条的block方法
     WeakSelf(weak);
+    //图片
     [self.toolbar setPictureButtonHasClicked:^(HJComposeTool *tool, UIButton *button) {
         [weak openUIImagePickerControllerWithType:(UIImagePickerControllerSourceTypePhotoLibrary)];
     }];
-    
+    //相机
     [self.toolbar setCameraButtonHasClicked:^ (HJComposeTool *tool, UIButton *button) {
         //查看权限能否使用
         [weak openUIImagePickerControllerWithType:(UIImagePickerControllerSourceTypeCamera)];
     }];
 
+    //表情键盘
+    [self.toolbar setEmoticonButtonHasClicked:^(HJComposeTool *tool, UIButton *button) {
+        tool.switchImage = !tool.switchImage;
+        if (weak.textView.inputView) {
+            weak.textView.inputView = nil;
+        } else {
+            //切换键盘
+            weak.emoticonKeyboard.size = CGSizeMake(weak.view.width, 216);
+            weak.textView.inputView = weak.emoticonKeyboard;
+        }
+        //解决键盘使用的时候,切换没效果,需要弹下去再弹出来
+        [weak.view endEditing:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weak.textView becomeFirstResponder];
+        });
+    }];
 }
 - (void)configNavigationBarButtonItem {
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss:)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发微博" style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss:)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"取消", nil) style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"发微博", nil) style:(UIBarButtonItemStylePlain) target:self action:@selector(dismiss:)];
     
     UILabel *titleL = [[UILabel alloc] init];
     titleL.size = CGSizeMake(150, 44);
@@ -94,17 +120,17 @@
     titleL.numberOfLines = 0;
     NSString *userName = [HJAccountTool getAccount].name;
     if (userName.length != 0) {
-        NSString *str = STR(@"发微博\n%@", userName);
+        NSString *str = STR(@"%@\n%@", NSLocalizedString(@"发微博", nil), userName);
         //可变的
         NSMutableAttributedString *title = [[NSMutableAttributedString alloc] initWithString:str];
         //后面的字体
-        [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(4, [HJAccountTool getAccount].name.length)];
-        [title addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(4, [HJAccountTool getAccount].name.length)];
+        [title addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:12] range:NSMakeRange(NSLocalizedString(@"发微博", nil).length, [HJAccountTool getAccount].name.length + 1)];
+        [title addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(NSLocalizedString(@"发微博", nil).length, [HJAccountTool getAccount].name.length + 1)];
         
         titleL.attributedText = title;
         self.navigationItem.titleView = titleL;
     } else {
-        self.navigationItem.title = @"发微博";  
+        self.navigationItem.title = NSLocalizedString(@"发微博", nil);
     }
 
 }

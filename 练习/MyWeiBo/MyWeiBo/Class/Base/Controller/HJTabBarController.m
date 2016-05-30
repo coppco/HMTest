@@ -23,10 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    [self addChildVC:[[HJHomeViewController alloc] init] title:@"首页" image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
-     [self addChildVC:[[HJMessageViewController alloc] init] title:@"消息" image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
-    [self addChildVC:[[HJDiscoverViewController alloc] init] title:@"发现" image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
-    [self addChildVC:[[HJMyViewController alloc] init] title:@"我的" image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
+    [self addChildVC:[[HJHomeViewController alloc] init] title:NSLocalizedString(@"首页", nil)  image:@"tabbar_home" selectedImage:@"tabbar_home_selected"];
+     [self addChildVC:[[HJMessageViewController alloc] init] title:NSLocalizedString(@"消息", nil)  image:@"tabbar_message_center" selectedImage:@"tabbar_message_center_selected"];
+    [self addChildVC:[[HJDiscoverViewController alloc] init] title:NSLocalizedString(@"发现", nil) image:@"tabbar_discover" selectedImage:@"tabbar_discover_selected"];
+    [self addChildVC:[[HJMyViewController alloc] init] title:NSLocalizedString(@"我的", nil) image:@"tabbar_profile" selectedImage:@"tabbar_profile_selected"];
     
     //利用KVC  使用自定义类
     HJTabBar *tabBar = [[HJTabBar alloc] init];

@@ -36,11 +36,21 @@ typedef enum {
         [self setupBtn:@"compose_trendbutton_background" hight:@"compose_trendbutton_background_highlighted" tag:(HJComposeButtonTypeTrend)];
         
         [self setupBtn:@"compose_emoticonbutton_background" hight:@"compose_emoticonbutton_background_highlighted" tag:(HJComposeButtonTypeEmoticon)];
-//        [self setupBtn:@"compose_keyboardbutton_background" hight:@"compose_keyboardbutton_background_highlighted"];
-        
     }
     return self;
 }
+- (void)setSwitchImage:(BOOL)switchImage {
+    _switchImage = switchImage;
+    UIButton *button = [self viewWithTag:HJComposeButtonTypeEmoticon];
+    if (switchImage) {
+        [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background_highlighted"] forState:(UIControlStateHighlighted)];
+        [button setImage:[UIImage imageNamed:@"compose_keyboardbutton_background"] forState:(UIControlStateNormal)];
+    } else {
+        [button setImage:[UIImage imageNamed:@"compose_emoticonbutton_background_highlighted"] forState:(UIControlStateHighlighted)];
+        [button setImage:[UIImage imageNamed:@"compose_emoticonbutton_background"] forState:(UIControlStateNormal)];
+    }
+}
+
 - (void)setupBtn:(NSString *)normal hight:(NSString *)highlighted tag:(HJComposeButtonType)type{
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button setImage:[UIImage imageNamed:normal] forState:(UIControlStateNormal)];

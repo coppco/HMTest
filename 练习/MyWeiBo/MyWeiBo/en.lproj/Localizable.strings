@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  MyWeiBo
+
+  Created by M-coppco on 16/5/28.
+  Copyright © 2016年 XHJ. All rights reserved.
+*/
+//   国际化or本地化
+
+"首页" = "Home";
+"消息" = "Message";
+"发现" = "Discover";
+"我的" = "Mine";
+"取消" = "Cancel";
+"发微博" = "Tweeting";
+"设置" = "Setting";
+"写私信" = "Private M";
+"请输入搜索内容" = "Please input what you want search";
+"最近" = "Recently";
+"浪小花" = "Sina";
+"默认" = "Default";
+"Emoji" = "Emoji";
+
+
+
