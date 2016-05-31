@@ -20,7 +20,6 @@
 		44377EB41CF4942B00E89401 /* HJComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB31CF4942B00E89401 /* HJComposeController.m */; };
 		443913F71CFA96AD00D66F0A /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 443913F61CFA96AD00D66F0A /* EmotionIcons */; };
 		443913FA1CFAAB9400D66F0A /* HJEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 443913F91CFAAB9400D66F0A /* HJEmoticon.m */; };
-		443914001CFAFC3100D66F0A /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = 443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */; };
 		443914031CFAFE6700D66F0A /* HJEmoticonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 443914021CFAFE6700D66F0A /* HJEmoticonCell.m */; };
 		443B03081CE6C24B005EBE83 /* libWeiboSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */; };
 		443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 443B03051CE6C24B005EBE83 /* WeiboSDK.bundle */; };
@@ -58,6 +57,7 @@
 		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
 		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
 		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
+		CC6D05861CFD23D9004279DA /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6D05851CFD23D9004279DA /* NSString+Emoji.m */; };
 		CC7A2EC81CD328A20005A5F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EC71CD328A20005A5F7 /* main.m */; };
 		CC7A2ED61CD328A20005A5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC7A2ED41CD328A20005A5F7 /* LaunchScreen.storyboard */; };
 		CC7A2EE11CD328A20005A5F7 /* MyWeiBoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7A2EE01CD328A20005A5F7 /* MyWeiBoTests.m */; };
@@ -122,8 +122,6 @@
 		443913F61CFA96AD00D66F0A /* EmotionIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = EmotionIcons; sourceTree = "<group>"; };
 		443913F81CFAAB9400D66F0A /* HJEmoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticon.h; sourceTree = "<group>"; };
 		443913F91CFAAB9400D66F0A /* HJEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticon.m; sourceTree = "<group>"; };
-		443913FE1CFAFC3100D66F0A /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Emoji.h"; path = "../../../../../../../../../../Volumes/五音六律/百度云下载/1黑马2期视频压缩版/黑马IOS就业班2014年8-12月2/day37/1022/代码/黑马微博2期43-发微博07-显示表情/黑马微博2期/Classes/Main(主要)/Category/NSString+Emoji.h"; sourceTree = "<group>"; };
-		443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Emoji.m"; path = "../../../../../../../../../../Volumes/五音六律/百度云下载/1黑马2期视频压缩版/黑马IOS就业班2014年8-12月2/day37/1022/代码/黑马微博2期43-发微博07-显示表情/黑马微博2期/Classes/Main(主要)/Category/NSString+Emoji.m"; sourceTree = "<group>"; };
 		443914011CFAFE6700D66F0A /* HJEmoticonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonCell.h; sourceTree = "<group>"; };
 		443914021CFAFE6700D66F0A /* HJEmoticonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonCell.m; sourceTree = "<group>"; };
 		443B02FB1CE6C24B005EBE83 /* libWeiboSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeiboSDK.a; sourceTree = "<group>"; };
@@ -199,6 +197,8 @@
 		79137DF3F01326EC74570CC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9102BEAE395CC40E57332B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CAFE3BE580459636279B50A9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		CC6D05841CFD23D9004279DA /* NSString+Emoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Emoji.h"; sourceTree = "<group>"; };
+		CC6D05851CFD23D9004279DA /* NSString+Emoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Emoji.m"; sourceTree = "<group>"; };
 		CC7A2EC31CD328A20005A5F7 /* MyWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC7A2EC71CD328A20005A5F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC7A2ED51CD328A20005A5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -540,6 +540,15 @@
 			path = HJTextView;
 			sourceTree = "<group>";
 		};
+		CC6D057D1CFD23A7004279DA /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				CC6D05841CFD23D9004279DA /* NSString+Emoji.h */,
+				CC6D05851CFD23D9004279DA /* NSString+Emoji.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 		CC7A2EBA1CD328A20005A5F7 = {
 			isa = PBXGroup;
 			children = (
@@ -804,11 +813,11 @@
 		CCAA28D01CD361B8006CA741 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				CC6D057D1CFD23A7004279DA /* NSString */,
 				44233A421CD3AAF600520A10 /* UIBarButtonItem */,
 				CCAA28D11CD361B8006CA741 /* NSArray */,
 				CCAA28D41CD361B8006CA741 /* NSDictionary */,
 				CCAA28D71CD361B8006CA741 /* NSObject */,
-				CCAA28DC1CD361B8006CA741 /* NSString */,
 				CCAA28DD1CD361B8006CA741 /* NSTimer */,
 				CCAA28E01CD361B8006CA741 /* UIView */,
 			);
@@ -842,15 +851,6 @@
 				CCAA28DB1CD361B8006CA741 /* NSObject+ZXPUnicode.m */,
 			);
 			path = NSObject;
-			sourceTree = "<group>";
-		};
-		CCAA28DC1CD361B8006CA741 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				443913FE1CFAFC3100D66F0A /* NSString+Emoji.h */,
-				443913FF1CFAFC3100D66F0A /* NSString+Emoji.m */,
-			);
-			path = NSString;
 			sourceTree = "<group>";
 		};
 		CCAA28DD1CD361B8006CA741 /* NSTimer */ = {
@@ -1006,7 +1006,6 @@
 				TargetAttributes = {
 					CC7A2EC21CD328A20005A5F7 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 3Y92XXLNT8;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1133,6 +1132,7 @@
 			files = (
 				CCAA28FC1CD363AE006CA741 /* HJFMDBHandle.m in Sources */,
 				44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */,
+				CC6D05861CFD23D9004279DA /* NSString+Emoji.m in Sources */,
 				445B42E71CE0BA21001F552F /* HJGuideController.m in Sources */,
 				443913FA1CFAAB9400D66F0A /* HJEmoticon.m in Sources */,
 				444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */,
@@ -1176,7 +1176,6 @@
 				44F145601CF9BA1700DA3429 /* HJEmoticonListView.m in Sources */,
 				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,
 				CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */,
-				443914001CFAFC3100D66F0A /* NSString+Emoji.m in Sources */,
 				44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */,
 				CCAA28ED1CD361B8006CA741 /* NSTimer+Block.m in Sources */,
 				CCAA28F51CD3620C006CA741 /* RegionSearch.m in Sources */,
@@ -1344,7 +1343,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyWeiBo/Class/Third/libWeiboSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.MyWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1366,7 +1365,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/MyWeiBo/Class/Third/libWeiboSDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.coppco.MyWeiBo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.coppco.MyWeiBo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

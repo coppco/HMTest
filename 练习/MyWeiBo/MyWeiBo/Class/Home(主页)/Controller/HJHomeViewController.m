@@ -242,7 +242,7 @@
     cell.statusFrame = statusF;
     return cell;
 }
-//上啦刷新
+//上拉刷新
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //    scrollView == self.tableView == self.view
