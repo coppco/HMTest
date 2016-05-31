@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HJEmoticonPopView">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="92"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emoticon_keyboard_magnifier" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-3u-19v">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="92"/>
+                    <animations/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8q-zS-HIx">
+                    <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="s8q-zS-HIx" secondAttribute="height" multiplier="1:1" id="Lh5-ti-wbY"/>
+                    </constraints>
+                </button>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="5rw-3u-19v" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7tD-gR-h8f"/>
+                <constraint firstAttribute="trailing" secondItem="s8q-zS-HIx" secondAttribute="trailing" id="NJq-mq-hBy"/>
+                <constraint firstAttribute="bottom" secondItem="5rw-3u-19v" secondAttribute="bottom" id="Q5a-qa-zvA"/>
+                <constraint firstItem="s8q-zS-HIx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gZP-Gh-sbh"/>
+                <constraint firstItem="5rw-3u-19v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p1y-tu-o0Z"/>
+                <constraint firstAttribute="trailing" secondItem="5rw-3u-19v" secondAttribute="trailing" id="qSo-jC-eyU"/>
+                <constraint firstItem="s8q-zS-HIx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xDC-D5-Zms"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="emoticonButton" destination="s8q-zS-HIx" id="nCF-MR-iVG"/>
+            </connections>
+            <point key="canvasLocation" x="482" y="308.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="emoticon_keyboard_magnifier" width="64" height="91"/>
+    </resources>
+</document>

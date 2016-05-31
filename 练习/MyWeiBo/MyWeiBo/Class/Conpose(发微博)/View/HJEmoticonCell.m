@@ -24,7 +24,7 @@
         [self.contentView addSubview:self.imageV];
         self.emoji = [[UILabel alloc] init];
         self.emoji.textAlignment = 1;
-        self.emoji.font = [UIFont systemFontOfSize:20];
+        self.emoji.font = [UIFont systemFontOfSize:25];
         [self.contentView addSubview:self.emoji];
     }
     return self;

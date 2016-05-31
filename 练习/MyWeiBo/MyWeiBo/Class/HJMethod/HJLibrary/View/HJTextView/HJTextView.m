@@ -33,6 +33,9 @@
     if ([self hasText]) {
         return;
     }
+    if (self.attributedText.length != 0) {
+        return;
+    }
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     dic[NSFontAttributeName] = self.font;
     dic[NSForegroundColorAttributeName] = self.placeholderColor ? self.placeholderColor : [UIColor grayColor];
@@ -60,6 +63,10 @@
 //字体
 - (void)setFont:(UIFont *)font {
     [super setFont:font];
+    [self setNeedsDisplay];
+}
+- (void)setAttributedText:(NSAttributedString *)attributedText {
+    [super setAttributedText:attributedText];
     [self setNeedsDisplay];
 }
 - (void)dealloc {

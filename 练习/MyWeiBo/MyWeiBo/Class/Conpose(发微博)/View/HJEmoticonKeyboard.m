@@ -19,6 +19,8 @@
 /**iCarousel内容*/
 @property (nonatomic, strong)iCarousel  *listView;
 
+/**最近表情数组*/
+@property (nonatomic, strong)NSMutableArray  *recentArray;
 /**默认表情数组*/
 @property (nonatomic, strong)NSArray  *defaultArray;
 /**Emoji表情数组*/
@@ -80,9 +82,19 @@
     HJEmoticonListView *listView = (HJEmoticonListView *)view;
     if (!listView) {
         listView = [[HJEmoticonListView alloc] initWithFrame:carousel.bounds];
+        [listView setEmoticonHasClick:^(HJEmoticon *emoticon) {
+            if (![self.recentArray containsObject:emoticon]) {
+                [self.recentArray addObject:emoticon];
+                [self.listView reloadItemAtIndex:0 animated:NO];
+            }
+            //往textView添加文本的block
+            if (self.buttonClick) {
+                self.buttonClick(emoticon);
+            }
+        }];
     }
     if (0 == index) {
-        listView.emoticons = nil;
+        listView.emoticons = self.recentArray;
     }else if (index == 1) {
         listView.emoticons = self.defaultArray;
     } else if (2 == index) {
@@ -114,5 +126,10 @@
     }
     return _lxhArray;
 }
-
+- (NSMutableArray *)recentArray {
+    if (!_recentArray) {
+        _recentArray = [NSMutableArray array];
+    }
+    return _recentArray;
+}
 @end

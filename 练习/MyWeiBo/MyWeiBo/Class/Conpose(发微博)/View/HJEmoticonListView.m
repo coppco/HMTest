@@ -9,7 +9,9 @@
 #import "HJEmoticonListView.h"
 #import "HJEmoticon.h"
 #import "HJEmoticonCell.h"
+#import "HJEmoticonPopView.h"
 #define kEmoticonIndentify @"HJEmoticonCell"
+
 @interface HJEmoticonListView ()<UICollectionViewDataSource, UICollectionViewDelegate
 >
 /**page*/
@@ -20,11 +22,17 @@
 /**layout*/
 @property (nonatomic, strong)UICollectionViewFlowLayout  *layout;
 
-
+/**表情弹出视图*/
+@property (nonatomic, strong)HJEmoticonPopView  *popView;
 @end
 
 @implementation HJEmoticonListView
-
+- (HJEmoticonPopView *)popView {
+    if (!_popView) {
+        _popView = [HJEmoticonPopView popView];
+    }
+    return _popView;
+}
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -85,9 +93,9 @@
     self.pageControl.frame = CGRectMake(0, self.height - 30, self.width, 30);
     self.collectionView.frame = CGRectMake(0, 0, self.width, self.height - 30);
     self.layout.itemSize = CGSizeMake(self.width / 10, self.width / 10);
-    self.layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-    self.layout.minimumInteritemSpacing = self.width / 10 * 3 / 8;
-    self.layout.minimumLineSpacing = self.width / 10 * 3 / 8;
+    self.layout.sectionInset = UIEdgeInsetsMake(10, self.width / 10 * 3 / 14, 10, self.width / 10 * 3 / 14);
+    self.layout.minimumInteritemSpacing = self.width / 10 * 3 / 7;
+    self.layout.minimumLineSpacing = self.width / 10 * 3 / 7;
 }
 - (void)setEmoticons:(NSArray *)emoticons {
     _emoticons = emoticons;
@@ -97,5 +105,25 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int page = (self.collectionView.contentOffset.x + 0.5)/ self.collectionView.width;
     self.pageControl.currentPage = page;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.item >= self.emoticons.count) {
+        return;
+    }
+    HJEmoticon *emoticon = self.emoticons[indexPath.item];
+    //显示大图
+    [[[UIApplication sharedApplication].windows lastObject] addSubview:self.popView];
+    HJEmoticonCell *cell = (HJEmoticonCell *)[collectionView cellForItemAtIndexPath:indexPath];
+
+    //坐标转换
+    CGRect frame = [cell convertRect:cell.bounds toView:nil];
+    
+    self.popView.y = CGRectGetMidY(frame) - self.popView.height;
+    self.popView.centerX = CGRectGetMidX(frame);
+    [self.popView configEmoticon:emoticon];
+    //block
+    if (self.emoticonHasClick) {
+        self.emoticonHasClick(emoticon);
+    }
 }
 @end

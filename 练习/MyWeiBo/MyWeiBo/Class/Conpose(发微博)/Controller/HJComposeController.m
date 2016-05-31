@@ -14,6 +14,7 @@
 #import <AssetsLibrary/AssetsLibrary.h> //检测相册访问权限
 #import <AVFoundation/AVFoundation.h>//检测摄像头访问权限
 #import "HJEmoticonKeyboard.h"  //自定义键盘
+#import "HJEmoticon.h"
 
 @interface HJComposeController ()<UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong)HJTextView  *textView;
@@ -48,7 +49,33 @@
 }
 - (HJEmoticonKeyboard *)emoticonKeyboard {
     if (!_emoticonKeyboard) {
+        WeakSelf(weak);
         _emoticonKeyboard  = [[HJEmoticonKeyboard alloc] init];
+        [_emoticonKeyboard setButtonClick:^(HJEmoticon *emoticon) {
+            if (emoticon.chs.length != 0) {
+//                [weak.textView insertText:emoticon.chs];
+                UIImage *image = [UIImage imageNamed:emoticon.png];
+                NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
+                textAttachment.image = image;
+                CGFloat attachHW = weak.textView.font.lineHeight;
+                //这里bounds可以设置 x y 的
+                textAttachment.bounds = CGRectMake(0, -4, attachHW, attachHW);
+                
+                NSAttributedString *imageString = [NSMutableAttributedString attributedStringWithAttachment:textAttachment];
+                //拼接之前的文字
+                NSMutableAttributedString *string = [[NSMutableAttributedString alloc] initWithAttributedString:weak.textView.attributedText];
+//                [string appendAttributedString:imageString];
+                //光标位置
+                NSRange range = weak.textView.selectedRange;
+                [string insertAttributedString:imageString atIndex:range.location];
+                [string addAttribute:NSFontAttributeName value:weak.textView.font range:NSMakeRange(0, string.length)];
+                weak.textView.attributedText = string;
+                //光标移动到插入的表情后面
+                weak.textView.selectedRange = NSMakeRange(range.location + 1, range.length);
+            } else if (emoticon.code.length != 0) {
+                [weak.textView insertText:[emoticon.code emoji]];
+            }
+        }];
     }
     return _emoticonKeyboard;
 }

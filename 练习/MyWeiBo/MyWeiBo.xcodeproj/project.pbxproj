@@ -41,6 +41,8 @@
 		443D28AE1CD6309100AF3683 /* HJTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443D28AD1CD6309100AF3683 /* HJTabBar.m */; };
 		443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79E71CD4E97400F07C68 /* HJSearchBar.m */; };
 		443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 443E79EB1CD4F53300F07C68 /* KxMenu.m */; };
+		444B390D1CFC724E00DE4B5A /* HJEmoticonPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444B390C1CFC724E00DE4B5A /* HJEmoticonPopView.m */; };
+		444B390F1CFC725C00DE4B5A /* HJEmoticonPopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 444B390E1CFC725C00DE4B5A /* HJEmoticonPopView.xib */; };
 		444FBBD91CF006BF00FD718B /* HJStatusToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */; };
 		444FBBDC1CF067B400FD718B /* HJStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 444FBBDB1CF067B400FD718B /* HJStatusPhotoView.m */; };
 		44565CB11CEB568D0068A22A /* HJTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44565CB01CEB568D0068A22A /* HJTitleButton.m */; };
@@ -162,6 +164,9 @@
 		443E79E71CD4E97400F07C68 /* HJSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJSearchBar.m; sourceTree = "<group>"; };
 		443E79EA1CD4F53300F07C68 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		443E79EB1CD4F53300F07C68 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		444B390B1CFC724E00DE4B5A /* HJEmoticonPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonPopView.h; sourceTree = "<group>"; };
+		444B390C1CFC724E00DE4B5A /* HJEmoticonPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonPopView.m; sourceTree = "<group>"; };
+		444B390E1CFC725C00DE4B5A /* HJEmoticonPopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJEmoticonPopView.xib; sourceTree = "<group>"; };
 		444FBBD71CF006BF00FD718B /* HJStatusToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusToolBar.h; sourceTree = "<group>"; };
 		444FBBD81CF006BF00FD718B /* HJStatusToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusToolBar.m; sourceTree = "<group>"; };
 		444FBBDA1CF067B400FD718B /* HJStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusPhotoView.h; sourceTree = "<group>"; };
@@ -503,6 +508,9 @@
 				443914021CFAFE6700D66F0A /* HJEmoticonCell.m */,
 				44F1456B1CF9DBF400DA3429 /* HJRemoveButton.h */,
 				44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */,
+				444B390B1CFC724E00DE4B5A /* HJEmoticonPopView.h */,
+				444B390C1CFC724E00DE4B5A /* HJEmoticonPopView.m */,
+				444B390E1CFC725C00DE4B5A /* HJEmoticonPopView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1045,6 +1053,7 @@
 				44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */,
 				44F145621CF9CCBE00DA3429 /* InfoPlist.strings in Resources */,
 				443B03091CE6C24B005EBE83 /* WeiboSDK.bundle in Resources */,
+				444B390F1CFC725C00DE4B5A /* HJEmoticonPopView.xib in Resources */,
 				44233A361CD3982300520A10 /* Assets.xcassets in Resources */,
 				44F145681CF9CD8A00DA3429 /* Localizable.strings in Resources */,
 				443913F71CFA96AD00D66F0A /* EmotionIcons in Resources */,
@@ -1133,6 +1142,7 @@
 				44341FEA1CEC8E57009B6C9A /* HJSinaUser.m in Sources */,
 				44233A481CD3B61F00520A10 /* HJTabBarController.m in Sources */,
 				CCAA28EB1CD361B8006CA741 /* NSObject+HJProperties.m in Sources */,
+				444B390D1CFC724E00DE4B5A /* HJEmoticonPopView.m in Sources */,
 				443914031CFAFE6700D66F0A /* HJEmoticonCell.m in Sources */,
 				443B03201CE6C78C005EBE83 /* HJOAuthViewController.m in Sources */,
 				CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */,
