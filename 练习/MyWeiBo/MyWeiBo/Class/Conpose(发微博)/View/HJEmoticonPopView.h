@@ -25,4 +25,5 @@
  *  @param emoticon 表情model
  */
 - (void)configEmoticon:(HJEmoticon *)emoticon;
+- (void)longPressEmoticon:(HJEmoticon *)emoticon;
 @end

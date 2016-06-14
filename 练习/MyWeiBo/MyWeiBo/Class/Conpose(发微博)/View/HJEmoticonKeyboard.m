@@ -10,7 +10,7 @@
 #import "HJEmoticonBottom.h"
 #import "HJEmoticonListView.h"
 #import "HJEmoticon.h"
-
+#import "HJEmoticonTool.h"
 
 @interface HJEmoticonKeyboard ()<iCarouselDataSource, iCarouselDelegate>
 /**下方工具条*/
@@ -84,9 +84,10 @@
         listView = [[HJEmoticonListView alloc] initWithFrame:carousel.bounds];
         [listView setEmoticonHasClick:^(HJEmoticon *emoticon) {
             if (![self.recentArray containsObject:emoticon]) {
-                [self.recentArray addObject:emoticon];
+                [self.recentArray insertObject:emoticon atIndex:0];
+                [HJEmoticonTool addEmoticon:emoticon];
                 [self.listView reloadItemAtIndex:0 animated:NO];
-            }
+            } 
             //往textView添加文本的block
             if (self.buttonClick) {
                 self.buttonClick(emoticon);
@@ -128,7 +129,12 @@
 }
 - (NSMutableArray *)recentArray {
     if (!_recentArray) {
-        _recentArray = [NSMutableArray array];
+        NSArray *array = [HJEmoticonTool recentEmoticons];
+        if (array.count != 0) {
+            _recentArray = [HJEmoticon arrayOfModelsFromDictionaries:array];
+        } else {
+            _recentArray = [NSMutableArray array];
+        }
     }
     return _recentArray;
 }

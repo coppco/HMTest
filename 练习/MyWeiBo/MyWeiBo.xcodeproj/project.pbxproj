@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4414D5D21CFE552F003BCE7C /* HJTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4414D5D11CFE552F003BCE7C /* HJTextAttachment.m */; };
 		44233A361CD3982300520A10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44233A351CD3982300520A10 /* Assets.xcassets */; };
 		44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A3D1CD3994D00520A10 /* HJNavigationController.m */; };
 		44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 44233A441CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m */; };
@@ -16,6 +17,7 @@
 		44341FF01CECAF55009B6C9A /* HJLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 44341FEF1CECAF55009B6C9A /* HJLoadMoreFooter.m */; };
 		44341FF41CECAFA5009B6C9A /* HJLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */; };
 		4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4434CB591CEDFF9B008B2949 /* HJStatusCell.m */; };
+		443643291CFF11B800EFDCB7 /* HJEmoticonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 443643281CFF11B800EFDCB7 /* HJEmoticonTool.m */; };
 		44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB01CF4888E00E89401 /* HJComposeTool.m */; };
 		44377EB41CF4942B00E89401 /* HJComposeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44377EB31CF4942B00E89401 /* HJComposeController.m */; };
 		443913F71CFA96AD00D66F0A /* EmotionIcons in Resources */ = {isa = PBXBuildFile; fileRef = 443913F61CFA96AD00D66F0A /* EmotionIcons */; };
@@ -55,6 +57,8 @@
 		44F145681CF9CD8A00DA3429 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44F1456A1CF9CD8A00DA3429 /* Localizable.strings */; };
 		44F1456D1CF9DBF400DA3429 /* HJRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */; };
 		44F2D84B1CEF4F220004A033 /* HJPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F2D84A1CEF4F220004A033 /* HJPhoto.m */; };
+		44F4661A1D0780DB00BE808B /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F466191D0780DB00BE808B /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44F4661C1D0780F700BE808B /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F4661B1D0780F700BE808B /* libicucore.tbd */; };
 		44F6D1A71CEE7CE600EF1617 /* HJStatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */; };
 		790ED7AA5A4F4E88F6D9B320 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79137DF3F01326EC74570CC9 /* libPods.a */; };
 		CC6D05861CFD23D9004279DA /* NSString+Emoji.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6D05851CFD23D9004279DA /* NSString+Emoji.m */; };
@@ -99,6 +103,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4414D5D01CFE552F003BCE7C /* HJTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJTextAttachment.h; sourceTree = "<group>"; };
+		4414D5D11CFE552F003BCE7C /* HJTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJTextAttachment.m; sourceTree = "<group>"; };
 		44233A351CD3982300520A10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44233A3C1CD3994D00520A10 /* HJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJNavigationController.h; sourceTree = "<group>"; };
 		44233A3D1CD3994D00520A10 /* HJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJNavigationController.m; sourceTree = "<group>"; };
@@ -115,6 +121,8 @@
 		44341FF31CECAFA5009B6C9A /* HJLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HJLoadMoreFooter.xib; sourceTree = "<group>"; };
 		4434CB581CEDFF9B008B2949 /* HJStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusCell.h; sourceTree = "<group>"; };
 		4434CB591CEDFF9B008B2949 /* HJStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusCell.m; sourceTree = "<group>"; };
+		443643271CFF11B800EFDCB7 /* HJEmoticonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJEmoticonTool.h; sourceTree = "<group>"; };
+		443643281CFF11B800EFDCB7 /* HJEmoticonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJEmoticonTool.m; sourceTree = "<group>"; };
 		44377EAF1CF4888E00E89401 /* HJComposeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJComposeTool.h; sourceTree = "<group>"; };
 		44377EB01CF4888E00E89401 /* HJComposeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJComposeTool.m; sourceTree = "<group>"; };
 		44377EB21CF4942B00E89401 /* HJComposeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJComposeController.h; sourceTree = "<group>"; };
@@ -192,6 +200,9 @@
 		44F1456C1CF9DBF400DA3429 /* HJRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJRemoveButton.m; sourceTree = "<group>"; };
 		44F2D8491CEF4F220004A033 /* HJPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJPhoto.h; sourceTree = "<group>"; };
 		44F2D84A1CEF4F220004A033 /* HJPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJPhoto.m; sourceTree = "<group>"; };
+		44F466181D0780DB00BE808B /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		44F466191D0780DB00BE808B /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		44F4661B1D0780F700BE808B /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		44F6D1A51CEE7CE600EF1617 /* HJStatusFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJStatusFrame.h; sourceTree = "<group>"; };
 		44F6D1A61CEE7CE600EF1617 /* HJStatusFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJStatusFrame.m; sourceTree = "<group>"; };
 		79137DF3F01326EC74570CC9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +262,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F4661C1D0780F700BE808B /* libicucore.tbd in Frameworks */,
 				443B03191CE6C3A1005EBE83 /* libsqlite3.tbd in Frameworks */,
 				CCAA28FF1CD363CE006CA741 /* libz.tbd in Frameworks */,
 				443B03171CE6C393005EBE83 /* CoreGraphics.framework in Frameworks */,
@@ -331,6 +343,7 @@
 		44233A3B1CD398CA00520A10 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				44F466171D0780DB00BE808B /* RegexKitLite */,
 				443B51FB1CE9FCC60067AAEF /* MBProgressHUD */,
 				443B02FA1CE6C24B005EBE83 /* libWeiboSDK */,
 				443E79E91CD4F53300F07C68 /* kxmenu */,
@@ -489,6 +502,10 @@
 			children = (
 				443913F81CFAAB9400D66F0A /* HJEmoticon.h */,
 				443913F91CFAAB9400D66F0A /* HJEmoticon.m */,
+				4414D5D01CFE552F003BCE7C /* HJTextAttachment.h */,
+				4414D5D11CFE552F003BCE7C /* HJTextAttachment.m */,
+				443643271CFF11B800EFDCB7 /* HJEmoticonTool.h */,
+				443643281CFF11B800EFDCB7 /* HJEmoticonTool.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -538,6 +555,15 @@
 				44CDBE1E1CF3554100FC2F11 /* HJTextView.m */,
 			);
 			path = HJTextView;
+			sourceTree = "<group>";
+		};
+		44F466171D0780DB00BE808B /* RegexKitLite */ = {
+			isa = PBXGroup;
+			children = (
+				44F466181D0780DB00BE808B /* RegexKitLite.h */,
+				44F466191D0780DB00BE808B /* RegexKitLite.m */,
+			);
+			path = RegexKitLite;
 			sourceTree = "<group>";
 		};
 		CC6D057D1CFD23A7004279DA /* NSString */ = {
@@ -921,6 +947,7 @@
 		FB27C25859E1BFD3EF274449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44F4661B1D0780F700BE808B /* libicucore.tbd */,
 				443B03181CE6C3A1005EBE83 /* libsqlite3.tbd */,
 				443B03161CE6C393005EBE83 /* CoreGraphics.framework */,
 				443B03141CE6C389005EBE83 /* CoreText.framework */,
@@ -1148,6 +1175,7 @@
 				CCAA28FD1CD363AE006CA741 /* HJHttpRequestTool.m in Sources */,
 				44F1455A1CF9B88200DA3429 /* HJEmoticonKeyboard.m in Sources */,
 				443E79EC1CD4F53300F07C68 /* KxMenu.m in Sources */,
+				44F4661A1D0780DB00BE808B /* RegexKitLite.m in Sources */,
 				CC7A2F4A1CD33BB00005A5F7 /* HJMyViewController.m in Sources */,
 				44377EB11CF4888E00E89401 /* HJComposeTool.m in Sources */,
 				443E79E81CD4E97400F07C68 /* HJSearchBar.m in Sources */,
@@ -1167,12 +1195,14 @@
 				CCAA28E91CD361B8006CA741 /* NSArray+ ZXPUnicode.m in Sources */,
 				443B52011CE9FCC60067AAEF /* MBProgressHUD+MJ.m in Sources */,
 				44233A3E1CD3994D00520A10 /* HJNavigationController.m in Sources */,
+				4414D5D21CFE552F003BCE7C /* HJTextAttachment.m in Sources */,
 				443B52091CEA084A0067AAEF /* UIWindow+HJExtension.m in Sources */,
 				4434CB5A1CEDFF9B008B2949 /* HJStatusCell.m in Sources */,
 				44F1456D1CF9DBF400DA3429 /* HJRemoveButton.m in Sources */,
 				44341FED1CEC903F009B6C9A /* HJSinaStatus.m in Sources */,
 				44233A451CD3AB6E00520A10 /* UIBarButtonItem+HJExtension.m in Sources */,
 				CC7A2F441CD33B910005A5F7 /* HJHomeViewController.m in Sources */,
+				443643291CFF11B800EFDCB7 /* HJEmoticonTool.m in Sources */,
 				44F145601CF9BA1700DA3429 /* HJEmoticonListView.m in Sources */,
 				CC7A2F471CD33BA10005A5F7 /* HJMessageViewController.m in Sources */,
 				CCAA28EE1CD361B8006CA741 /* UIView+HJExtension.m in Sources */,

@@ -20,7 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    NSLog(@"%@", NSHomeDirectory());
         [self registerThird];// 注册三分
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

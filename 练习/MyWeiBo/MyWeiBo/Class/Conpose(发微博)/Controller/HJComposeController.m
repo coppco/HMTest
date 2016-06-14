@@ -15,7 +15,7 @@
 #import <AVFoundation/AVFoundation.h>//检测摄像头访问权限
 #import "HJEmoticonKeyboard.h"  //自定义键盘
 #import "HJEmoticon.h"
-
+#import "HJTextAttachment.h"
 @interface HJComposeController ()<UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (nonatomic, strong)HJTextView  *textView;
 @property (nonatomic, strong)HJComposeTool  *toolbar;
@@ -54,9 +54,10 @@
         [_emoticonKeyboard setButtonClick:^(HJEmoticon *emoticon) {
             if (emoticon.chs.length != 0) {
 //                [weak.textView insertText:emoticon.chs];
-                UIImage *image = [UIImage imageNamed:emoticon.png];
-                NSTextAttachment *textAttachment = [[NSTextAttachment alloc] init];
-                textAttachment.image = image;
+//                UIImage *image = [UIImage imageNamed:emoticon.png];
+                HJTextAttachment *textAttachment = [[HJTextAttachment alloc] init];
+                textAttachment.emoticon = emoticon;
+//                textAttachment.image = image;
                 CGFloat attachHW = weak.textView.font.lineHeight;
                 //这里bounds可以设置 x y 的
                 textAttachment.bounds = CGRectMake(0, -4, attachHW, attachHW);
@@ -67,8 +68,14 @@
 //                [string appendAttributedString:imageString];
                 //光标位置
                 NSRange range = weak.textView.selectedRange;
-                [string insertAttributedString:imageString atIndex:range.location];
+                //插入不会替换
+//                [string insertAttributedString:imageString atIndex:range.location];
+                
+                //替换
+                [string replaceCharactersInRange:range withAttributedString:imageString];
+                
                 [string addAttribute:NSFontAttributeName value:weak.textView.font range:NSMakeRange(0, string.length)];
+
                 weak.textView.attributedText = string;
                 //光标移动到插入的表情后面
                 weak.textView.selectedRange = NSMakeRange(range.location + 1, range.length);
@@ -101,7 +108,7 @@
 
     //函数响应式编程
     RAC(self.navigationItem.rightBarButtonItem, enabled) = [RACSignal combineLatest:@[self.textView.rac_textSignal] reduce:^id (NSString *text){
-        return @(text.length != 0);
+        return @(text.length != 0 || self.textView.attributedText.length != 0);
     }];
     
     //工具条
@@ -181,7 +188,7 @@
      status	true	string	要发布的微博文本内容，必须做URLencode，内容不超过140个汉字。
      pic  binary  二进制
      */
-    NSDictionary *params = @{@"access_token":[HJAccountTool getAccount].access_token, @"status":self.textView.text};
+    NSDictionary *params = @{@"access_token":[HJAccountTool getAccount].access_token, @"status":self.textView.fullText};
     if (!self.textView.image) {
         NSString *url1 = @"https://api.weibo.com/2/statuses/update.json";
         [HJHttpRequestTool requestWithType:(HJHttpRequestTypePOST) URLString:url1 params:params showHUD:NO progress:nil success:^(id response) {

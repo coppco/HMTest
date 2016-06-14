@@ -41,6 +41,12 @@
     
         self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
         self.collectionView.backgroundColor = [UIColor whiteColor];
+        
+        //长按手势
+        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+        longPress.minimumPressDuration = 0.5;
+        [self.collectionView addGestureRecognizer:longPress];
+        
         //注册单元格
         [self.collectionView registerClass:[HJEmoticonCell class] forCellWithReuseIdentifier:kEmoticonIndentify];
         self.collectionView.pagingEnabled = YES;
@@ -59,6 +65,49 @@
         [self.pageControl setValue:[UIImage imageNamed:@"compose_keyboard_dot_selected"] forKeyPath:@"currentPageImage"];
     }
     return self;
+}
+- (void)longPress:(UILongPressGestureRecognizer *)longPress {
+    CGPoint point = [longPress locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
+    
+    UIGestureRecognizerState state = longPress.state;
+    switch (state) {
+        case UIGestureRecognizerStateBegan:
+        case UIGestureRecognizerStateChanged:
+        {
+            if (indexPath) {
+                if (indexPath.item >= self.emoticons.count) {
+                    return;
+                }
+                //显示大图
+                [[[UIApplication sharedApplication].windows lastObject] addSubview:self.popView];
+                HJEmoticonCell *cell = (HJEmoticonCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+                HJEmoticon *emoticon = self.emoticons[indexPath.item];
+                //坐标转换
+                CGRect frame = [cell convertRect:cell.bounds toView:nil];
+                
+                
+                self.popView.y = CGRectGetMidY(frame) - self.popView.height;
+                self.popView.centerX = CGRectGetMidX(frame);
+                [self.popView longPressEmoticon:emoticon];
+            }
+        }
+            break;
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateEnded:
+        {
+            if (indexPath.item < self.emoticons.count && indexPath) {
+                HJEmoticon *emooticon = self.emoticons[indexPath.item];
+                if (self.emoticonHasClick) {
+                    self.emoticonHasClick (emooticon);
+                }
+            }
+            [self.popView removeFromSuperview];
+        }
+            break;
+        default:
+            break;
+    }
 }
 #pragma - mark UICollectViewDelegate
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

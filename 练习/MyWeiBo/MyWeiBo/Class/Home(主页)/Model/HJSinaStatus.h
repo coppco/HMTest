@@ -15,6 +15,10 @@
 @property (nonatomic, copy)NSString *idstr;
 /**微博内容*/
 @property (nonatomic, copy)NSString *text;
+
+/**微博内容*/
+@property (nonatomic, copy)NSAttributedString <Optional>*attributedText;
+
 /**用户信息*/
 @property (nonatomic, copy)HJSinaUser <Optional>*user;
 /**创建时间*/
@@ -30,6 +34,9 @@
 
 /**转发微博字段, 当该微博为转发微博的时候返回*/
 @property (nonatomic, strong)HJSinaStatus  <Optional>*retweeted_status;
+/**微博内容*/
+@property (nonatomic, copy)NSAttributedString <Optional>*retweeted_attributedText;
+
 
 /**toolBar里面数据*/
 @property (nonatomic, copy)NSString  <Optional>*attitudes_count; //表态

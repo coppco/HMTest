@@ -15,4 +15,6 @@
 @property (nonatomic, strong)UIColor *placeholderColor;
 
 @property (nonatomic, strong)UIImage  *image;
+
+- (NSString *)fullText;
 @end

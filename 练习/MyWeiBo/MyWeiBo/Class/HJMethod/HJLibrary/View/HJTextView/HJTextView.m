@@ -7,6 +7,8 @@
 //
 
 #import "HJTextView.h"
+#import "HJTextAttachment.h"
+#import "HJEmoticon.h"
 
 @interface HJTextView ()
 @property (nonatomic, strong)UIImageView  *imageV;
@@ -77,5 +79,24 @@
     _image = image;
     self.imageV.image = image;
     self.imageV.frame = CGRectMake(5, 100, 70, 79);
+}
+- (NSString *)fullText {
+    NSMutableString *string = [NSMutableString string];
+    [self.attributedText enumerateAttributesInRange:NSMakeRange(0, self.attributedText.length) options:(NSAttributedStringEnumerationLongestEffectiveRangeNotRequired) usingBlock:^(NSDictionary<NSString *,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+        //获取范围了的文字
+        NSAttributedString *str = [self.attributedText attributedSubstringFromRange:range];
+        
+        //判断
+        HJTextAttachment *att = attrs[@"NSAttachment"];
+
+        if (att) {//图片
+            [string appendString:att.emoticon.chs];
+            XHJLog(@"%@", string);
+        } else {
+            //文本或者Emoji
+            [string appendString:str.string];
+        }
+    }];
+    return string;
 }
 @end

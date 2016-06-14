@@ -164,7 +164,8 @@
     self.sourceLabel.text = status.source;
     self.sourceLabel.frame = statusFrame.sourceF;
     /*正文*/
-    self.contentLabel.text = status.text;
+//    self.contentLabel.text = status.text;
+    self.contentLabel.attributedText = status.attributedText;
     self.contentLabel.frame = statusFrame.contentF;
     
     //转发微博
@@ -176,7 +177,8 @@
         self.retweetLabel.hidden = NO;
         self.retweetLabel.frame = statusFrame.retweetLabelF;
         self.retweetLabel.font = HJStatusCellRetweetContentFont;
-        self.retweetLabel.text = STR(@"@%@:%@", retweetStatus.user.name, retweetStatus.text);
+//        self.retweetLabel.text = STR(@"@%@:%@", retweetStatus.user.name, retweetStatus.text);
+        self.retweetLabel.attributedText = status.retweeted_attributedText;
         
         //转发微博配图
         if (status.retweeted_status.pic_urls.count != 0) {

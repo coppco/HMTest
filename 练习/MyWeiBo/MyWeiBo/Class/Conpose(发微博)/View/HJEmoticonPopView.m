@@ -39,12 +39,15 @@
     self.emoticonButton.titleLabel.font = [UIFont systemFontOfSize:25];
 }
 - (void)configEmoticon:(HJEmoticon *)emoticon {
+    [self longPressEmoticon:emoticon];
+    
+    [self performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:.25f];
+}
+- (void)longPressEmoticon:(HJEmoticon *)emoticon {
     if (emoticon.png.length != 0) {
         [self.emoticonButton setImage:[UIImage imageNamed:emoticon.png] forState:(UIControlStateNormal)];
     } else if (emoticon.code != 0) {
         [self.emoticonButton setTitle:[emoticon.code emoji] forState:(UIControlStateNormal)];
     }
-    
-    [self performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:.25f];
 }
 @end

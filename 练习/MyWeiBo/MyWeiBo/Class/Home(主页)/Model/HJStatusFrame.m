@@ -68,7 +68,10 @@
 
     /*正文*/
 
-    CGSize contentFrame = [self sizeForString:status.text font:HJStatusCellContentFont maxWidth:KMainScreenWidth - 2 * HJStatusCellBorderW];
+//    CGSize contentFrame = [self sizeForString:status.text font:HJStatusCellContentFont maxWidth:KMainScreenWidth - 2 * HJStatusCellBorderW];
+    
+    CGSize contentFrame = [status.attributedText boundingRectWithSize:CGSizeMake(KMainScreenWidth - 2 * HJStatusCellBorderW, 10000) options:(NSStringDrawingUsesLineFragmentOrigin) context:nil].size;
+    
     self.contentF = CGRectMake(HJStatusCellBorderW, MAX(CGRectGetMaxY(self.timeF), CGRectGetMaxY(self.iconImageF)) + HJStatusCellBorderW, KMainScreenWidth - 2 * HJStatusCellBorderW, contentFrame.height);
     
      /*配图*/
@@ -82,7 +85,8 @@
     //被转发微博
     if (status.retweeted_status) {
         //转发微博昵称和内容
-        CGSize reweetLF = [self sizeForString:STR(@"@%@:%@", status.retweeted_status.user.name, status.retweeted_status.text) font:HJStatusCellRetweetContentFont maxWidth:KMainScreenWidth - 2 * HJStatusCellBorderW];
+//        CGSize reweetLF = [self sizeForString:STR(@"@%@:%@", status.retweeted_status.user.name, status.retweeted_status.text) font:HJStatusCellRetweetContentFont maxWidth:KMainScreenWidth - 2 * HJStatusCellBorderW];
+        CGSize reweetLF = [status.retweeted_attributedText boundingRectWithSize:CGSizeMake(KMainScreenWidth - 2 * HJStatusCellBorderW, 10000) options:(NSStringDrawingUsesLineFragmentOrigin) context:nil].size;
         self.retweetLabelF = CGRectMake(HJStatusCellBorderW, HJStatusCellBorderW, reweetLF.width, reweetLF.height);
         
         //转发微博配图
