@@ -22,13 +22,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //自定义泛型实例:
-    //指定泛型是iOS *, 后面属性赋值@"".有警告
-    //__covariant
+    //自定义泛型实例:可以用来修饰返回值或者属性 参考NSEnumerator
+    //指定泛型是iOS *, 后面属性赋值@"".有警告类型不匹配
+    //__covariant 
     Person<iOS *> *person = [[Person alloc] init];
     person.language = @"";
     person.language = [[iOS alloc] init];
     
+    //泛型修饰属性
+    if (self.views) {
+        self.views = [NSMutableArray array];
+    }
+    [self.views addObject:@"1"];
     
 //    __kindof  表示当前类或者它的子类
     iOS *ios = [iOS language];
@@ -50,6 +55,31 @@
      2⃣️:在声明一个类的时候,类里面的有些属性不确定,才使用泛型
  */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    NSArray *array = @[@1, @2,@3];
+    NSEnumerator *enumer = [array reverseObjectEnumerator];
+    id object;
+    while (object = [enumer nextObject]) {
+        NSLog(@"%@", object);
+    }
     
+    for (id object in [array reverseObjectEnumerator]) {
+        NSLog(@"哈哈%@", object);
+    }
+    
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+    }];
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:@"1", @"a", @"2", @"b", @"3", @"c", @"4", @"d", nil];
+    NSEnumerator *enumer1 = [dic objectEnumerator];
+    
+    
+    
+    [dic enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        
+    }];
 }
+
+
 @end
