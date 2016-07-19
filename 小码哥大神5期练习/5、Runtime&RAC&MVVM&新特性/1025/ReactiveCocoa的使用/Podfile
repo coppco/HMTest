@@ -1,0 +1,3 @@
+target 'ReactiveCocoa的使用' do
+pod 'ReactiveCocoa', '~> 2.5'
+end
