@@ -9,33 +9,82 @@
 #import "ViewController.h"
 #import "ReactiveCocoa.h"
 @interface ViewController ()
+/**订阅者*/
+@property (nonatomic, strong)id<RACSubscriber> subscriber;
 
+/**<#描述#>*/
+@property (nonatomic, strong)RACReplaySubject *repaly;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self UseSignal];
+//    [self UseSignal];
+//    [self useSubject];
+    [self useReplaySubject];
 }
 
 - (void)UseSignal {
     //1⃣️创建信号(冷信号)
     RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        //作用:发送数据   调用:当信号被订阅的时候
+        _subscriber = subscriber;
+        //作用:发送数据
+        //调用:当信号被订阅的时候
         
         //3⃣️发送数据
-        [subscriber sendNext:@"124"];
-        return nil;
+        [subscriber sendNext:@"RACSignal"];
+    
+        return [RACDisposable disposableWithBlock:^{
+            //只要信号取消了订阅才会执行block
+            NSLog(@"信号取消订阅了");
+        }];
     }];
     
     //2⃣️订阅信号---->变为热信号
-    [signal subscribeNext:^(id x) {
-        //作用:接收到数据    调用:当接收到数据的时候
+   RACDisposable *disposable = [signal subscribeNext:^(id x) {
+        //作用:接收到数据
+        //调用:当接收到数据的时候
         NSLog(@"%@", x);
     }];
     
+//    取消订阅
+//    [disposable dispose];
     
 }
 
+
+- (void)useSubject {
+    //一、创建信号
+    RACSubject *subject = [RACSubject subject];
+
+    //二、订阅信号,可以订阅多次
+    [subject subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    [subject subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    //三、发送数据
+    [subject sendNext:@"RACSubject"];
+    
+}
+
+- (void)useReplaySubject {
+     //一、创建信号
+    RACReplaySubject *replay = [RACReplaySubject subject];
+    self.repaly = replay;
+    //二、订阅信号
+    [replay subscribeNext:^(id x) {
+        NSLog(@"%@", x);
+    }];
+    //三、发送数据
+    [replay sendNext:@"RACReplaySubject"];
+    
+    //再次发送数据,订阅信号
+    [replay sendNext:@"RACReplaySubject-------"];
+    [replay subscribeNext:^(id x) {
+        NSLog(@"==%@", x);
+    }];
+}
 @end
