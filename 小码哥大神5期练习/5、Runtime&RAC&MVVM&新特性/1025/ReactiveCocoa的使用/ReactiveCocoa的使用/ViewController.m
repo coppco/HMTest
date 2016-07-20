@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ReactiveCocoa.h"
+#import <NSObject+RACKVOWrapper.h>
 @interface ViewController ()
 /**订阅者*/
 @property (nonatomic, strong)id<RACSubscriber> subscriber;
@@ -23,6 +24,7 @@
 //    [self UseSignal];
 //    [self useSubject];
 //    [self useReplaySubject];
+
     [self moreAPI];
 }
 
@@ -110,4 +112,61 @@
 - (void)updateUIWithSellData:(NSString *)sell buyData:(NSString *)buy {
     NSLog(@"%@====%@", sell, buy);
 }
+
+- (void)RACTuple {
+    RACTuple *tuple = [RACTuple tupleWithObjects:@"1", @"2", @"3", nil];
+    NSString *str = tuple[0];
+    //用来解析RACTuple类型
+    RACTupleUnpack(NSString *key, NSString *value) = tuple;
+    
+}
+
+- (void)RACSequence {
+    //数组
+    NSArray *arr = @[@"1",@"2", @"3", @"4"];
+    //RAC集合
+    RACSequence *sequence = arr.rac_sequence;
+    //把集合转成信号
+    RACSignal *signal = sequence.signal;
+    //订阅集合信号,内部会自动遍历所有的元素发出去
+    [signal subscribeNext:^(id x) {
+        NSLog(@"%@", x); //打印1,2,3,4
+    }];
+    
+    //连起来写
+    [@[@"1", @"3"].rac_sequence.signal subscribeNext:^(id x) {
+        NSLog(@"%@", x);//打印1,3
+    }];
+}
+
+- (void)kvo {
+    [self rac_observeKeyPath:@"frame" options:(NSKeyValueObservingOptionNew) observer:nil block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+        //code
+    }];
+    
+    [[self rac_valuesForKeyPath:@"frame" observer:nil] subscribeNext:^(id x) {
+        //code
+    }];
+}
+
+- (void)event {
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [[button rac_signalForControlEvents:(UIControlEventTouchUpInside)] subscribeNext:^(id x) {
+        //code
+    }];
+}
+
+- (void)notification {
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:UIKeyboardWillShowNotification object:nil] subscribeNext:^(id x) {
+        //code
+    }];
+}
+
+- (void)textfield {
+    UITextField *textfield = [UITextField new];
+    [textfield.rac_textSignal subscribeNext:^(id x) {
+        //code
+    }];
+}
+
 @end
