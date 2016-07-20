@@ -22,7 +22,8 @@
     [super viewDidLoad];
 //    [self UseSignal];
 //    [self useSubject];
-    [self useReplaySubject];
+//    [self useReplaySubject];
+    [self moreAPI];
 }
 
 - (void)UseSignal {
@@ -86,5 +87,27 @@
     [replay subscribeNext:^(id x) {
         NSLog(@"==%@", x);
     }];
+}
+
+- (void)moreAPI {
+    RACSignal *sellSignal =  [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        //网络请求
+        [subscriber sendNext:@"获取动求购信息"];
+        return  nil;
+    }];
+    
+    RACSignal *buySignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        //网络请求
+        [subscriber sendNext:@"获取动求购信息"];
+        return  nil;
+    }];
+    
+    //数组用来存放 信号
+    //当数组中的所有信号都发送数据的时候,才会执行selector
+    //该方法的参数个数必须和数组中信号个数一致
+    [self rac_liftSelector:@selector(updateUIWithSellData: buyData:) withSignals:sellSignal, buySignal, nil];
+}
+- (void)updateUIWithSellData:(NSString *)sell buyData:(NSString *)buy {
+    NSLog(@"%@====%@", sell, buy);
 }
 @end
