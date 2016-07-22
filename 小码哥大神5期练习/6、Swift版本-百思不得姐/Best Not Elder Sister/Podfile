@@ -1,0 +1,11 @@
+#pod update --verbose --no-repo-update
+
+use_frameworks!
+
+target 'Best Not Elder Sister' do
+pod 'Alamofire', '~> 3.1.4'
+pod 'SwiftyJSON', '~> 2.3.2'
+pod 'SnapKit', '~> 0.19.1'
+end
+
+
