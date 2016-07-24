@@ -19,7 +19,9 @@
 		44A44BA51D419372009C5BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A44BA31D419372009C5BB8 /* LaunchScreen.storyboard */; };
 		44A44BB01D419372009C5BB8 /* Best_Not_Elder_SisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BAF1D419372009C5BB8 /* Best_Not_Elder_SisterTests.swift */; };
 		44A44BBB1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BBA1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift */; };
-		44EC516B1D4490D70094F298 /* UIColor+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */; };
+		44DE6FAB1D44DE7300F40BD7 /* HJTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE6FAA1D44DE7300F40BD7 /* HJTabBar.swift */; };
+		44EC516E1D44AA4F0094F298 /* UIColor+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC516D1D44AA4F0094F298 /* UIColor+HJExtension.swift */; };
+		44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC51701D44AF9C0094F298 /* UIView+HJExtension.swift */; };
 		CC1596251D41EC070097718D /* HJGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596241D41EC070097718D /* HJGuideController.swift */; };
 		CC15963D1D41EDAE0097718D /* 1242*2208-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC1596291D41EDAE0097718D /* 1242*2208-1.jpg */; };
 		CC15963E1D41EDAE0097718D /* 1242*2208-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC15962A1D41EDAE0097718D /* 1242*2208-2.jpg */; };
@@ -82,7 +84,9 @@
 		44A44BB61D419372009C5BB8 /* Best Not Elder SisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Best Not Elder SisterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A44BBA1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Best_Not_Elder_SisterUITests.swift; sourceTree = "<group>"; };
 		44A44BBC1D419372009C5BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HJExtension.swift"; sourceTree = "<group>"; };
+		44DE6FAA1D44DE7300F40BD7 /* HJTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HJTabBar.swift; path = "Best Not Elder Sister/Class/HJTool/HJExtension/UIView/HJTabBar.swift"; sourceTree = SOURCE_ROOT; };
+		44EC516D1D44AA4F0094F298 /* UIColor+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HJExtension.swift"; sourceTree = "<group>"; };
+		44EC51701D44AF9C0094F298 /* UIView+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HJExtension.swift"; sourceTree = "<group>"; };
 		97E377650BBBC94778F5BFC6 /* Pods-Best Not Elder Sister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.release.xcconfig"; sourceTree = "<group>"; };
 		AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Not_Elder_Sister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1596241D41EC070097718D /* HJGuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJGuideController.swift; sourceTree = "<group>"; };
@@ -148,8 +152,9 @@
 		447150901D42EB7A002493DC /* HJExtension */ = {
 			isa = PBXGroup;
 			children = (
+				44EC516F1D44AF8E0094F298 /* UIView */,
+				44EC516C1D44AA4F0094F298 /* UIColor */,
 				447150911D42EB7A002493DC /* HJDefine.swift */,
-				44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */,
 			);
 			path = HJExtension;
 			sourceTree = "<group>";
@@ -206,6 +211,22 @@
 				44A44BBC1D419372009C5BB8 /* Info.plist */,
 			);
 			path = "Best Not Elder SisterUITests";
+			sourceTree = "<group>";
+		};
+		44EC516C1D44AA4F0094F298 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				44EC516D1D44AA4F0094F298 /* UIColor+HJExtension.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		44EC516F1D44AF8E0094F298 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				44EC51701D44AF9C0094F298 /* UIView+HJExtension.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		479123ABCDE00117687B9DC6 /* Pods */ = {
@@ -269,6 +290,7 @@
 		CC15960F1D41EAFD0097718D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44DE6FAA1D44DE7300F40BD7 /* HJTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,12 +667,14 @@
 				447150921D42EB7A002493DC /* HJDefine.swift in Sources */,
 				CC1596251D41EC070097718D /* HJGuideController.swift in Sources */,
 				44A44B9D1D419372009C5BB8 /* ViewController.swift in Sources */,
+				44DE6FAB1D44DE7300F40BD7 /* HJTabBar.swift in Sources */,
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
+				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,
 				CC1596571D4218340097718D /* HJTabBarController.swift in Sources */,
 				44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */,
 				4452D0E11D443EC700708BDA /* HJEssenceController.swift in Sources */,
 				4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */,
-				44EC516B1D4490D70094F298 /* UIColor+HJExtension.swift in Sources */,
+				44EC516E1D44AA4F0094F298 /* UIColor+HJExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

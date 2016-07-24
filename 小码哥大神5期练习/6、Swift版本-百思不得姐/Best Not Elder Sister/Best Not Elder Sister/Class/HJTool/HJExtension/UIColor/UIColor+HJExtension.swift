@@ -1,6 +1,6 @@
 //
 //  UIColor+HJExtension.swift
-//  Best Not Elder Sister
+//  HJExtension
 //
 //  Created by M-coppco on 16/7/24.
 //  Copyright © 2016年 M-coppco. All rights reserved.
@@ -39,5 +39,9 @@ extension UIColor {
             return UIColor.clearColor()
         }
         return hj_colorFromRGBValue(result)
+    }
+    /**图片转color*/
+    class func hj_colorFromImage(imageName: String) -> UIColor{
+        return UIColor(patternImage: UIImage(named: imageName)!)
     }
 }

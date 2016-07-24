@@ -12,7 +12,7 @@ class HJConcernController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        HJLog()
         // Do any additional setup after loading the view.
     }
 

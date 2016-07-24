@@ -27,24 +27,26 @@ class HJTabBarController: UITabBarController {
         settingController(HJConcernController(), title: "关注", image: "tabBar_friendTrends_icon", selectImage: "tabBar_friendTrends_click_icon")
         
         settingController(HJMyController(), title: "我", image: "tabBar_me_icon", selectImage: "tabBar_me_click_icon")
+        
+        self.setValue(HJTabBar(), forKeyPath: "tabBar")
     }
+    
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
     }
     
     func settingController(controller: UIViewController, title: String, image: String, selectImage: String) {
-        controller.title = title
+        controller.tabBarItem.title = title
         controller.tabBarItem.image = UIImage(named: image)
         //选择图片,默认选中的时候会有蓝色  方法1:原始图片(代码)  方法2:在Assets.xcassets中选中图片,  把Render as  选择original(Xcode)
         controller.tabBarItem.selectedImage = UIImage(named: selectImage)?.imageWithRenderingMode(.AlwaysOriginal)
-        //文字
-//        controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGrayColor()], forState: .Normal)
-//        controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blackColor()], forState: .Selected)
+        //文字样式,这一这里设置也可以使用appearance统一设置
+        //controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGrayColor()], forState: .Normal)
+        //controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blackColor()], forState: .Selected)
         let navigationVC = HJNavigationController(rootViewController: controller)
-        controller.view.backgroundColor = UIColor.hj_randomColor()
         self.addChildViewController(navigationVC)
     }
-
 }

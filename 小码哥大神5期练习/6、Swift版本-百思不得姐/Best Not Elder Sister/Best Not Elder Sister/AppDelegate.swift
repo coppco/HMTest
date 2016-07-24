@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             window?.rootViewController = HJGuideController(closure: { () -> Void in
                 self.window?.rootViewController = HJTabBarController()
+                self.window?.makeKeyAndVisible()
             })
         }
         window?.makeKeyAndVisible()

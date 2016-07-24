@@ -12,7 +12,10 @@ class HJEssenceController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let button = UIButton(type: .Custom)
+        button.setImage(UIImage(named: <#T##String#>), forState: .Normal)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: <#T##UIView#>)
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "MainTitle"))
     }
 
     override func didReceiveMemoryWarning() {
