@@ -15,22 +15,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+    
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.backgroundColor = UIColor.whiteColor()
-        if NSUserDefaults.standardUserDefaults().boolForKey(isFirst) {
-            window?.rootViewController = ViewController()
+        if NSUserDefaults.standardUserDefaults().boolForKey(is_First) {
+            window?.rootViewController = HJTabBarController()
         } else {
-            
+            /*
             var images: [String] = [String]()
             for i in 0...3 {
                  images.append(String(format: "1242*2208-%d.jpg", i + 1))
             }
-            window?.rootViewController = HJGuideController(imageArray: images)
 
-            /*
-            window?.rootViewController = HJGuideController();
+            window?.rootViewController = HJGuideController(imageArray: images, closure: { () -> Void in
+                self.window?.rootViewController = HJTabBarController()
+            })
             */
+            
+            window?.rootViewController = HJGuideController(closure: { () -> Void in
+                self.window?.rootViewController = HJTabBarController()
+            })
         }
         window?.makeKeyAndVisible()
         

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2E664BADDF4D7FCFC55ADC0D /* Pods_Best_Not_Elder_Sister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */; };
+		4452D0E11D443EC700708BDA /* HJEssenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E01D443EC700708BDA /* HJEssenceController.swift */; };
+		4452D0E31D443EE000708BDA /* HJLastestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E21D443EE000708BDA /* HJLastestController.swift */; };
+		4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E41D44473D00708BDA /* HJNavigationController.swift */; };
+		447150921D42EB7A002493DC /* HJDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447150911D42EB7A002493DC /* HJDefine.swift */; };
 		44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44B9A1D419372009C5BB8 /* AppDelegate.swift */; };
 		44A44B9D1D419372009C5BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44B9C1D419372009C5BB8 /* ViewController.swift */; };
 		44A44BA01D419372009C5BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A44B9E1D419372009C5BB8 /* Main.storyboard */; };
@@ -15,6 +19,7 @@
 		44A44BA51D419372009C5BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44A44BA31D419372009C5BB8 /* LaunchScreen.storyboard */; };
 		44A44BB01D419372009C5BB8 /* Best_Not_Elder_SisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BAF1D419372009C5BB8 /* Best_Not_Elder_SisterTests.swift */; };
 		44A44BBB1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44BBA1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift */; };
+		44EC516B1D4490D70094F298 /* UIColor+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */; };
 		CC1596251D41EC070097718D /* HJGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596241D41EC070097718D /* HJGuideController.swift */; };
 		CC15963D1D41EDAE0097718D /* 1242*2208-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC1596291D41EDAE0097718D /* 1242*2208-1.jpg */; };
 		CC15963E1D41EDAE0097718D /* 1242*2208-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC15962A1D41EDAE0097718D /* 1242*2208-2.jpg */; };
@@ -36,12 +41,9 @@
 		CC15964E1D41EDAE0097718D /* 750*1334-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC15963A1D41EDAE0097718D /* 750*1334-2.jpg */; };
 		CC15964F1D41EDAE0097718D /* 750*1334-3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC15963B1D41EDAE0097718D /* 750*1334-3.jpg */; };
 		CC1596501D41EDAE0097718D /* 750*1334-4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC15963C1D41EDAE0097718D /* 750*1334-4.jpg */; };
-		CC1596551D41FB610097718D /* HJFuction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596541D41FB610097718D /* HJFuction.swift */; };
 		CC1596571D4218340097718D /* HJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596561D4218340097718D /* HJTabBarController.swift */; };
 		CC15965B1D4231B40097718D /* HJConcernController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15965A1D4231B40097718D /* HJConcernController.swift */; };
-		CC15965D1D4231CA0097718D /* HJEssenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15965C1D4231CA0097718D /* HJEssenceController.swift */; };
 		CC1596611D4231F10097718D /* HJMyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596601D4231F10097718D /* HJMyController.swift */; };
-		CC1596631D4232080097718D /* HJLastestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596621D4232080097718D /* HJLastestController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 
 /* Begin PBXFileReference section */
 		3E038FFA57812BB49F1AD1F8 /* Pods-Best Not Elder Sister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.debug.xcconfig"; sourceTree = "<group>"; };
+		4452D0E01D443EC700708BDA /* HJEssenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceController.swift; sourceTree = "<group>"; };
+		4452D0E21D443EE000708BDA /* HJLastestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLastestController.swift; sourceTree = "<group>"; };
+		4452D0E41D44473D00708BDA /* HJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
+		447150911D42EB7A002493DC /* HJDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJDefine.swift; sourceTree = "<group>"; };
 		44A44B971D419372009C5BB8 /* Best Not Elder Sister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Not Elder Sister.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A44B9A1D419372009C5BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44A44B9C1D419372009C5BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 		44A44BB61D419372009C5BB8 /* Best Not Elder SisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Best Not Elder SisterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44A44BBA1D419372009C5BB8 /* Best_Not_Elder_SisterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Best_Not_Elder_SisterUITests.swift; sourceTree = "<group>"; };
 		44A44BBC1D419372009C5BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HJExtension.swift"; sourceTree = "<group>"; };
 		97E377650BBBC94778F5BFC6 /* Pods-Best Not Elder Sister.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.release.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.release.xcconfig"; sourceTree = "<group>"; };
 		AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Best_Not_Elder_Sister.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1596241D41EC070097718D /* HJGuideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJGuideController.swift; sourceTree = "<group>"; };
@@ -99,12 +106,9 @@
 		CC15963A1D41EDAE0097718D /* 750*1334-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "750*1334-2.jpg"; sourceTree = "<group>"; };
 		CC15963B1D41EDAE0097718D /* 750*1334-3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "750*1334-3.jpg"; sourceTree = "<group>"; };
 		CC15963C1D41EDAE0097718D /* 750*1334-4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "750*1334-4.jpg"; sourceTree = "<group>"; };
-		CC1596541D41FB610097718D /* HJFuction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJFuction.swift; sourceTree = "<group>"; };
 		CC1596561D4218340097718D /* HJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJTabBarController.swift; sourceTree = "<group>"; };
 		CC15965A1D4231B40097718D /* HJConcernController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJConcernController.swift; sourceTree = "<group>"; };
-		CC15965C1D4231CA0097718D /* HJEssenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceController.swift; sourceTree = "<group>"; };
 		CC1596601D4231F10097718D /* HJMyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJMyController.swift; sourceTree = "<group>"; };
-		CC1596621D4232080097718D /* HJLastestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLastestController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4471508F1D42EB7A002493DC /* HJTool */ = {
+			isa = PBXGroup;
+			children = (
+				447150901D42EB7A002493DC /* HJExtension */,
+			);
+			path = HJTool;
+			sourceTree = "<group>";
+		};
+		447150901D42EB7A002493DC /* HJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				447150911D42EB7A002493DC /* HJDefine.swift */,
+				44EC516A1D4490D70094F298 /* UIColor+HJExtension.swift */,
+			);
+			path = HJExtension;
+			sourceTree = "<group>";
+		};
 		44A44B8E1D419371009C5BB8 = {
 			isa = PBXGroup;
 			children = (
@@ -209,11 +230,11 @@
 			children = (
 				CC1596261D41ED8E0097718D /* Source */,
 				CC15960C1D41EAFD0097718D /* Base */,
-				CC1596101D41EAFD0097718D /* Concern(关注) */,
 				CC1596141D41EAFD0097718D /* Essence(精华) */,
-				CC1596181D41EAFD0097718D /* HJMothod */,
 				CC15961C1D41EAFD0097718D /* Latest(最新) */,
+				CC1596101D41EAFD0097718D /* Concern(关注) */,
 				CC1596201D41EAFD0097718D /* My(我) */,
+				4471508F1D42EB7A002493DC /* HJTool */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -233,6 +254,7 @@
 			children = (
 				CC1596241D41EC070097718D /* HJGuideController.swift */,
 				CC1596561D4218340097718D /* HJTabBarController.swift */,
+				4452D0E41D44473D00708BDA /* HJNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,7 +318,7 @@
 		CC1596151D41EAFD0097718D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC15965C1D4231CA0097718D /* HJEssenceController.swift */,
+				4452D0E01D443EC700708BDA /* HJEssenceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -315,14 +337,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CC1596181D41EAFD0097718D /* HJMothod */ = {
-			isa = PBXGroup;
-			children = (
-				CC1596511D41EEBC0097718D /* HJExtension */,
-			);
-			path = HJMothod;
-			sourceTree = "<group>";
-		};
 		CC15961C1D41EAFD0097718D /* Latest(最新) */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,7 +350,7 @@
 		CC15961D1D41EAFD0097718D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC1596621D4232080097718D /* HJLastestController.swift */,
+				4452D0E21D443EE000708BDA /* HJLastestController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,14 +436,6 @@
 			path = GuideImage;
 			sourceTree = "<group>";
 		};
-		CC1596511D41EEBC0097718D /* HJExtension */ = {
-			isa = PBXGroup;
-			children = (
-				CC1596541D41FB610097718D /* HJFuction.swift */,
-			);
-			path = HJExtension;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,6 +508,7 @@
 				TargetAttributes = {
 					44A44B961D419372009C5BB8 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3Y92XXLNT8;
 					};
 					44A44BAA1D419372009C5BB8 = {
 						CreatedOnToolsVersion = 7.2;
@@ -634,14 +641,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC15965B1D4231B40097718D /* HJConcernController.swift in Sources */,
-				CC1596631D4232080097718D /* HJLastestController.swift in Sources */,
-				CC15965D1D4231CA0097718D /* HJEssenceController.swift in Sources */,
-				CC1596551D41FB610097718D /* HJFuction.swift in Sources */,
+				4452D0E31D443EE000708BDA /* HJLastestController.swift in Sources */,
+				447150921D42EB7A002493DC /* HJDefine.swift in Sources */,
 				CC1596251D41EC070097718D /* HJGuideController.swift in Sources */,
 				44A44B9D1D419372009C5BB8 /* ViewController.swift in Sources */,
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
 				CC1596571D4218340097718D /* HJTabBarController.swift in Sources */,
 				44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */,
+				4452D0E11D443EC700708BDA /* HJEssenceController.swift in Sources */,
+				4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */,
+				44EC516B1D4490D70094F298 /* UIColor+HJExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,11 +794,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Best Not Elder Sister/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco..Best-Not-Elder-Sister";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.Best-Not-Elder-Sister";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -799,11 +812,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Best Not Elder Sister/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco..Best-Not-Elder-Sister";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.coppco.Best-Not-Elder-Sister";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

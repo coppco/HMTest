@@ -50,7 +50,7 @@ class HJGuideController: UICollectionViewController {
     }()
     
     /**默认初始化方法*/
-     init() {
+    init(closure: () -> Void) {
         layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .Horizontal
         layout.itemSize = kHJMainScreenBounds.size
@@ -58,20 +58,21 @@ class HJGuideController: UICollectionViewController {
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsetsZero
         for i in 1...number {
-            if __isIphone4 {
+            if is_iPhone4 {
                 images.append(String(format: "320*480-%d.jpg", i))
-            }else if __isIphone4s {
+            }else if is_iPhone4s {
                 images.append(String(format: "640*960-%d.jpg", i))
-            }else if __isIphone5 {
+            }else if is_iPhone5 {
                  images.append(String(format: "640*1136-%d.jpg", i))
-            }else if __isIphone6 {
+            }else if is_iPhone6 {
                  images.append(String(format: "750*1334-%d.jpg", i))
-            }else if __isIphone6p {
+            }else if is_iPhone6p {
                  images.append(String(format: "1242*2208-%d.jpg", i))
             } else {
                 images.append(String(format: "1242*2208-%d.jpg", i))
             }
         }
+        skipClosure = closure
         super.init(collectionViewLayout: layout)
     }
 
@@ -79,8 +80,12 @@ class HJGuideController: UICollectionViewController {
          fatalError("init(coder:) has not been implemented")
      }
 
-    /**使用存放图片名称的数组初始化*/
-    init(imageArray:[String]) {
+    deinit {
+        HJLog("\(self.classForCoder)","释放了")
+    }
+    
+    /**使用存放图片名称的数组初始化, 跳过闭包*/
+    init(imageArray:[String], closure:() ->Void) {
         layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .Horizontal
         layout.itemSize = kHJMainScreenBounds.size
@@ -88,6 +93,7 @@ class HJGuideController: UICollectionViewController {
         layout.minimumLineSpacing = 0
         layout.sectionInset = UIEdgeInsetsZero
         images = imageArray
+        self.skipClosure = closure
         super.init(collectionViewLayout: layout)
     }
     
@@ -122,13 +128,17 @@ class HJGuideController: UICollectionViewController {
     }
 
     func skipHasClicked() {
-        //设置windows的rootController
+        skipButton.hidden = true
+        enterButton.hidden = true
+        self.animation(self.collectionView!, isRotate: true, delegate: self)
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: is_First)
+        NSUserDefaults.standardUserDefaults().synchronize()
+    }
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if nil != self.skipClosure {
             self.skipClosure!()
         }
-        UIApplication.sharedApplication().keyWindow?.rootViewController = ViewController()
-        NSUserDefaults.standardUserDefaults().setBool(true, forKey: isFirst)
-        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     override func didReceiveMemoryWarning() {
@@ -178,4 +188,33 @@ class HJGuideController: UICollectionViewController {
         pageControl.currentPage = Int(page)
     }
 
+    
+    func animation(view:UIView, isRotate: Bool, delegate: AnyObject) {
+        if isRotate {
+            view.transform = CGAffineTransformRotate(view.transform, CGFloat(M_1_PI))
+        }
+        //缩放
+        let duration = 0.5
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnimation.fromValue = NSNumber(double: 1)
+        scaleAnimation.toValue = NSNumber(double: 2)
+        
+        //透明度
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = NSNumber(double: 1)
+        opacityAnimation.toValue = NSNumber(double: 0)
+        
+        //组动画
+        let group = CAAnimationGroup()
+        group.animations = [scaleAnimation, opacityAnimation]
+        group.duration = duration
+        group.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        group.speed = 0.5//慢速
+        group.delegate = delegate
+        group.autoreverses = false// 防止最后显现,不自动返回
+        group.fillMode = kCAFillModeForwards//最终会停在终点处
+        //removedOnCompletion:默认为YES,代表动画执行完毕后就从图层上移除,图形会恢复到动画执行前的状态。如果想让图层保持显示动画执行后的状态,那就设置为false, 不会会闪一下
+        group.removedOnCompletion = false //这个一定要设置为NO,不然会闪一下
+        view.layer.addAnimation(group, forKey: nil)
+    }
 }
