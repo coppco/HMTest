@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2E664BADDF4D7FCFC55ADC0D /* Pods_Best_Not_Elder_Sister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */; };
-		4452D0E11D443EC700708BDA /* HJEssenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E01D443EC700708BDA /* HJEssenceController.swift */; };
-		4452D0E31D443EE000708BDA /* HJLastestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E21D443EE000708BDA /* HJLastestController.swift */; };
 		4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E41D44473D00708BDA /* HJNavigationController.swift */; };
 		447150921D42EB7A002493DC /* HJDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447150911D42EB7A002493DC /* HJDefine.swift */; };
 		44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A44B9A1D419372009C5BB8 /* AppDelegate.swift */; };
@@ -46,6 +44,15 @@
 		CC1596571D4218340097718D /* HJTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596561D4218340097718D /* HJTabBarController.swift */; };
 		CC15965B1D4231B40097718D /* HJConcernController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC15965A1D4231B40097718D /* HJConcernController.swift */; };
 		CC1596611D4231F10097718D /* HJMyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1596601D4231F10097718D /* HJMyController.swift */; };
+		CC3C099F1D45A19400D9DB48 /* HJBaseTableVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C099E1D45A19400D9DB48 /* HJBaseTableVController.swift */; };
+		CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09A01D45A20A00D9DB48 /* HJEssenceController.swift */; };
+		CC3C09A31D45A22C00D9DB48 /* HJLastestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09A21D45A22C00D9DB48 /* HJLastestController.swift */; };
+		CC3C09A61D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09A51D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift */; };
+		CC3C09A81D45B12D00D9DB48 /* HJRecommendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09A71D45B12D00D9DB48 /* HJRecommendController.swift */; };
+		CC3C09AA1D45BD8E00D9DB48 /* HJSettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09A91D45BD8E00D9DB48 /* HJSettingController.swift */; };
+		CC3C09AE1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */; };
+		CC3C09B21D45F59E00D9DB48 /* HJNoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */; };
+		CC3C09B41D462E4E00D9DB48 /* HJLoginRegistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09B31D462E4E00D9DB48 /* HJLoginRegistController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +74,6 @@
 
 /* Begin PBXFileReference section */
 		3E038FFA57812BB49F1AD1F8 /* Pods-Best Not Elder Sister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.debug.xcconfig"; sourceTree = "<group>"; };
-		4452D0E01D443EC700708BDA /* HJEssenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceController.swift; sourceTree = "<group>"; };
-		4452D0E21D443EE000708BDA /* HJLastestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLastestController.swift; sourceTree = "<group>"; };
 		4452D0E41D44473D00708BDA /* HJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
 		447150911D42EB7A002493DC /* HJDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJDefine.swift; sourceTree = "<group>"; };
 		44A44B971D419372009C5BB8 /* Best Not Elder Sister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Best Not Elder Sister.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +118,15 @@
 		CC1596561D4218340097718D /* HJTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJTabBarController.swift; sourceTree = "<group>"; };
 		CC15965A1D4231B40097718D /* HJConcernController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJConcernController.swift; sourceTree = "<group>"; };
 		CC1596601D4231F10097718D /* HJMyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJMyController.swift; sourceTree = "<group>"; };
+		CC3C099E1D45A19400D9DB48 /* HJBaseTableVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJBaseTableVController.swift; sourceTree = "<group>"; };
+		CC3C09A01D45A20A00D9DB48 /* HJEssenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceController.swift; sourceTree = "<group>"; };
+		CC3C09A21D45A22C00D9DB48 /* HJLastestController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLastestController.swift; sourceTree = "<group>"; };
+		CC3C09A51D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+HJExtension.swift"; sourceTree = "<group>"; };
+		CC3C09A71D45B12D00D9DB48 /* HJRecommendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJRecommendController.swift; sourceTree = "<group>"; };
+		CC3C09A91D45BD8E00D9DB48 /* HJSettingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJSettingController.swift; sourceTree = "<group>"; };
+		CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HJNoDataExtension.swift"; sourceTree = "<group>"; };
+		CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNoDataView.swift; sourceTree = "<group>"; };
+		CC3C09B31D462E4E00D9DB48 /* HJLoginRegistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLoginRegistController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +158,7 @@
 		4471508F1D42EB7A002493DC /* HJTool */ = {
 			isa = PBXGroup;
 			children = (
+				CC3C09AF1D45F55C00D9DB48 /* HJLibrary */,
 				447150901D42EB7A002493DC /* HJExtension */,
 			);
 			path = HJTool;
@@ -152,6 +167,7 @@
 		447150901D42EB7A002493DC /* HJExtension */ = {
 			isa = PBXGroup;
 			children = (
+				CC3C09A41D45A35600D9DB48 /* UIBarButtonItem */,
 				44EC516F1D44AF8E0094F298 /* UIView */,
 				44EC516C1D44AA4F0094F298 /* UIColor */,
 				447150911D42EB7A002493DC /* HJDefine.swift */,
@@ -225,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				44EC51701D44AF9C0094F298 /* UIView+HJExtension.swift */,
+				CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -276,6 +293,8 @@
 				CC1596241D41EC070097718D /* HJGuideController.swift */,
 				CC1596561D4218340097718D /* HJTabBarController.swift */,
 				4452D0E41D44473D00708BDA /* HJNavigationController.swift */,
+				CC3C099E1D45A19400D9DB48 /* HJBaseTableVController.swift */,
+				CC3C09B31D462E4E00D9DB48 /* HJLoginRegistController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				CC15965A1D4231B40097718D /* HJConcernController.swift */,
+				CC3C09A71D45B12D00D9DB48 /* HJRecommendController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,7 +360,7 @@
 		CC1596151D41EAFD0097718D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4452D0E01D443EC700708BDA /* HJEssenceController.swift */,
+				CC3C09A01D45A20A00D9DB48 /* HJEssenceController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,7 +392,7 @@
 		CC15961D1D41EAFD0097718D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4452D0E21D443EE000708BDA /* HJLastestController.swift */,
+				CC3C09A21D45A22C00D9DB48 /* HJLastestController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -405,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1596601D4231F10097718D /* HJMyController.swift */,
+				CC3C09A91D45BD8E00D9DB48 /* HJSettingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,6 +477,30 @@
 				CC15963C1D41EDAE0097718D /* 750*1334-4.jpg */,
 			);
 			path = GuideImage;
+			sourceTree = "<group>";
+		};
+		CC3C09A41D45A35600D9DB48 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C09A51D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		CC3C09AF1D45F55C00D9DB48 /* HJLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C09B01D45F58500D9DB48 /* UIView */,
+			);
+			path = HJLibrary;
+			sourceTree = "<group>";
+		};
+		CC3C09B01D45F58500D9DB48 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -663,16 +708,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC15965B1D4231B40097718D /* HJConcernController.swift in Sources */,
-				4452D0E31D443EE000708BDA /* HJLastestController.swift in Sources */,
+				CC3C09AA1D45BD8E00D9DB48 /* HJSettingController.swift in Sources */,
 				447150921D42EB7A002493DC /* HJDefine.swift in Sources */,
 				CC1596251D41EC070097718D /* HJGuideController.swift in Sources */,
 				44A44B9D1D419372009C5BB8 /* ViewController.swift in Sources */,
+				CC3C09AE1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift in Sources */,
+				CC3C09A61D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift in Sources */,
 				44DE6FAB1D44DE7300F40BD7 /* HJTabBar.swift in Sources */,
+				CC3C09A81D45B12D00D9DB48 /* HJRecommendController.swift in Sources */,
+				CC3C099F1D45A19400D9DB48 /* HJBaseTableVController.swift in Sources */,
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
+				CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */,
 				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,
 				CC1596571D4218340097718D /* HJTabBarController.swift in Sources */,
+				CC3C09A31D45A22C00D9DB48 /* HJLastestController.swift in Sources */,
 				44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */,
-				4452D0E11D443EC700708BDA /* HJEssenceController.swift in Sources */,
+				CC3C09B21D45F59E00D9DB48 /* HJNoDataView.swift in Sources */,
+				CC3C09B41D462E4E00D9DB48 /* HJLoginRegistController.swift in Sources */,
 				4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */,
 				44EC516E1D44AA4F0094F298 /* UIColor+HJExtension.swift in Sources */,
 			);

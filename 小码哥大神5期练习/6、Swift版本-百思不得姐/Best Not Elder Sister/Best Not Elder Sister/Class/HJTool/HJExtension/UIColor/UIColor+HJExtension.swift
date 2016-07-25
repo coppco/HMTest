@@ -42,6 +42,19 @@ extension UIColor {
     }
     /**图片转color*/
     class func hj_colorFromImage(imageName: String) -> UIColor{
-        return UIColor(patternImage: UIImage(named: imageName)!)
+        //guard 条件为真会跳过else里面的代码
+        guard let image = UIImage(named: imageName) else{
+            return UIColor.clearColor()
+        }
+        return UIColor(patternImage: image)
     }
+    
+    class func hj_colorForRGBA(red red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) -> UIColor {
+        return UIColor(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha) / 255.0)
+    }
+    
+    class func hj_colorForRGB(red red: UInt8, green: UInt8, blue: UInt8) -> UIColor {
+        return self.hj_colorForRGBA(red: red, green: green, blue: blue, alpha: UInt8.max)
+    }
+    
 }

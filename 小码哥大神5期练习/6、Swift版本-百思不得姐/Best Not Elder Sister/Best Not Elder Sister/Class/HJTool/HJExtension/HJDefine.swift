@@ -50,7 +50,7 @@ func HJLog(items: Any..., file:String = __FILE__, line:Int = __LINE__, function:
         for item in items {
             fileString += (String(item) + " ")
         }
-        print(fileString + "\n")
+        print(fileString)
     #else
     #endif
 }

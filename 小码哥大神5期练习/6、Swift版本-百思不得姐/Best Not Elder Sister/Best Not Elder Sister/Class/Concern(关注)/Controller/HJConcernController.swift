@@ -12,10 +12,26 @@ class HJConcernController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        HJLog()
-        // Do any additional setup after loading the view.
+        settingNavigation()
+        let noData = HJNoDataView(title: "温馨提示", details: "快快登录吧,关注百思最牛人\n好友动态让你过把瘾!~\n欧耶~~~!", image: "header_cry_icon", buttonTitle: "立即登录注册") { () -> Void in
+            self.presentViewController(HJLoginRegistController(), animated: true, completion: { () -> Void in
+                
+            })
+        }
+        
+        noData.showInView(self.view)
+
     }
 
+    func settingNavigation() {
+        navigationItem.title = "我的关注"
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.hj_barButtonItem(title: "", normalImage: "friendsRecommentIcon", highlightedImage: "friendsRecommentIcon-click", target: self, action: "gotoRecommend")
+    }
+    
+    func gotoRecommend() {
+        navigationController?.pushViewController(HJRecommendController(), animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -20,18 +20,26 @@ class HJTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+        self.setValue(HJTabBar(closure: { (tabBar) -> Void in
+            //FIXME: 需要完善
+            HJLog("需要完善")
+        }), forKeyPath: "tabBar")
+    }
+    
+    /**
+     添加子控制器
+     */
+    func setup() {
+        settingController(HJConcernController(), title: "关注", image: "tabBar_friendTrends_icon", selectImage: "tabBar_friendTrends_click_icon")
         settingController(HJEssenceController(), title: "精华", image: "tabBar_essence_icon", selectImage: "tabBar_essence_click_icon")
         
         settingController(HJLastestController(), title: "最新", image: "tabBar_new_icon", selectImage: "tabBar_new_click_icon")
         
-        settingController(HJConcernController(), title: "关注", image: "tabBar_friendTrends_icon", selectImage: "tabBar_friendTrends_click_icon")
         
         settingController(HJMyController(), title: "我", image: "tabBar_me_icon", selectImage: "tabBar_me_click_icon")
-        
-        self.setValue(HJTabBar(), forKeyPath: "tabBar")
     }
     
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,7 +54,6 @@ class HJTabBarController: UITabBarController {
         //文字样式,这一这里设置也可以使用appearance统一设置
         //controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.lightGrayColor()], forState: .Normal)
         //controller.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.blackColor()], forState: .Selected)
-        let navigationVC = HJNavigationController(rootViewController: controller)
-        self.addChildViewController(navigationVC)
+            self.addChildViewController(HJNavigationController(rootViewController: controller))
     }
 }

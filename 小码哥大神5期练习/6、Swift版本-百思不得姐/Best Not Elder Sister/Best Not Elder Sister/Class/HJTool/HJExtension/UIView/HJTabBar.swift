@@ -10,6 +10,8 @@ import UIKit
 
 class HJTabBar: UITabBar {
     
+    private var plusClick: (HJTabBar) -> Void?
+    
     lazy var publishButton: UIButton = {
             let button = UIButton(type: .Custom)
             button.setImage(UIImage(named: "tabBar_publish_icon"), forState: .Normal)
@@ -18,9 +20,11 @@ class HJTabBar: UITabBar {
         return button
     }()
     
-    init() {
+    init(closure: (tabBar: HJTabBar) -> Void) {
+        self.plusClick = closure
         super.init(frame: CGRectZero)
         self.addSubview(publishButton)
+        self.backgroundImage = UIImage(named: "tabbar-light")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -44,6 +48,6 @@ class HJTabBar: UITabBar {
         publishButton.frame = CGRectMake(2 * self.hj_width / 5, 0, self.hj_width / 5, self.hj_height)
     }
     func publish() {
-       HJLog("弹出")
+        plusClick(self)
     }
 }

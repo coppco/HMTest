@@ -10,12 +10,23 @@ import UIKit
 
 class HJMyController: UIViewController {
 
+    var settingBarButton: UIBarButtonItem?
+    var moonBarButton: UIBarButtonItem?
     override func viewDidLoad() {
         super.viewDidLoad()
-        HJLog()
-        // Do any additional setup after loading the view.
+        navigationItem.title = "我的"
+        moonBarButton = UIBarButtonItem.hj_barButtonItem(title: "", normalImage: "mine-moon-icon", highlightedImage: "mine-moon-icon-click", target: self, action: "setMoon")
+        settingBarButton = UIBarButtonItem.hj_barButtonItem(title: "", normalImage: "mine-setting-icon", highlightedImage: "mine-setting-icon-click", target: self, action: "gotoNext:")
+        self.navigationItem.rightBarButtonItems = [moonBarButton!, settingBarButton!]
     }
-
+    
+    func gotoNext(sender: UIButton) {
+        self.navigationController?.pushViewController(HJSettingController(), animated: true)
+    }
+    func setMoon() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
             */
             
-            window?.rootViewController = HJGuideController(closure: { () -> Void in
+            window?.rootViewController = HJGuideController(closure: {[unowned self] () -> Void in
                 self.window?.rootViewController = HJTabBarController()
                 self.window?.makeKeyAndVisible()
             })
