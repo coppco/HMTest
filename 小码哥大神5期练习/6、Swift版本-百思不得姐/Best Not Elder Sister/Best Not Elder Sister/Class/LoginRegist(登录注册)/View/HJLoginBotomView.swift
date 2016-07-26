@@ -4,24 +4,24 @@
 //
 //  Created by M-coppco on 16/7/26.
 //  Copyright © 2016年 M-coppco. All rights reserved.
-//
+//   登录界面的下面快速登录
 
 import UIKit
 
 class HJLoginBotomView: UIView {
     /**快速登录*/
-    internal lazy var titleL: UILabel = {
+    private lazy var titleL: UILabel = {
         let label = UILabel()
         label.text = "快速登录"
         label.numberOfLines = 1
         label.textAlignment = .Center
         label.textColor = UIColor.whiteColor()
-        label.font = UIFont.systemFontOfSize(16)
+        label.font = UIFont.systemFontOfSize(14)
         return label
     }()
     /**QQ登录*/
-    internal lazy var qqB: UIButton = {
-        let button = UIButton(type: .Custom)
+    private lazy var qqB: HJCustomButton = {
+        let button = HJCustomButton(type: .Custom)
         button.setTitle("QQ登录", forState: .Normal)
         button.setTitle("QQ登录", forState: .Highlighted)
         button.setImage(UIImage(named: "login_QQ_icon"), forState: .Normal)
@@ -29,8 +29,8 @@ class HJLoginBotomView: UIView {
         return button
     }()
     /**Sina微博登录*/
-    internal lazy var sinaB: UIButton = {
-        let button = UIButton(type: .Custom)
+    private lazy var sinaB: HJCustomButton = {
+        let button = HJCustomButton(type: .Custom)
         button.setTitle("微博登录", forState: .Normal)
         button.setTitle("微博登录", forState: .Highlighted)
         button.setImage(UIImage(named: "login_sina_icon"), forState: .Normal)
@@ -38,8 +38,8 @@ class HJLoginBotomView: UIView {
         return button
     }()
     /**腾讯微博登录*/
-    internal lazy var tecentB: UIButton = {
-        let button = UIButton(type: .Custom)
+    private lazy var tecentB: HJCustomButton = {
+        let button = HJCustomButton(type: .Custom)
         button.setTitle("腾讯微博", forState: .Normal)
         button.setTitle("腾讯微博", forState: .Highlighted)
         button.setImage(UIImage(named: "login_tecent_icon"), forState: .Normal)
@@ -47,14 +47,16 @@ class HJLoginBotomView: UIView {
         return button
     }()
     
-    internal lazy var leftLine: UIImageView = {
+    private lazy var leftLine: UIImageView = {
         let imageV = UIImageView(image: UIImage(named: "login_register_left_line"))
         return imageV
     }()
-    internal lazy var rightLine: UIImageView = {
+    private lazy var rightLine: UIImageView = {
         let imageV = UIImageView(image: UIImage(named: "login_register_right_line"))
         return imageV
     }()
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,7 +68,6 @@ class HJLoginBotomView: UIView {
     }
     
     func setupUI() {
-        self.backgroundColor = UIColor.hj_randomColor()
         self.addSubview(titleL)
         titleL.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(self).offset(10)
@@ -92,24 +93,26 @@ class HJLoginBotomView: UIView {
         self.addSubview(sinaB)
         self.addSubview(tecentB)
         qqB.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(0)
-            make.bottom.equalTo(self.snp_bottom).offset(-20)
+            make.size.equalTo(sinaB)
+            make.size.equalTo(tecentB)
+            make.top.equalTo(titleL.snp_bottom).offset(10)
+            make.bottom.equalTo(self.snp_bottom).offset(-10)
+            make.left.equalTo(self)
             make.right.equalTo(sinaB.snp_left)
-            make.top.equalTo(titleL.snp_bottom).offset(20)
         }
         
         sinaB.snp_makeConstraints { (make) -> Void in
-            make.bottom.equalTo(0)
-            make.right.equalTo(tecentB.snp_left)
             make.centerY.equalTo(qqB)
+            make.right.equalTo(tecentB.snp_left)
         }
         
         tecentB.snp_makeConstraints { (make) -> Void in
-            make.bottom.equalTo(0)
-            make.right.equalTo(0)
             make.centerY.equalTo(qqB)
+            make.right.equalTo(self.snp_right)
         }
         
     }
-    
+    deinit {
+        HJLog(self.classForCoder, "释放了")
+    }
 }

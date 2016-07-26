@@ -12,7 +12,7 @@ class HJTabBar: UITabBar {
     
     private var plusClick: (HJTabBar) -> Void?
     
-    lazy var publishButton: UIButton = {
+    private lazy var publishButton: UIButton = {
             let button = UIButton(type: .Custom)
             button.setImage(UIImage(named: "tabBar_publish_icon"), forState: .Normal)
             button.setImage(UIImage(named: "tabBar_publish_click_icon"), forState: .Highlighted)

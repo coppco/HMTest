@@ -85,11 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Best Not Elder Sister/Alamofire.framework"
+  install_framework "Pods-Best Not Elder Sister/ReactiveCocoa.framework"
+  install_framework "Pods-Best Not Elder Sister/Result.framework"
   install_framework "Pods-Best Not Elder Sister/SnapKit.framework"
   install_framework "Pods-Best Not Elder Sister/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Best Not Elder Sister/Alamofire.framework"
+  install_framework "Pods-Best Not Elder Sister/ReactiveCocoa.framework"
+  install_framework "Pods-Best Not Elder Sister/Result.framework"
   install_framework "Pods-Best Not Elder Sister/SnapKit.framework"
   install_framework "Pods-Best Not Elder Sister/SwiftyJSON.framework"
 fi

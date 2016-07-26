@@ -3,9 +3,10 @@
 use_frameworks!
 
 target 'Best Not Elder Sister' do
-pod 'Alamofire', '~> 3.1.4'
-pod 'SwiftyJSON', '~> 2.3.2'
-pod 'SnapKit', '~> 0.19.1'
+pod 'Alamofire', '~> 3.1.4'  #网络请求
+pod 'SwiftyJSON', '~> 2.3.2'  #JSON 处理
+pod 'SnapKit', '~> 0.19.1'  #AutoLayout
+pod 'ReactiveCocoa', '~> 4.0.0'  #函数响应式编程
 end
 
 

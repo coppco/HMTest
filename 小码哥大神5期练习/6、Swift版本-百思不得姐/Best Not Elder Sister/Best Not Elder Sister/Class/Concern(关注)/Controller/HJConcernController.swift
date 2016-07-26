@@ -18,7 +18,6 @@ class HJConcernController: UIViewController {
                 
             })
         }
-        
         noData.showInView(self.view)
 
     }

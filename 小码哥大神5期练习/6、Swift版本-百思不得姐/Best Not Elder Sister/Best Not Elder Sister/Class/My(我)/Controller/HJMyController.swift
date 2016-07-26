@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Alamofire
 
-class HJMyController: UIViewController {
+class HJMyController: UITableViewController {
 
     var settingBarButton: UIBarButtonItem?
     var moonBarButton: UIBarButtonItem?
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingNavigation()
+        //http://api.budejie.com/api/api_open.php
+        network()
+    }
+    
+    func settingNavigation() {
         navigationItem.title = "我的"
         moonBarButton = UIBarButtonItem.hj_barButtonItem(title: "", normalImage: "mine-moon-icon", highlightedImage: "mine-moon-icon-click", target: self, action: "setMoon")
         settingBarButton = UIBarButtonItem.hj_barButtonItem(title: "", normalImage: "mine-setting-icon", highlightedImage: "mine-setting-icon-click", target: self, action: "gotoNext:")
@@ -27,20 +34,30 @@ class HJMyController: UIViewController {
         
     }
     
+    func network() {
+        //["a":"themes", "c":"topic"]
+        let url = "http://api.budejie.com/api/api_open.php"
+        let paremeters =  ["a":"square", "c":"topic"]
+        
+        Alamofire.request(.GET, url, parameters: paremeters).res//        Alamofire.request(.GET, url, parameters: paremeters)
+//            .responseJSON { response in
+//                print(response.request)  // original URL request
+//                print(response.response) // URL response
+//                print(response.data)     // server data
+//                print(response.result)   // result of response serialization
+//                
+//                if let JSON = response.result.value {
+//                    print("JSON: \(JSON)")
+//                }
+//        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

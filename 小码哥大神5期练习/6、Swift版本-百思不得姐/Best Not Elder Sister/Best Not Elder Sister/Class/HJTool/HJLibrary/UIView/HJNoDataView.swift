@@ -13,11 +13,11 @@ import SnapKit
 class HJNoDataView: UIView {
     typealias hj_NoDataClosure = () -> Void
     
-    let title: String
-    let details: String
-    let image: String
-    let buttonTitle: String
-    var buttonHasClick: hj_NoDataClosure
+    private let title: String
+    private let details: String
+    private let image: String
+    private let buttonTitle: String
+    private var buttonHasClick: hj_NoDataClosure
     
     init(title: String, details: String, image: String, buttonTitle: String, buttonHasClick: hj_NoDataClosure) {
         self.title = title
@@ -52,7 +52,7 @@ class HJNoDataView: UIView {
     }
     
     /**布局*/
-    func configSubview() {
+    private func configSubview() {
         
         self.addSubview(imageV)
         imageV.snp_makeConstraints(closure: { (make) -> Void in
@@ -95,13 +95,13 @@ class HJNoDataView: UIView {
     
     //MARK:懒加载
     /**图片*/
-    lazy var imageV: UIImageView = {
+    private lazy var imageV: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: self.image))
         return imageView
     }()
     
     /**标题*/
-    lazy var titleL: UILabel = {
+    private lazy var titleL: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = self.title
         titleLabel.numberOfLines = 0
@@ -112,7 +112,7 @@ class HJNoDataView: UIView {
     }()
     
     /**描述*/
-    lazy var detailsL: UILabel = {
+    private lazy var detailsL: UILabel = {
         let detailsLabel = UILabel()
         detailsLabel.text = self.details
         detailsLabel.numberOfLines = 0
@@ -123,7 +123,7 @@ class HJNoDataView: UIView {
     }()
     
     /**按钮*/
-    lazy var operationB: UIButton = {
+    private lazy var operationB: UIButton = {
         let operationButton = UIButton(type: UIButtonType.Custom)
         operationButton.setTitleColor(UIColor.redColor(), forState: .Normal)
         operationButton.setTitleColor(UIColor.redColor(), forState: .Highlighted)
@@ -138,7 +138,7 @@ class HJNoDataView: UIView {
         return operationButton
     }()
 
-    func buttonHasClick(sender: UIButton) {
+    internal func buttonHasClick(sender: UIButton) {
         self.buttonHasClick()
     }
 }
