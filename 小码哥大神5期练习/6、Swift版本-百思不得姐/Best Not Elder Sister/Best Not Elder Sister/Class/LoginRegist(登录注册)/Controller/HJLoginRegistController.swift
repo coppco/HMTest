@@ -11,17 +11,23 @@ import UIKit
 class HJLoginRegistController: UIViewController {
 
     /**背景图*/
-    lazy var backGroundImage:UIImageView = {
+    internal lazy var backGroundImage:UIImageView = {
         let imageV = UIImageView(image: UIImage(named: "login_register_background"))
         return imageV
     }()
     
     /**返回按钮*/
-    lazy var backButton: UIButton = {
+    internal lazy var backButton: UIButton = {
         let button = UIButton(type: UIButtonType.Custom)
         button.setBackgroundImage(UIImage(named: "login_close_icon"), forState: .Normal)
         button.addTarget(self, action: "back:", forControlEvents: .TouchUpInside)
         return button
+    }()
+    
+    //底部
+    internal lazy var bottomView: HJLoginBotomView = {
+        let view = HJLoginBotomView(frame: CGRectZero)
+        return view
     }()
     
     override func viewDidLoad() {
@@ -37,10 +43,17 @@ class HJLoginRegistController: UIViewController {
         
         self.view.addSubview(backButton)
         backButton.snp_makeConstraints { (make) -> Void in
-            make.size.equalTo(CGSizeMake(24, 24))
-            make.top.left.equalTo(25)
+            make.size.equalTo(CGSizeMake(16, 16))
+            make.top.left.equalTo(UIEdgeInsetsMake(40, 25, 0, 0))
         }
         
+        self.view.addSubview(bottomView)
+        bottomView.snp_makeConstraints { (make) -> Void in
+            make.left.right.equalTo(0)
+            make.bottom.equalTo(self.view.snp_bottom).offset(-20)
+            //这里不设置高度,内部控件已经设置好了约束
+//            make.height.equalTo(self.view.hj_height * 0.3)
+        }
     }
     
     //返回
