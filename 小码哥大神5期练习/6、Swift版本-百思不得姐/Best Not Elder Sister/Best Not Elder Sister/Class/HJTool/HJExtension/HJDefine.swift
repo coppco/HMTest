@@ -13,16 +13,16 @@ import UIKit
 let kHJMainScreen = UIScreen.mainScreen()
 
 /**主屏幕bounds*/
-let kHJMainScreenBounds = kHJMainScreen.bounds
+let kHJMainScreenBounds: CGRect = kHJMainScreen.bounds
 
 /**主屏幕的size*/
-let kHJMainScreenSize = kHJMainScreenBounds.size
+let kHJMainScreenSize: CGSize = kHJMainScreenBounds.size
 
 /**主屏幕的宽*/
-let kHJMainScreenWidth = kHJMainScreenSize.width
+let kHJMainScreenWidth: CGFloat = kHJMainScreenSize.width
 
 /**主屏幕的高*/
-let kHJMainScreenHeight = kHJMainScreenSize.height
+let kHJMainScreenHeight: CGFloat = kHJMainScreenSize.height
 
 /**是否是iPhone 4*/
 let is_iPhone4: Bool = CGSizeEqualToSize(kHJMainScreenSize, CGSizeMake(320, 480)) && kHJMainScreen.scale == 1.0
@@ -38,6 +38,9 @@ let is_iPhone6: Bool = CGSizeEqualToSize(kHJMainScreenSize, CGSizeMake(375, 667)
 
 /**是否是iPhone 6 Plus or iPhone 6S Plus*/
 let is_iPhone6p: Bool = CGSizeEqualToSize(kHJMainScreenSize, CGSizeMake(414, 736))
+
+/**系统版本*/
+let systemVersion: Float = (UIDevice.currentDevice().systemVersion as NSString).floatValue
 
 /**是否第一次登陆*/
 let is_First:String = "isFirst"

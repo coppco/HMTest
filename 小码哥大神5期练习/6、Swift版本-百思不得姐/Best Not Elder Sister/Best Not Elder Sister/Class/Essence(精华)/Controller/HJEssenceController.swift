@@ -12,9 +12,8 @@ class HJEssenceController: HJBaseTableVController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.edgesForExtendedLayout = .All
-//        self.automaticallyAdjustsScrollViewInsets = true
-        // Do any additional setup after loading the view.
+        
+        
     }
 
     override func gotoNextVC() {

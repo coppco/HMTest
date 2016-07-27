@@ -55,7 +55,13 @@
 		CC3C09AE1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */; };
 		CC3C09B21D45F59E00D9DB48 /* HJNoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */; };
 		CC5295D91D46EC4700DE45BC /* HJCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5295D81D46EC4700DE45BC /* HJCustomButton.swift */; };
-		CC8C3C8C1D4785DD0098D11D /* HJHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8C3C8B1D4785DD0098D11D /* HJHttpRequest.swift */; };
+		CC54B4771D4844FC00DD8DD4 /* NSDate+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4761D4844FC00DD8DD4 /* NSDate+HJExtension.swift */; };
+		CC54B47A1D4860C300DD8DD4 /* RequestDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */; };
+		CC54B47C1D487FB700DD8DD4 /* HJHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */; };
+		CC54B47E1D48975000DD8DD4 /* HJSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47D1D48975000DD8DD4 /* HJSquare.swift */; };
+		CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */; };
+		CC54B4841D48B55E00DD8DD4 /* HJHomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4831D48B55E00DD8DD4 /* HJHomeTopView.swift */; };
+		CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4861D48BA7000DD8DD4 /* NSString+HJExtension.swift */; };
 		CCCE57761D46F97300A5899C /* HJNamePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE57751D46F97300A5899C /* HJNamePasswordView.swift */; };
 		CCCE57791D476C3700A5899C /* UITextField+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE57781D476C3700A5899C /* UITextField+HJExtension.swift */; };
 /* End PBXBuildFile section */
@@ -134,7 +140,13 @@
 		CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HJNoDataExtension.swift"; sourceTree = "<group>"; };
 		CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNoDataView.swift; sourceTree = "<group>"; };
 		CC5295D81D46EC4700DE45BC /* HJCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJCustomButton.swift; sourceTree = "<group>"; };
-		CC8C3C8B1D4785DD0098D11D /* HJHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHttpRequest.swift; sourceTree = "<group>"; };
+		CC54B4761D4844FC00DD8DD4 /* NSDate+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+HJExtension.swift"; sourceTree = "<group>"; };
+		CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDefine.swift; sourceTree = "<group>"; };
+		CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHttpRequest.swift; sourceTree = "<group>"; };
+		CC54B47D1D48975000DD8DD4 /* HJSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJSquare.swift; sourceTree = "<group>"; };
+		CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJGetRequest.swift; sourceTree = "<group>"; };
+		CC54B4831D48B55E00DD8DD4 /* HJHomeTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHomeTopView.swift; sourceTree = "<group>"; };
+		CC54B4861D48BA7000DD8DD4 /* NSString+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSString+HJExtension.swift"; path = "Best Not Elder Sister/Class/Base/View/NSString+HJExtension.swift"; sourceTree = SOURCE_ROOT; };
 		CCCE57751D46F97300A5899C /* HJNamePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNamePasswordView.swift; sourceTree = "<group>"; };
 		CCCE57781D476C3700A5899C /* UITextField+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+HJExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,12 +189,15 @@
 		447150901D42EB7A002493DC /* HJExtension */ = {
 			isa = PBXGroup;
 			children = (
+				CC54B4851D48B9A400DD8DD4 /* NSString */,
+				CC54B4751D4844DB00DD8DD4 /* NSDate */,
 				CCCE57771D476C1E00A5899C /* UITextField */,
 				CC3C09A41D45A35600D9DB48 /* UIBarButtonItem */,
 				44EC516F1D44AF8E0094F298 /* UIView */,
 				44EC516C1D44AA4F0094F298 /* UIColor */,
 				447150911D42EB7A002493DC /* HJDefine.swift */,
-				CC8C3C8B1D4785DD0098D11D /* HJHttpRequest.swift */,
+				CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */,
+				CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */,
 			);
 			path = HJExtension;
 			sourceTree = "<group>";
@@ -349,6 +364,7 @@
 		CC15960E1D41EAFD0097718D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -357,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				44DE6FAA1D44DE7300F40BD7 /* HJTabBar.swift */,
+				CC54B4831D48B55E00DD8DD4 /* HJHomeTopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +497,7 @@
 		CC1596221D41EAFD0097718D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC54B47D1D48975000DD8DD4 /* HJSquare.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -548,6 +566,23 @@
 				CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		CC54B4751D4844DB00DD8DD4 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				CC54B4761D4844FC00DD8DD4 /* NSDate+HJExtension.swift */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		CC54B4851D48B9A400DD8DD4 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				CC54B4861D48BA7000DD8DD4 /* NSString+HJExtension.swift */,
+			);
+			name = NSString;
+			path = String;
 			sourceTree = "<group>";
 		};
 		CCCE57771D476C1E00A5899C /* UITextField */ = {
@@ -767,21 +802,27 @@
 				447150921D42EB7A002493DC /* HJDefine.swift in Sources */,
 				CC1596251D41EC070097718D /* HJGuideController.swift in Sources */,
 				44A44B9D1D419372009C5BB8 /* ViewController.swift in Sources */,
+				CC54B47C1D487FB700DD8DD4 /* HJHttpRequest.swift in Sources */,
 				CC3C09AE1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift in Sources */,
 				CC3C09A61D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift in Sources */,
+				CC54B47E1D48975000DD8DD4 /* HJSquare.swift in Sources */,
+				CC54B4841D48B55E00DD8DD4 /* HJHomeTopView.swift in Sources */,
 				44DE6FAB1D44DE7300F40BD7 /* HJTabBar.swift in Sources */,
 				CC3C09A81D45B12D00D9DB48 /* HJRecommendController.swift in Sources */,
 				CCCE57791D476C3700A5899C /* UITextField+HJExtension.swift in Sources */,
+				CC54B47A1D4860C300DD8DD4 /* RequestDefine.swift in Sources */,
 				CC3C099F1D45A19400D9DB48 /* HJBaseTableVController.swift in Sources */,
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
 				CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */,
+				CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */,
+				CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */,
 				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,
 				447EE3681D46CFDE00405A22 /* HJLoginBotomView.swift in Sources */,
 				CC1596571D4218340097718D /* HJTabBarController.swift in Sources */,
+				CC54B4771D4844FC00DD8DD4 /* NSDate+HJExtension.swift in Sources */,
 				CC3C09A31D45A22C00D9DB48 /* HJLastestController.swift in Sources */,
 				44A44B9B1D419372009C5BB8 /* AppDelegate.swift in Sources */,
 				CC3C09B21D45F59E00D9DB48 /* HJNoDataView.swift in Sources */,
-				CC8C3C8C1D4785DD0098D11D /* HJHttpRequest.swift in Sources */,
 				CCCE57761D46F97300A5899C /* HJNamePasswordView.swift in Sources */,
 				447EE3661D46CE0000405A22 /* HJLoginRegistController.swift in Sources */,
 				4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */,

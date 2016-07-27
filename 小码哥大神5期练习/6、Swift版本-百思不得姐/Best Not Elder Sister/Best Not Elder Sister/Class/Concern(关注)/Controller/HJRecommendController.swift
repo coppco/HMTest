@@ -14,7 +14,6 @@ class HJRecommendController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationItem.title = "推荐关注"
-        
         // Do any additional setup after loading the view.
     }
 

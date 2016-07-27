@@ -13,10 +13,17 @@ class HJMyController: UITableViewController {
 
     var settingBarButton: UIBarButtonItem?
     var moonBarButton: UIBarButtonItem?
+    var square: [HJSquare]? {
+        didSet {
+            if let _ = square {
+//                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingNavigation()
-        //http://api.budejie.com/api/api_open.php
         network()
     }
     
@@ -35,22 +42,30 @@ class HJMyController: UITableViewController {
     }
     
     func network() {
-        //["a":"themes", "c":"topic"]
-        let url = "http://api.budejie.com/api/api_open.php"
-        let paremeters =  ["a":"square", "c":"topic"]
+        /*
+        srand(UInt32(time(nil)))
+        //随机数
+        let nonestr = "\(rand())"
+        */
         
-        Alamofire.request(.GET, url, parameters: paremeters).res//        Alamofire.request(.GET, url, parameters: paremeters)
-//            .responseJSON { response in
-//                print(response.request)  // original URL request
-//                print(response.response) // URL response
-//                print(response.data)     // server data
-//                print(response.result)   // result of response serialization
-//                
-//                if let JSON = response.result.value {
-//                    print("JSON: \(JSON)")
-//                }
-//        }
+        let par = ["a": "square", "c": "topic", "device": "ios设备", "openudid":"19deb9dde5ccf65fe1623b59a5ebeff55bcbc319", "client":"iphone"]
+        httpRequestJSON(.GET, URLString: kBaseURL, parameters: par, encoding: .URL, success: {[unowned self] (object) -> Void in
+        
+            if let list_array = object["square_list"] {
+                
+                var array = [HJSquare]()
+                for dic in list_array as! [[String: AnyObject]] {
+                    array.append(HJSquare(dic: dic))
+                }
+                self.square = array
+
+            }
+            }) { (error) -> Void in
+        }
+    
     }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,6 +73,14 @@ class HJMyController: UITableViewController {
     }
     
 
+    //TODO: UITableViewDataSource
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        return 2
+//    }
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 1
+//    }
+    
     
 
 }
