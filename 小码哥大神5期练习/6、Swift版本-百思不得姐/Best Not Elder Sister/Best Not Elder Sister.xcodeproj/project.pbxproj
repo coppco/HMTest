@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E664BADDF4D7FCFC55ADC0D /* Pods_Best_Not_Elder_Sister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */; };
+		44051CFB1D497C3100996B9F /* HJEssenceCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44051CFA1D497C3100996B9F /* HJEssenceCCell.swift */; };
+		44051CFD1D497F5800996B9F /* HJEssenceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44051CFC1D497F5800996B9F /* HJEssenceTCell.swift */; };
 		4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E41D44473D00708BDA /* HJNavigationController.swift */; };
 		447150921D42EB7A002493DC /* HJDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447150911D42EB7A002493DC /* HJDefine.swift */; };
 		447EE3661D46CE0000405A22 /* HJLoginRegistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EE3631D46CE0000405A22 /* HJLoginRegistController.swift */; };
@@ -85,6 +87,8 @@
 
 /* Begin PBXFileReference section */
 		3E038FFA57812BB49F1AD1F8 /* Pods-Best Not Elder Sister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.debug.xcconfig"; sourceTree = "<group>"; };
+		44051CFA1D497C3100996B9F /* HJEssenceCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HJEssenceCCell.swift; path = "Best Not Elder Sister/Class/LoginRegist(登录注册)/View/HJEssenceCCell.swift"; sourceTree = SOURCE_ROOT; };
+		44051CFC1D497F5800996B9F /* HJEssenceTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HJEssenceTCell.swift; path = "Best Not Elder Sister/Class/LoginRegist(登录注册)/View/HJEssenceTCell.swift"; sourceTree = SOURCE_ROOT; };
 		4452D0E41D44473D00708BDA /* HJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
 		447150911D42EB7A002493DC /* HJDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJDefine.swift; sourceTree = "<group>"; };
 		447EE3631D46CE0000405A22 /* HJLoginRegistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLoginRegistController.swift; sourceTree = "<group>"; };
@@ -439,6 +443,8 @@
 		CC1596171D41EAFD0097718D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				44051CFA1D497C3100996B9F /* HJEssenceCCell.swift */,
+				44051CFC1D497F5800996B9F /* HJEssenceTCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -807,6 +813,7 @@
 				CC3C09A61D45A3BC00D9DB48 /* UIBarButtonItem+HJExtension.swift in Sources */,
 				CC54B47E1D48975000DD8DD4 /* HJSquare.swift in Sources */,
 				CC54B4841D48B55E00DD8DD4 /* HJHomeTopView.swift in Sources */,
+				44051CFB1D497C3100996B9F /* HJEssenceCCell.swift in Sources */,
 				44DE6FAB1D44DE7300F40BD7 /* HJTabBar.swift in Sources */,
 				CC3C09A81D45B12D00D9DB48 /* HJRecommendController.swift in Sources */,
 				CCCE57791D476C3700A5899C /* UITextField+HJExtension.swift in Sources */,
@@ -815,6 +822,7 @@
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
 				CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */,
 				CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */,
+				44051CFD1D497F5800996B9F /* HJEssenceTCell.swift in Sources */,
 				CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */,
 				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,
 				447EE3681D46CFDE00405A22 /* HJLoginBotomView.swift in Sources */,

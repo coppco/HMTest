@@ -14,6 +14,16 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,6 +42,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>216D52201B4F62D61536F0755D26D759</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>432ECC54282C84882B482CCB4CF227FC</key>
 		<dict>
 			<key>primary</key>
@@ -42,7 +57,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>86AF713383A3D7126A3D0D147BC41B03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A703A813DB71A151096B24A327CF54BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8C3FB9825C196F01175FA0A0C41782E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5975E3C18A46D709B558057F9546EF2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E6302C80740A667ACD095165CDDBAE3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

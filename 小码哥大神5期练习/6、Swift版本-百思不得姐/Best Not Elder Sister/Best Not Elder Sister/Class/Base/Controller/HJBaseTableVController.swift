@@ -28,16 +28,40 @@ class HJBaseTableVController: UIViewController {
         self.view.addSubview(topView)
         topView.snp_makeConstraints { (make) -> Void in
             make.right.left.top.equalTo(self.view)
-            make.height.equalTo(50)
+            make.height.equalTo(44)
+        }
+        
+        self.view.addSubview(collectionView)
+
+        collectionView.snp_makeConstraints { (make) -> Void in
+            make.left.right.bottom.equalTo(self.view)
+            make.top.equalTo(topView.snp_bottom)
         }
     }
 
-    //MARK: 
-    private var topView: HJHomeTopView = {
+    //MARK: private
+    private lazy var topView: HJHomeTopView = {
         let view = HJHomeTopView(title: ["推荐", "视频", "图片", "段子", "网红", "排行", "社会", "美女", "冷知识", "游戏"], closure: { (title) -> Void in
             HJLog(title)
+            
         })
         return view
+        
     }()
 
+    //集合视图
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        layout.itemSize = CGSizeMake(kHJMainScreenWidth, kHJMainScreenHeight - 44 - 64 - 49)
+        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        layout.scrollDirection = .Horizontal
+        let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.bounces = false
+        collectionView.pagingEnabled = true
+        return collectionView
+    }()
 }

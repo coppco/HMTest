@@ -22,7 +22,7 @@ class HJHomeTopView: UIView {
 
     
     func setupUI() {
-        self.backgroundColor = UIColor.lightTextColor()
+         self.backgroundColor =  UIColor.hj_colorFromImage("tabbar-light")
         addSubview(self.scrollView)
         
         var tempButton: UIButton?
@@ -68,7 +68,7 @@ class HJHomeTopView: UIView {
             make.width.equalTo(self.selectButton!.snp_width)
             make.height.equalTo(2)
             make.leading.equalTo(selectButton!.snp_leading)
-            make.top.equalTo(selectButton!.snp_bottom).offset(1)
+            make.top.equalTo(selectButton!.snp_bottom).offset(-1)
         }
         
         //下方灰色线

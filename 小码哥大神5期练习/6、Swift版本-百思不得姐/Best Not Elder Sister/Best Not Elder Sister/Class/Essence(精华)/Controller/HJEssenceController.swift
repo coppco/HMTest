@@ -10,10 +10,13 @@ import UIKit
 
 class HJEssenceController: HJBaseTableVController {
 
+    private let identifier = "HJEssenceCCell"
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.registerClass(HJEssenceCCell.self, forCellWithReuseIdentifier: identifier)
     }
 
     override func gotoNextVC() {
@@ -25,16 +28,23 @@ class HJEssenceController: HJBaseTableVController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+extension HJEssenceController: UICollectionViewDataSource {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 10
     }
-    */
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+}
 
+extension HJEssenceController: UICollectionViewDelegate {
+    
 }
