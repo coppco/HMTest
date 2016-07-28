@@ -17,8 +17,10 @@ class HJEssenceController: HJBaseTableVController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerClass(HJEssenceCCell.self, forCellWithReuseIdentifier: identifier)
+        
     }
 
+    
     override func gotoNextVC() {
         //MARK: 需要完善
         HJLog("需要完善")
@@ -31,20 +33,21 @@ class HJEssenceController: HJBaseTableVController {
 
 }
 
+//MARK: UICollectionViewDataSource
 extension HJEssenceController: UICollectionViewDataSource {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return 10
+        return 1
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! HJEssenceCCell
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 10
     }
 }
-
+//MARK: UICollectionViewDelegate
 extension HJEssenceController: UICollectionViewDelegate {
     
 }

@@ -64,4 +64,7 @@ class HJBaseTableVController: UIViewController {
         collectionView.pagingEnabled = true
         return collectionView
     }()
+    
+
+  
 }

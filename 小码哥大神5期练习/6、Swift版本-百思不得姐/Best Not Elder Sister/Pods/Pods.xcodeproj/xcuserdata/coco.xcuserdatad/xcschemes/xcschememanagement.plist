@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Best Not Elder Sister.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,10 +44,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>216D52201B4F62D61536F0755D26D759</key>
+		<key>08E7AEBFE0B397F01EF9922CF0FF0B0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>175892047F5D57D69AC9D102FB92A2F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>29DD99664D189A7CA206368F493B1E0B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>30472FB2FD7BF4F4C86B4563B28A7514</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,22 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>86AF713383A3D7126A3D0D147BC41B03</key>
+		<key>5B8ED40BDCA0160C5C2E9B76749A352F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C8C3FB9825C196F01175FA0A0C41782E</key>
+		<key>9C0C7982DC8D58B16B69DF3C1AD0DE98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D5975E3C18A46D709B558057F9546EF2</key>
+		<key>D981FAAA64C4D09B531E6FF9166AB73C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6302C80740A667ACD095165CDDBAE3A</key>
+		<key>EBBCB4532EE22403A38C9681B7E54B4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

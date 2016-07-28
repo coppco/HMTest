@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-
+import SwiftyJSON
 
 
 func httpRequestJSON(
@@ -16,15 +16,14 @@ func httpRequestJSON(
     URLString: String,
     parameters: [String: AnyObject]? = nil,
     encoding: ParameterEncoding = .URL,
-    headers: [String: String]? = nil, success: (object: AnyObject) -> Void, failed: (error: NSError) -> Void) -> Request{
+    headers: [String: String]? = nil, success: (object: JSON) -> Void, failed: (error: NSError) -> Void) -> Request{
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         let request: Request = Alamofire.request(type, URLString, parameters: parameters, encoding: encoding, headers: headers)
 
         request.responseJSON { (response) -> Void in
             if response.result.isSuccess {
-                
                 if let data = response.result.value {
-                    success(object: data)
+                    success(object: JSON(data))
                 } else {
                     failed(error: NSError(domain: "数据异常", code: 44, userInfo: nil))
                 }

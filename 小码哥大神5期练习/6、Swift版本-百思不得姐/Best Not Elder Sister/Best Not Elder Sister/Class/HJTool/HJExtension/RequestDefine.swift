@@ -13,6 +13,6 @@ let kBaseURL: String = "http://api.budejie.com/api/api_open.php"
 
 /**我的-推荐订阅*/
 let myCommend: [String: String] = ["a": "tag_recommend","action":"sub", "c": "topic"]
-
+//http://api.budejie.com/api/api_open.php?a=list&c=data&type=1
 /**段子*/
-let joke: [String: String] = ["a": "list", "c":"data"]
+let joke: [String: String] = ["a": "list", "c":"data", "type": "10"]

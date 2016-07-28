@@ -49,20 +49,6 @@ class HJMyController: UITableViewController {
         */
         
         let par = ["a": "square", "c": "topic", "device": "ios设备", "openudid":"19deb9dde5ccf65fe1623b59a5ebeff55bcbc319", "client":"iphone"]
-        httpRequestJSON(.GET, URLString: kBaseURL, parameters: par, encoding: .URL, success: {[unowned self] (object) -> Void in
-        
-            if let list_array = object["square_list"] {
-                
-                var array = [HJSquare]()
-                for dic in list_array as! [[String: AnyObject]] {
-                    array.append(HJSquare(dic: dic))
-                }
-                self.square = array
-
-            }
-            }) { (error) -> Void in
-        }
-    
     }
     
 
