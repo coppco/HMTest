@@ -85,6 +85,7 @@ extension HJEssenceCCell: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+//        return 600
         return tableView.fd_heightForCellWithIdentifier(identifier, cacheByIndexPath: indexPath, configuration: {[unowned self] (cell) -> Void in
             let model = self.modelArray![indexPath.row]
             (cell as! HJEssenceTCell).tModel = model

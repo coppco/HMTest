@@ -81,7 +81,7 @@ class HJEssenceModel: NSObject {
     //计算属性
     var pictureSize: CGSize {
         let w = kHJMainScreenWidth - 2 * 20
-        let h = self.height * w / self.width
+        let h = round((self.height * w / self.width ) * 100) / 100
         
         return CGSizeMake(w, h >= 1000 ? 250 : h)
     }

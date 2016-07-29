@@ -41,7 +41,7 @@ class HJPictureView: UIView {
         let button = UIButton(type: UIButtonType.Custom)
         button.setImage(UIImage(named: "see-big-picture"), forState: UIControlState.Normal)
         button.setTitle("点击查看全图", forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.grayColor()
+        button.setTitleShadowColor(UIColor.grayColor().colorWithAlphaComponent(0.4), forState: .Normal)
         return button
     }()
     

@@ -11,36 +11,18 @@ import Kingfisher
 
 class HJEssenceTCell: UITableViewCell {
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        for view in self.subviews {
+            view.snp_removeConstraints()
+        }
+    }
+
+    
     //MARK: 监听
      var tModel: HJEssenceModel? {
         didSet (new){
-            self.nameL.text = tModel!.name
-            self.create_timeL.text = tModel!.create_time
-            self.iconImageV.kf_setImageWithURL(NSURL(string: (tModel?.profile_image)!)!, placeholderImage: UIImage(named: "defaultUserIcon"))
-            self.contentL.text = tModel?.text
-            
-            if let type = tModel?.type {
-                switch type {
-                case 10:
-                    self.contentView.addSubview(pictureV)
-                    self.pictureV.model = tModel
-                    print(tModel?.pictureSize)
-                    pictureV.snp_remakeConstraints(closure: { (make) -> Void in
-                        make.centerX.equalTo(self)
-                        make.size.equalTo((tModel?.pictureSize)!)
-                        make.top.equalTo(self.contentL.snp_bottom).offset(2 * paddingV)
-                    })
-                default: break
-                }
-            }
-            
-            self.bottomBar.snp_remakeConstraints { (make) -> Void in
-                make.top.equalTo(pictureV.snp_bottom)
-                make.left.right.equalTo(0)
-                make.height.equalTo(44)
-                make.bottom.equalTo(self.contentView).offset(-paddingV)
-            }
-            
+            configUI()
         }
     }
     
@@ -109,53 +91,80 @@ class HJEssenceTCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        configUI()
     }
 
     func configUI() {
         self.contentView.addSubview(iconImageV)
         self.contentView.addSubview(nameL)
         self.contentView.addSubview(create_timeL)
-        self.contentView.addSubview(bottomBar)
         self.contentView.addSubview(moreButton)
         self.contentView.addSubview(contentL)
+        contentL.backgroundColor = UIColor.hj_randomColor()
+        self.contentView.addSubview(bottomBar)
         
+        self.nameL.text = tModel!.name
+        self.create_timeL.text = tModel!.create_time
+        self.iconImageV.kf_setImageWithURL(NSURL(string: (tModel?.profile_image)!)!, placeholderImage: UIImage(named: "defaultUserIcon"))
+        self.contentL.text = tModel?.text
         
-        iconImageV.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(self).offset(iconBeginX)
-            make.top.equalTo(iconBeginY)
-            make.size.equalTo(CGSizeMake(40, 40))
+        iconImageV.snp_remakeConstraints { (make) -> Void in
+            make.top.equalTo(iconBeginY) //冲突
+            make.left.equalTo(iconBeginX)
+            make.size.equalTo(CGSizeMake(40, 40))  //height 40//冲突
         }
         
-        nameL.snp_makeConstraints { (make) -> Void in
+        nameL.snp_remakeConstraints { (make) -> Void in
             make.top.equalTo(iconImageV)
             make.height.equalTo(create_timeL)
             make.left.equalTo(iconImageV.snp_right).offset(paddingH)
             make.bottom.equalTo(create_timeL.snp_top)
         }
-        create_timeL.snp_makeConstraints { (make) -> Void in
+        create_timeL.snp_remakeConstraints { (make) -> Void in
             make.left.equalTo(nameL)
             make.bottom.equalTo(iconImageV.snp_bottom)
         }
         
-        moreButton.snp_makeConstraints { (make) -> Void in
+        moreButton.snp_remakeConstraints { (make) -> Void in
             make.centerY.equalTo(iconImageV)
             make.right.equalTo(-iconBeginX)
         }
         
-        contentL.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV * 2)
+        contentL.snp_remakeConstraints { (make) -> Void in
+            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV * 2)//冲突
             make.left.equalTo(iconBeginX)
             make.right.equalTo(-iconBeginX)
         }
-        
-        
-        
-        bottomBar.snp_makeConstraints { (make) -> Void in
-            make.right.left.equalTo(self)
-            make.height.equalTo(44)
-            make.bottom.equalTo(self).offset(-paddingV)
+    
+        if let type = tModel?.type {
+            switch type {
+            case 10:
+                self.contentView.addSubview(pictureV)
+                self.pictureV.model = tModel
+                HJLog(tModel?.pictureSize)
+                //这里使用update可以,使用remake就不行
+                pictureV.snp_updateConstraints(closure: { (make) -> Void in
+                    make.centerX.equalTo(self.contentView.snp_centerX)
+                    make.size.equalTo((tModel?.pictureSize)!)  //height //冲突
+                    make.top.equalTo(self.contentL.snp_bottom).offset(2 * paddingV)  //冲突
+                })
+                
+                bottomBar.snp_remakeConstraints { (make) -> Void in
+                    make.top.equalTo(pictureV.snp_bottom).offset(paddingV * 2) //冲突
+                    make.right.left.equalTo(self.contentView)
+                    make.height.equalTo(44) //冲突
+                    make.bottom.equalTo(self.contentView).offset(-paddingV) //冲突
+                }
+            default: break
+            }
         }
+        
+        
+//        bottomBar.snp_makeConstraints { (make) -> Void in
+//            make.top.equalTo(contentL.snp_bottom).offset(paddingV * 2)
+//            make.right.left.equalTo(self.contentView)
+//            make.height.equalTo(44)
+//            make.bottom.equalTo(self.contentView).offset(-paddingV)
+//        }
         
     }
     
