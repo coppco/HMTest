@@ -11,13 +11,15 @@ import UIKit
 class HJPictureView: UIView {
 
     var model: HJEssenceModel? {
-        didSet {
-            self.imageV.kf_setImageWithURL(NSURL(string: (model?.cdn_img)!)!, placeholderImage: UIImage(named: "defaultUserIcon"))
-            
-            if ((model?.is_git) != nil) {
-                self.gitImageV.hidden = false
-            } else {
-                self.gitImageV.hidden = true
+        didSet  {
+            if let value = model {
+                self.imageV.kf_setImageWithURL(NSURL(string: (value.cdn_img))!, placeholderImage: UIImage(named: "post_placeholderImage"))
+                
+                if (value.is_gif) {
+                    self.gitImageV.hidden = false
+                } else {
+                    self.gitImageV.hidden = true
+                }
             }
         }
     }
@@ -41,7 +43,7 @@ class HJPictureView: UIView {
         let button = UIButton(type: UIButtonType.Custom)
         button.setImage(UIImage(named: "see-big-picture"), forState: UIControlState.Normal)
         button.setTitle("点击查看全图", forState: UIControlState.Normal)
-        button.setTitleShadowColor(UIColor.grayColor().colorWithAlphaComponent(0.4), forState: .Normal)
+        button.setBackgroundImage(UIImage(named: "see-big-picture-background"), forState: .Normal)
         return button
     }()
     

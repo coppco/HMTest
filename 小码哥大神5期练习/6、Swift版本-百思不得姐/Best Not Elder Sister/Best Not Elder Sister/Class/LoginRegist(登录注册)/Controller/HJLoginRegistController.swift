@@ -27,7 +27,7 @@ class HJLoginRegistController: UIViewController {
             self.view.endEditing(true)
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 sender.transform = CGAffineTransformRotate(sender.transform, CGFloat(-M_PI_2) / 2.0)
-                }) { (flag) -> Void in
+                }) {[unowned self] (flag) -> Void in
                     self.dismissViewControllerAnimated(true, completion: nil)
                    }
             })
@@ -91,7 +91,7 @@ class HJLoginRegistController: UIViewController {
             })
         }
         //约束使用layoutIfNeeded()方法做动画
-        UIView.animateWithDuration(0.25) { () -> Void in
+        UIView.animateWithDuration(0.25) {[unowned self] () -> Void in
             self.view.layoutIfNeeded()
         }
     }

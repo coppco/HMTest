@@ -23,6 +23,7 @@ class HJEssenceModel: NSObject {
     var bookmark: Int = 0
     var cache_version: Int = 0
     var cai: Int = 0
+    /**显示的图片*/
     var cdn_img: String = ""
     var comment: Int = 0
     /**创建时间*/
@@ -32,16 +33,18 @@ class HJEssenceModel: NSObject {
     var favourite = 0
     var gifFistFrame: String = ""
     var hate: Int = 0
-    var height: CGFloat = 0
+    var height: Int = 0
     var id: Int = 0
     var image0: String = ""
     var image1: String = ""
     var image2: String = ""
-    var is_git: Bool = false
+    
+    var is_gif: Bool = false
     var love: Int = 0
     var name: String = ""
     var original_pid: Int = 0
     var passtime: String = ""
+    /**用户头像*/
     var profile_image: String = ""
     var repost: Int = 0
     var screen_name: String = ""
@@ -62,7 +65,7 @@ class HJEssenceModel: NSObject {
     var voicetime: Int = 0
     var voiceuri: String = ""
     var weixin_url = ""
-    var width: CGFloat = 0
+    var width: Int = 0
     
     init(dic: [String: AnyObject]) {
         super.init()
@@ -78,12 +81,11 @@ class HJEssenceModel: NSObject {
     }
     
     
-    //计算属性
-    var pictureSize: CGSize {
-        let w = kHJMainScreenWidth - 2 * 20
-        let h = round((self.height * w / self.width ) * 100) / 100
-        
-        return CGSizeMake(w, h >= 1000 ? 250 : h)
-    }
+//    //计算属性
+//    var pictureSize: CGSize {
+//        let w: CGFloat = kHJMainScreenWidth - 2 * 20
+//        let h = CGFloat(self.height) * w / CGFloat(self.width)
+//        return CGSizeMake(round(w), round(h))
+//    }
     
 }

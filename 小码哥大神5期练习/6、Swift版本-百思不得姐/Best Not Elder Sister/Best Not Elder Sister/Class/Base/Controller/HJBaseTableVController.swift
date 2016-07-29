@@ -54,7 +54,7 @@ class HJBaseTableVController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
-        layout.itemSize = CGSizeMake(kHJMainScreenWidth, kHJMainScreenHeight - 44 - 64 - 49)
+        layout.itemSize = CGSizeMake(kHJMainScreenWidth, kHJMainScreenHeight - 44 - 64 - 49)  //tabBar高度49  导航栏和状态栏 64  顶部自定义44
         layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0)
         layout.scrollDirection = .Horizontal
         let collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)

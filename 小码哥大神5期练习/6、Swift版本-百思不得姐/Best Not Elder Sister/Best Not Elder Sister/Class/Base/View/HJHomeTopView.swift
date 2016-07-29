@@ -59,7 +59,7 @@ class HJHomeTopView: UIView {
         
         //最后设置scrollview
         scrollView.snp_makeConstraints { (make) -> Void in
-            make.edges.equalTo(UIEdgeInsetsMake(1, 1, -1, 1))
+            make.edges.equalTo(UIEdgeInsetsMake(1, 1, -1, -1))
             make.right.equalTo((tempButton?.snp_right)!).offset(begin)
         }
         

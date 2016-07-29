@@ -21,7 +21,7 @@ class HJTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        self.setValue(HJTabBar(closure: { (tabBar) -> Void in
+        self.setValue(HJTabBar(closure: {[unowned self] (tabBar) -> Void in
             //FIXME: 需要完善
             HJLog("需要完善")
         }), forKeyPath: "tabBar")

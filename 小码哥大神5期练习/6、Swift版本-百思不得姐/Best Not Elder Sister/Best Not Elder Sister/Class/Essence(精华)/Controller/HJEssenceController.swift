@@ -31,6 +31,8 @@ class HJEssenceController: HJBaseTableVController {
         // Dispose of any resources that can be recreated.
     }
 
+    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
+    private let jokeType: [Int] = [1, 41, 10, 29, 31, 25, 45, 12, 54, 53]
 }
 
 //MARK: UICollectionViewDataSource
@@ -38,8 +40,10 @@ extension HJEssenceController: UICollectionViewDataSource {
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! HJEssenceCCell
+        cell.jokeType = self.jokeType[indexPath.item]
         return cell
     }
     

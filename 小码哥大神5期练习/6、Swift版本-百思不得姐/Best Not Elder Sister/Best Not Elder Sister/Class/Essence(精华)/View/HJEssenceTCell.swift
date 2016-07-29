@@ -8,23 +8,120 @@
 
 import UIKit
 import Kingfisher
+import SnapKit
 
 class HJEssenceTCell: UITableViewCell {
 
+
+    
     override func prepareForReuse() {
         super.prepareForReuse()
-        for view in self.subviews {
-            view.snp_removeConstraints()
-        }
+        self.tModel = nil
+        self.iconImageV.image = nil
+        self.nameL.text = nil
+        self.create_timeL.text = nil
+        self.contentL.text = nil
+        self.pictureV.model = nil
     }
 
     
     //MARK: 监听
      var tModel: HJEssenceModel? {
-        didSet (new){
-            configUI()
+        didSet {
+            if let new = tModel {
+                self.iconImageV.kf_setImageWithURL(NSURL(string: new.profile_image)!, placeholderImage: UIImage(named: "defaultUserIcon"))
+                self.nameL.text = new.name
+
+                self.create_timeL.text = new.create_time
+                self.contentL.text = new.text
+                self.pictureV.model = new
+
+
+                self.setNeedsUpdateConstraints()
+            }
         }
     }
+    
+   
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        createSubview()
+        setAutoLayout()
+    }
+
+    func createSubview() {
+        self.contentView.addSubview(iconImageV)
+        self.contentView.addSubview(nameL)
+        self.contentView.addSubview(create_timeL)
+        self.contentView.addSubview(moreButton)
+        self.contentView.addSubview(contentL)
+         self.contentView.addSubview(pictureV)
+        self.contentView.addSubview(bottomBar)
+    }
+    
+    func setAutoLayout() {
+        iconImageV.snp_makeConstraints { (make) -> Void in
+            make.size.equalTo(CGSizeMake(40, 40))
+            make.left.equalTo(iconBeginX)
+            make.top.equalTo(iconBeginY)
+        }
+        
+        nameL.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(iconImageV.snp_right).offset(paddingH)
+            make.top.equalTo(iconImageV.snp_top)
+            make.height.equalTo(create_timeL.snp_height)
+        }
+        
+        create_timeL.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(nameL.snp_bottom)
+            make.left.equalTo(nameL.snp_left)
+        }
+        
+        contentL.snp_makeConstraints { (make) -> Void in
+            make.left.equalTo(self.contentView).offset(iconBeginX)
+            make.right.equalTo(self.contentView).offset(-iconBeginX)
+            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV)
+        }
+        
+        //这个设置是重点
+        pictureV.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(contentL.snp_bottom).offset(paddingV)
+            make.left.equalTo(iconBeginX)
+            make.right.equalTo(-iconBeginX)
+            make.height.equalTo(250)
+        }
+        
+        bottomBar.snp_makeConstraints { (make) -> Void in
+            make.top.equalTo(pictureV.snp_bottom).offset(paddingV)
+            make.left.right.equalTo(self.contentView)
+            make.height.equalTo(44)
+            make.bottom.equalTo(self.contentView).offset(-iconBeginY)
+        }
+        
+        self.setNeedsUpdateConstraints()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+    //MARK: 一些设置
+    let iconBeginX: CGFloat = 20  //开始x坐标
+    let iconBeginY: CGFloat = 10  //开始y坐标
+    let paddingH: CGFloat = 8  //水平间距
+    let paddingV: CGFloat = 10  //垂直间距
     
     /**头像*/
     private lazy var iconImageV: UIImageView = {
@@ -84,109 +181,9 @@ class HJEssenceTCell: UITableViewCell {
         let view = HJPictureView()
         return view
     }()
-     
+    
     
     /**底部按钮*/
     private lazy var bottomBar: HJJokeToolBar = HJJokeToolBar(frame: CGRectZero)
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-
-    func configUI() {
-        self.contentView.addSubview(iconImageV)
-        self.contentView.addSubview(nameL)
-        self.contentView.addSubview(create_timeL)
-        self.contentView.addSubview(moreButton)
-        self.contentView.addSubview(contentL)
-        contentL.backgroundColor = UIColor.hj_randomColor()
-        self.contentView.addSubview(bottomBar)
-        
-        self.nameL.text = tModel!.name
-        self.create_timeL.text = tModel!.create_time
-        self.iconImageV.kf_setImageWithURL(NSURL(string: (tModel?.profile_image)!)!, placeholderImage: UIImage(named: "defaultUserIcon"))
-        self.contentL.text = tModel?.text
-        
-        iconImageV.snp_remakeConstraints { (make) -> Void in
-            make.top.equalTo(iconBeginY) //冲突
-            make.left.equalTo(iconBeginX)
-            make.size.equalTo(CGSizeMake(40, 40))  //height 40//冲突
-        }
-        
-        nameL.snp_remakeConstraints { (make) -> Void in
-            make.top.equalTo(iconImageV)
-            make.height.equalTo(create_timeL)
-            make.left.equalTo(iconImageV.snp_right).offset(paddingH)
-            make.bottom.equalTo(create_timeL.snp_top)
-        }
-        create_timeL.snp_remakeConstraints { (make) -> Void in
-            make.left.equalTo(nameL)
-            make.bottom.equalTo(iconImageV.snp_bottom)
-        }
-        
-        moreButton.snp_remakeConstraints { (make) -> Void in
-            make.centerY.equalTo(iconImageV)
-            make.right.equalTo(-iconBeginX)
-        }
-        
-        contentL.snp_remakeConstraints { (make) -> Void in
-            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV * 2)//冲突
-            make.left.equalTo(iconBeginX)
-            make.right.equalTo(-iconBeginX)
-        }
-    
-        if let type = tModel?.type {
-            switch type {
-            case 10:
-                self.contentView.addSubview(pictureV)
-                self.pictureV.model = tModel
-                HJLog(tModel?.pictureSize)
-                //这里使用update可以,使用remake就不行
-                pictureV.snp_updateConstraints(closure: { (make) -> Void in
-                    make.centerX.equalTo(self.contentView.snp_centerX)
-                    make.size.equalTo((tModel?.pictureSize)!)  //height //冲突
-                    make.top.equalTo(self.contentL.snp_bottom).offset(2 * paddingV)  //冲突
-                })
-                
-                bottomBar.snp_remakeConstraints { (make) -> Void in
-                    make.top.equalTo(pictureV.snp_bottom).offset(paddingV * 2) //冲突
-                    make.right.left.equalTo(self.contentView)
-                    make.height.equalTo(44) //冲突
-                    make.bottom.equalTo(self.contentView).offset(-paddingV) //冲突
-                }
-            default: break
-            }
-        }
-        
-        
-//        bottomBar.snp_makeConstraints { (make) -> Void in
-//            make.top.equalTo(contentL.snp_bottom).offset(paddingV * 2)
-//            make.right.left.equalTo(self.contentView)
-//            make.height.equalTo(44)
-//            make.bottom.equalTo(self.contentView).offset(-paddingV)
-//        }
-        
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        configUI()
-        // Initialization code
-    }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-    //MARK: 一些设置
-    let iconBeginX = 20
-    let iconBeginY = 10
-    let paddingH = 8
-    let paddingV = 5
 }

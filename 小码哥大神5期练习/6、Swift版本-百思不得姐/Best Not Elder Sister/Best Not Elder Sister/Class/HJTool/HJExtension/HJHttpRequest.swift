@@ -23,6 +23,7 @@ func httpRequestJSON(
         request.responseJSON { (response) -> Void in
             if response.result.isSuccess {
                 if let data = response.result.value {
+                    print(data)
                     success(object: JSON(data))
                 } else {
                     failed(error: NSError(domain: "数据异常", code: 44, userInfo: nil))
