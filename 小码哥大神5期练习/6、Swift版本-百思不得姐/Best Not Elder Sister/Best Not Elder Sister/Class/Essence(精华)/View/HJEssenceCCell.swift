@@ -25,7 +25,7 @@ class HJEssenceCCell: UICollectionViewCell {
     /**最大数据*/
     private var maxtime: String = ""
     //model数据
-    private var modelArray: [HJEssenceModel] = [HJEssenceModel]() {
+    private var modelArray: [JokeModel] = [JokeModel]() {
         didSet  {
                 self.tableView.reloadData()
         }
@@ -74,9 +74,9 @@ class HJEssenceCCell: UICollectionViewCell {
 
         httpRequestJSON(.GET, URLString: homeRecommend, parameters: param, success: {[unowned self] (object) -> Void in
             self.maxtime = object["info"]["maxtime"].stringValue
-            var temp = [HJEssenceModel]()
+            var temp = [JokeModel]()
             for item in object["list"].array! {
-                temp.append(HJEssenceModel(dic: item.dictionaryObject!))
+//                temp.append(JokeModel(dic: item.dictionaryObject!))
             }
             self.modelArray.appendContentsOf(temp)
             self.tableView.mj_header.endRefreshing()

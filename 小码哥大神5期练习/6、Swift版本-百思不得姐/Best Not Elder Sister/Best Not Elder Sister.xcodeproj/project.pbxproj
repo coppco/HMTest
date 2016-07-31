@@ -55,7 +55,7 @@
 		CC3C09AE1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */; };
 		CC3C09B21D45F59E00D9DB48 /* HJNoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */; };
 		CC5295D91D46EC4700DE45BC /* HJCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5295D81D46EC4700DE45BC /* HJCustomButton.swift */; };
-		CC546AE71D49931F00D4878C /* HJEssenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC546AE61D49931F00D4878C /* HJEssenceModel.swift */; };
+		CC546AE71D49931F00D4878C /* JokeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC546AE61D49931F00D4878C /* JokeModel.swift */; };
 		CC54B4771D4844FC00DD8DD4 /* NSDate+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4761D4844FC00DD8DD4 /* NSDate+HJExtension.swift */; };
 		CC54B47A1D4860C300DD8DD4 /* RequestDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */; };
 		CC54B47C1D487FB700DD8DD4 /* HJHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */; };
@@ -145,7 +145,7 @@
 		CC3C09AD1D45F2DE00D9DB48 /* UIView+HJNoDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HJNoDataExtension.swift"; sourceTree = "<group>"; };
 		CC3C09B11D45F59E00D9DB48 /* HJNoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNoDataView.swift; sourceTree = "<group>"; };
 		CC5295D81D46EC4700DE45BC /* HJCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJCustomButton.swift; sourceTree = "<group>"; };
-		CC546AE61D49931F00D4878C /* HJEssenceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceModel.swift; sourceTree = "<group>"; };
+		CC546AE61D49931F00D4878C /* JokeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JokeModel.swift; sourceTree = "<group>"; };
 		CC54B4761D4844FC00DD8DD4 /* NSDate+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+HJExtension.swift"; sourceTree = "<group>"; };
 		CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDefine.swift; sourceTree = "<group>"; };
 		CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHttpRequest.swift; sourceTree = "<group>"; };
@@ -442,7 +442,7 @@
 		CC1596161D41EAFD0097718D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC546AE61D49931F00D4878C /* HJEssenceModel.swift */,
+				CC546AE61D49931F00D4878C /* JokeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -831,7 +831,7 @@
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
 				CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */,
 				CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */,
-				CC546AE71D49931F00D4878C /* HJEssenceModel.swift in Sources */,
+				CC546AE71D49931F00D4878C /* JokeModel.swift in Sources */,
 				CCB781CE1D49D29F0010BEBA /* HJJokeToolBar.swift in Sources */,
 				CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */,
 				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,

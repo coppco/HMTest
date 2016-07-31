@@ -10,16 +10,16 @@ import UIKit
 
 class HJPictureView: UIView {
 
-    var model: HJEssenceModel? {
+    var model: JokeModel? {
         didSet  {
             if let value = model {
-                self.imageV.kf_setImageWithURL(NSURL(string: (value.cdn_img))!, placeholderImage: UIImage(named: "post_placeholderImage"))
+//                self.imageV.kf_setImageWithURL(NSURL(string: (value.cdn_img))!, placeholderImage: UIImage(named: "post_placeholderImage"))
                 
-                if (value.is_gif) {
-                    self.gitImageV.hidden = false
-                } else {
-                    self.gitImageV.hidden = true
-                }
+//                if (value.is_gif) {
+//                    self.gitImageV.hidden = false
+//                } else {
+//                    self.gitImageV.hidden = true
+//                }
             }
         }
     }

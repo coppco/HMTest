@@ -13,7 +13,6 @@ import SnapKit
 class HJEssenceTCell: UITableViewCell {
 
 
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.tModel = nil
@@ -26,13 +25,13 @@ class HJEssenceTCell: UITableViewCell {
 
     
     //MARK: 监听
-     var tModel: HJEssenceModel? {
+     var tModel: JokeModel? {
         didSet {
             if let new = tModel {
-                self.iconImageV.kf_setImageWithURL(NSURL(string: new.profile_image)!, placeholderImage: UIImage(named: "defaultUserIcon"))
-                self.nameL.text = new.name
+//                self.iconImageV.kf_setImageWithURL(NSURL(string: new.profile_image)!, placeholderImage: UIImage(named: "defaultUserIcon"))
+//                self.nameL.text = new.name
 
-                self.create_timeL.text = new.create_time
+//                self.create_timeL.text = new.create_time
                 self.contentL.text = new.text
                 self.pictureV.model = new
 
