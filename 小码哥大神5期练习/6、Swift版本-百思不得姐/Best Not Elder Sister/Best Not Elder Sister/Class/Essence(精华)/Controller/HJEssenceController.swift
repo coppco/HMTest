@@ -18,6 +18,9 @@ class HJEssenceController: HJBaseTableVController {
         collectionView.dataSource = self
         collectionView.registerClass(HJEssenceCCell.self, forCellWithReuseIdentifier: identifier)
         
+//        let a = String.fromCString(class_getName(JokeModel.classForCoder()))
+//        print(JokeModel.classForCoder(), JokeModel.self,a)
+//        JokeModel.dictionaryToModel([:])
     }
 
     

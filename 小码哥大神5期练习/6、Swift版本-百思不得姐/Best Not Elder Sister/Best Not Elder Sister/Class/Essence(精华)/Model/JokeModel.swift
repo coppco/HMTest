@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 //段子类型
 enum JOKEType: Int {
     case All = 1
@@ -18,6 +19,16 @@ enum JOKEType: Int {
 }
 
 class JokeModel: NSObject {
+    
+    /**改变key*/
+    override class func changKeys() -> [String: String]? {
+        return ["":""]
+    }
+    /**数组中存放model*/
+    override class func CustomerInArray() ->  [String: String]?{
+        return ["tags":"Tags", ]
+    }
+
     
     /***/
     var bookmark: Int?
@@ -50,7 +61,9 @@ class JokeModel: NSObject {
     var image: Image?
     /**gif信息*/
     var gif: Gif?
-    var precmt: Precmt?
+    var precmt: Precmt? 
+
+    
 }
 
 /**标签*/

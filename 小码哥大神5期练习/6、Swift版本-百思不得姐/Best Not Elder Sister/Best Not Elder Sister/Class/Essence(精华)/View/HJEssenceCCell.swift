@@ -77,6 +77,8 @@ class HJEssenceCCell: UICollectionViewCell {
             var temp = [JokeModel]()
             for item in object["list"].array! {
 //                temp.append(JokeModel(dic: item.dictionaryObject!))
+                let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+                temp.append(model)
             }
             self.modelArray.appendContentsOf(temp)
             self.tableView.mj_header.endRefreshing()
