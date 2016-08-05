@@ -17,10 +17,6 @@ class HJEssenceController: HJBaseTableVController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerClass(HJEssenceCCell.self, forCellWithReuseIdentifier: identifier)
-        
-//        let a = String.fromCString(class_getName(JokeModel.classForCoder()))
-//        print(JokeModel.classForCoder(), JokeModel.self,a)
-//        JokeModel.dictionaryToModel([:])
     }
 
     
@@ -29,13 +25,17 @@ class HJEssenceController: HJBaseTableVController {
         HJLog("需要完善")
     }
     
+    override func changeTitle(title title: String, index: Int) {
+        self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.None, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    //1为全部，10为图片，29为段子，31为音频，41为视频，默认为1
-    private let jokeType: [Int] = [1, 41, 10, 29, 31, 25, 45, 12, 54, 53]
+    //1为全部，41为视频，10为图片，29为段子，31为音频
+    private let jokeType: [String] = ["1", "41", "10", "29", "31", "25", "45", "12", "54", "53"]
 }
 
 //MARK: UICollectionViewDataSource
@@ -51,7 +51,7 @@ extension HJEssenceController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.topView.titleList.count
     }
 }
 //MARK: UICollectionViewDelegate

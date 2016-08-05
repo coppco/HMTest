@@ -11,15 +11,29 @@ import UIKit
 class HJPictureView: UIView {
 
     var model: JokeModel? {
-        didSet  {
-            if let value = model {
-//                self.imageV.kf_setImageWithURL(NSURL(string: (value.cdn_img))!, placeholderImage: UIImage(named: "post_placeholderImage"))
+        willSet  {
+            if let value = newValue {
                 
-//                if (value.is_gif) {
-//                    self.gitImageV.hidden = false
-//                } else {
-//                    self.gitImageV.hidden = true
-//                }
+                switch value.jokeType {
+                case .Gif:
+                    if let gif = value.gif {
+                        self.imageV.kf_setImageWithURL(NSURL(string: (gif.images?.first)!)!, placeholderImage: UIImage(named: "mainCellBackground"))
+                        self.gitImageV.hidden = false
+                    }
+                case .Image:
+                    if let temp = value.image {
+                        self.imageV.kf_setImageWithURL(NSURL(string: (temp.big?.first!)!)!, placeholderImage: UIImage(named: "mainCellBackground"))
+                        self.gitImageV.hidden = true
+                    }
+                default:
+                    break
+                }
+                if value.isLongPicture {
+                    self.bigButton.hidden = false
+                } else {
+                    self.bigButton.hidden = true
+                }
+                
             }
         }
     }

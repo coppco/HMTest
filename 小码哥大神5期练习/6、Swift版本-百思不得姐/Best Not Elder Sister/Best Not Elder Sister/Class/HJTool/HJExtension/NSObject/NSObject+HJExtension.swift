@@ -37,11 +37,9 @@ extension NSObject {
                 let propertyType = String.fromCString(property_getAttributes(property))! //属性类型
                 var propertyName: String = String.fromCString(property_getName(property))! //属性名称
                 if propertyType == "description" { continue }
-                
-                
+
                 if var value = dic.objectForKey(propertyName) {
                     let valueType = "\(value.classForCoder)"  //字典中存放的数据类型
-                    
                     if "NSDictionary" == valueType {
                         //嵌套
                         if let subModelString = self.getCustomerType(propertyType) {
@@ -52,6 +50,7 @@ extension NSObject {
                             print("\(propertyName)需要一个自定义模型")
                         }
                     } else if "NSArray" == valueType {
+                        //数组中存放model的情况
                         if self.respondsToSelector("CustomerInArray") {
                             if var subModelClassName = className.CustomerInArray()![propertyName] {
                                 subModelClassName = bundleName + "." + subModelClassName
@@ -61,6 +60,11 @@ extension NSObject {
                                     }
                                 }
                             }
+                        }
+                    } else {
+                        //Foundation中类型
+                        if propertyType.componentsSeparatedByString("\"")[1] == "NSString" {
+                            value = String(value)
                         }
                     }
                     //这里可以设置映射, 改变key值的情况
@@ -81,7 +85,7 @@ extension NSObject {
         return object
     }
     
-    
+    /**字典数组转模型数组*/
     class func arrayOfDicToArrayOfModel(array: NSArray) -> NSArray? {
         if array.count == 0 {
             return nil
@@ -107,6 +111,59 @@ extension NSObject {
             return result
         }
     }
+    
+    /**模型转字典*/
+    var keyValues:[String:AnyObject]? {
+        get{
+            var result = [String: AnyObject]()           //保存结果
+            var classType:AnyClass = self.classForCoder
+            while("NSObject" !=  "\(classType)" ){
+                var count:UInt32 = 0
+                let properties = class_copyPropertyList(classType, &count)
+                for i in 0..<count{
+                    let property = properties[Int(i)]
+                    let propertyName = String.fromCString(property_getName(property))!         //模型中属性名称
+                    let propertyType = String.fromCString(property_getAttributes(property))!  //模型中属性类型
+                    
+                    if "description" == propertyName{ continue }   //描述，不是属性
+                    
+                    let tempValue:AnyObject!  = self.valueForKey(propertyName)
+
+                    if let _ =  NSObject.getCustomerType(propertyType) {         //1,自定义的类
+                        if  tempValue == nil {
+                            result[propertyName] = [:]
+                            continue
+                        } else {
+                            result[propertyName] = tempValue.keyValues
+                        }
+                    }else if (propertyType.containsString("NSArray")){       //2, 数组, 将数组中的模型转成字典
+                        if  tempValue == nil {
+                            result[propertyName] = []
+                            continue
+                        } else {
+                            result[propertyName] = (tempValue as! NSArray).keyValuesArray       //
+                        }
+                    }else{
+                        //3， 基本数据
+                        if tempValue == nil {
+                            result[propertyName] = ""
+                        } else {
+                            result[propertyName] = tempValue
+                        }
+                    }
+                }
+                free(properties)
+                classType = classType.superclass()!
+            }
+            if result.count == 0{
+                return nil
+            }else{
+                return result
+            }
+            
+        }
+    }
+
     
      /**
      获取自定义类的类名, 自定义类
@@ -146,4 +203,62 @@ extension NSObject {
 private let bundleName = (NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"]?.stringByReplacingOccurrencesOfString(" ", withString: "_"))! as String
 //private let bundleName = NSBundle.mainBundle().bundlePath.componentsSeparatedByString("/").last!.componentsSeparatedByString(".").first!
 
+private let set = NSSet(array: [
+    NSURL.classForCoder(),
+    NSDate.classForCoder(),
+    NSValue.classForCoder(),
+    NSData.classForCoder(),
+    NSError.classForCoder(),
+    NSArray.classForCoder(),
+    NSDictionary.classForCoder(),
+    NSString.classForCoder(),
+    NSAttributedString.classForCoder()
+    ])
 
+private func isClassFromFoundation(c:AnyClass)->Bool {
+    var  result = false
+    if c == NSObject.classForCoder(){
+        result = true
+    }else{
+        set.enumerateObjectsUsingBlock({ (foundation,  stop) -> Void in
+            if  c.isSubclassOfClass(foundation as! AnyClass) {
+                result = true
+                stop.initialize(true)
+            }
+        })
+    }
+    return result
+}
+
+extension NSArray{  //数组的拓展
+    var keyValuesArray:[AnyObject]?{
+        get{
+            var result = [AnyObject]()
+            for item in self{
+                if !isClassFromFoundation(item.classForCoder){ //1,自定义的类
+                    let subKeyValues:[String:AnyObject]! = item.keyValues
+                    if  subKeyValues == nil {
+                        result.append([:])
+                    } else {
+                        result.append(subKeyValues)
+                    }
+                }else if item.classForCoder == NSArray.classForCoder(){    //2, 如果item 是数组
+                    let subKeyValues:[AnyObject]! = (item as! NSArray).keyValuesArray
+                    if  subKeyValues == nil {
+                        result.append([])
+                    } else {
+                        result.append(subKeyValues)
+                    }
+                }else{                                                     //3, 基本数据类型
+                    result.append(item)
+                }
+            }
+            if result.count == 0{
+                return nil
+            }else{
+                return result
+            }
+            
+        }
+    }
+}

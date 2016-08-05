@@ -10,6 +10,17 @@ import UIKit
 
 class HJJokeToolBar: UIView {
 
+    var model: JokeModel? {
+        didSet  {
+            if let new = model {
+                self.favoriteB.setTitle(new.up, forState: UIControlState.Normal)
+                self.hateB.setTitle(new.down, forState: UIControlState.Normal)
+                self.shareB.setTitle(new.forward, forState: UIControlState.Normal)
+                self.commentB.setTitle(new.comment, forState: UIControlState.Normal)
+            }
+        }
+    }
+    
     /**点赞*/
     private lazy var favoriteB: UIButton = {
         let button = UIButton(type: UIButtonType.Custom)

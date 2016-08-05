@@ -10,7 +10,7 @@ import UIKit
 
 class HJHomeTopView: UIView {
     
-    init(title:[String], closure: (String) -> Void) {
+    init(title:[String], closure: (String, Int) -> Void) {
         self.titleList = title
         self.hasSelectButton = closure
         super.init(frame: CGRectZero)
@@ -84,7 +84,9 @@ class HJHomeTopView: UIView {
     //点击按钮 方法
     func selectButton(sender: UIButton) {
         if let title = sender.currentTitle {
-            hasSelectButton(title)
+            if let index = self.titleList.indexOf(title) {
+                hasSelectButton(title, index)
+            }
         }
         self.selectButton = sender
     }
@@ -95,7 +97,7 @@ class HJHomeTopView: UIView {
     
     //MARK:  private
     /**顶部数组*/
-    private var titleList: [String]
+    var titleList: [String]
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView(frame: CGRectZero)
         scroll.showsHorizontalScrollIndicator = false
@@ -129,15 +131,17 @@ class HJHomeTopView: UIView {
         }
     }
     
+    
+    
     /**点击按钮闭包*/
-    internal var hasSelectButton: (String) -> Void
+    internal var hasSelectButton: (String, Int) -> Void
     
     deinit {
         HJLog("\(self.classForCoder)释放了")
     }
     
     /**移动动画*/
-    func animation(oldbutton: UIButton, newButton: UIButton) {
+    private func animation(oldbutton: UIButton, newButton: UIButton) {
         //下划线
         underLine.snp_remakeConstraints { (make) -> Void in
             make.width.equalTo(newButton.snp_width)

@@ -8,14 +8,20 @@
 
 import Foundation
 /**推荐*/
-let homeRecommend: String = jokeUrlForType("1")
+//func homeRecommendUrl(timeStamp: String) -> String {
+//    return jokeUrlForType(type: "1", timeStamp: timeStamp)
+//}
 
-/**视频*/
-let vedioUrl: String = jokeUrlForType("41")
 
-/**baseURL*/
-func jokeUrlForType(type: String) -> String {
-    return String(format: "http://s.budejie.com/topic/list/jingxuan/%@/bs0315-iphone-4.3/0-20.json", type)
+///**视频*/
+//func vedioUrl(timeStamp: String) -> String {
+//    return jokeUrlForType(type: "41", timeStamp: timeStamp)
+//}
+
+
+/**baseURL*/ 
+func jokeUrlForType(type type: String, timeStamp: String) -> String {
+    return String(format: "http://s.budejie.com/topic/list/jingxuan/%@/bs0315-iphone-4.3/%@-20.json", type, timeStamp)
 }
 
 /**我的-推荐订阅*/

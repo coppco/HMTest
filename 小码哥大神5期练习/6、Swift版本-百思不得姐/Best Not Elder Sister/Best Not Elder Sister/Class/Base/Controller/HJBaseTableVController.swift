@@ -40,10 +40,10 @@ class HJBaseTableVController: UIViewController {
     }
 
     //MARK: private
-    private lazy var topView: HJHomeTopView = {
-        let view = HJHomeTopView(title: ["推荐", "视频", "图片", "段子", "网红", "排行", "社会", "美女", "冷知识", "游戏"], closure: { (title) -> Void in
-            HJLog(title)
-            
+     lazy var topView: HJHomeTopView = {
+        let array = ["推荐", "视频", "图片", "段子", "网红", "排行", "社会", "美女", "冷知识", "游戏"]
+        let view = HJHomeTopView(title: array, closure: {[unowned self] (title, index) -> Void in
+            self.changeTitle(title: title, index: index)
         })
         return view
         
@@ -66,5 +66,8 @@ class HJBaseTableVController: UIViewController {
     }()
     
 
+    func changeTitle(title title: String, index: Int) {
+        
+    }
   
 }

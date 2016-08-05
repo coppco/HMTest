@@ -15,91 +15,127 @@ class HJEssenceTCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.tModel = nil
-        self.iconImageV.image = nil
-        self.nameL.text = nil
-        self.create_timeL.text = nil
-        self.contentL.text = nil
-        self.pictureV.model = nil
+        for view in self.contentView.subviews {
+//            view.snp_removeConstraints()
+            view.removeFromSuperview()
+        }
+        self.contentView.setNeedsUpdateConstraints()
+        self.contentView.updateConstraintsIfNeeded()
+        print("重用")
     }
 
     
     //MARK: 监听
-     var tModel: JokeModel? {
-        didSet {
-            if let new = tModel {
-//                self.iconImageV.kf_setImageWithURL(NSURL(string: new.profile_image)!, placeholderImage: UIImage(named: "defaultUserIcon"))
-//                self.nameL.text = new.name
-
-//                self.create_timeL.text = new.create_time
-                self.contentL.text = new.text
-                self.pictureV.model = new
-
-
-                self.setNeedsUpdateConstraints()
+     var tModel: JokeModel?  {
+        willSet {
+            if let new = newValue {
+                //设置子控件和约束
+                setSubviewAndAutoLayout(new)
+            } else {
+                print("空值")
             }
         }
     }
     
-   
+   //添加view,设置约束
+    func setSubviewAndAutoLayout(new: JokeModel) {
+        setCommonSubview()
+        
+        self.iconImageV.kf_setImageWithURL(NSURL(string: (new.u?.header![0])!)!, placeholderImage: UIImage(named: "defaultUserIcon"))
+        self.nameL.text = new.u?.name
+        self.create_timeL.text = new.passtime
+        self.contentL.text = new.text
+
+        switch new.jokeType {
+        case .Gif, .Image:
+            self.contentView.addSubview(pictureV)
+            pictureV.model = new
+            pictureV.snp_remakeConstraints(closure: { (make) -> Void in
+                make.top.equalTo(self.contentL.snp_bottom).offset(paddingV)
+                make.centerX.equalTo(self.contentView.snp_centerX)
+                make.size.equalTo(new.middleSize)
+            })
+            bottomBar.snp_makeConstraints(closure: { (make) -> Void in
+                make.left.right.bottom.equalTo(self.contentView)
+                make.height.equalTo(44)
+                make.top.equalTo(self.pictureV.snp_bottom).offset(paddingV)
+            })
+            break
+        case .Html:
+            bottomBar.snp_makeConstraints(closure: { (make) -> Void in
+                make.left.right.bottom.equalTo(self.contentView)
+                make.height.equalTo(44)
+                make.top.equalTo(self.contentL.snp_bottom).offset(paddingV)
+            })
+            break
+        case .Video:
+            self.contentView.addSubview(videoV)
+            videoV.model = new
+            videoV.snp_remakeConstraints(closure: { (make) -> Void in
+                make.top.equalTo(self.contentL.snp_bottom).offset(paddingV)
+                make.centerX.equalTo(self.contentView.snp_centerX)
+                make.size.equalTo(new.middleSize)
+            })
+            bottomBar.snp_makeConstraints(closure: { (make) -> Void in
+                make.left.right.bottom.equalTo(self.contentView)
+                make.height.equalTo(44)
+                make.top.equalTo(self.videoV.snp_bottom).offset(paddingV)
+            })
+            break
+        default:
+            bottomBar.snp_makeConstraints(closure: { (make) -> Void in
+                make.left.right.bottom.equalTo(self.contentView)
+                make.height.equalTo(44)
+                make.top.equalTo(self.contentL.snp_bottom).offset(paddingV)
+            })
+        }
+        
+        self.bottomBar.model = new
+    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        createSubview()
-        setAutoLayout()
     }
 
-    func createSubview() {
+    //通用部分
+    func setCommonSubview() {
         self.contentView.addSubview(iconImageV)
         self.contentView.addSubview(nameL)
         self.contentView.addSubview(create_timeL)
         self.contentView.addSubview(moreButton)
         self.contentView.addSubview(contentL)
-         self.contentView.addSubview(pictureV)
         self.contentView.addSubview(bottomBar)
-    }
-    
-    func setAutoLayout() {
+        
         iconImageV.snp_makeConstraints { (make) -> Void in
             make.size.equalTo(CGSizeMake(40, 40))
-            make.left.equalTo(iconBeginX)
-            make.top.equalTo(iconBeginY)
+            make.left.equalTo(self.contentView).offset(iconBeginX)
+            make.top.equalTo(self.contentView).offset(iconBeginY)
         }
         
         nameL.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(iconImageV.snp_right).offset(paddingH)
             make.top.equalTo(iconImageV.snp_top)
-            make.height.equalTo(create_timeL.snp_height)
+            make.height.equalTo(20)
         }
         
         create_timeL.snp_makeConstraints { (make) -> Void in
             make.top.equalTo(nameL.snp_bottom)
             make.left.equalTo(nameL.snp_left)
+            make.height.equalTo(nameL.snp_height)
+        }
+        
+        moreButton.snp_makeConstraints { (make) -> Void in
+            make.centerY.equalTo(iconImageV.snp_centerY)
+            make.right.equalTo(self.contentView).offset(-iconBeginX)
         }
         
         contentL.snp_makeConstraints { (make) -> Void in
-            make.left.equalTo(self.contentView).offset(iconBeginX)
-            make.right.equalTo(self.contentView).offset(-iconBeginX)
-            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV)
-        }
-        
-        //这个设置是重点
-        pictureV.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(contentL.snp_bottom).offset(paddingV)
             make.left.equalTo(iconBeginX)
             make.right.equalTo(-iconBeginX)
-            make.height.equalTo(250)
+            make.top.equalTo(iconImageV.snp_bottom).offset(paddingV)
         }
-        
-        bottomBar.snp_makeConstraints { (make) -> Void in
-            make.top.equalTo(pictureV.snp_bottom).offset(paddingV)
-            make.left.right.equalTo(self.contentView)
-            make.height.equalTo(44)
-            make.bottom.equalTo(self.contentView).offset(-iconBeginY)
-        }
-        
-        self.setNeedsUpdateConstraints()
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -121,7 +157,7 @@ class HJEssenceTCell: UITableViewCell {
     let iconBeginY: CGFloat = 10  //开始y坐标
     let paddingH: CGFloat = 8  //水平间距
     let paddingV: CGFloat = 10  //垂直间距
-    
+    //MARK: 懒加载
     /**头像*/
     private lazy var iconImageV: UIImageView = {
         let icon = UIImageView()
@@ -169,7 +205,7 @@ class HJEssenceTCell: UITableViewCell {
     /**正文*/
     private lazy var contentL: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFontOfSize(14)
+        label.font = UIFont.systemFontOfSize(16)
         label.numberOfLines = 0
         label.textColor = UIColor.blackColor()
         return label
@@ -181,8 +217,14 @@ class HJEssenceTCell: UITableViewCell {
         return view
     }()
     
-    
+    /**中间video*/
+    private lazy var videoV: HJVideoView = {
+        let view = HJVideoView()
+        return view
+    }()
     /**底部按钮*/
     private lazy var bottomBar: HJJokeToolBar = HJJokeToolBar(frame: CGRectZero)
-    
+
 }
+
+

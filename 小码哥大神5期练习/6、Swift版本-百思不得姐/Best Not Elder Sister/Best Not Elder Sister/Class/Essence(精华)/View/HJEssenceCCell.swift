@@ -15,15 +15,14 @@ import UITableView_FDTemplateLayoutCell
 class HJEssenceCCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.maxtime = ""
-        self.jokeType = 41
         self.modelArray.removeAll()
+        print("c重用")
     }
     
     /**cell重用标识*/
     private let identifier = "HJEssenceTCell"
     /**最大数据*/
-    private var maxtime: String = ""
+    private var maxtime: String = "0"
     //model数据
     private var modelArray: [JokeModel] = [JokeModel]() {
         didSet  {
@@ -32,55 +31,51 @@ class HJEssenceCCell: UICollectionViewCell {
     }
     
     /**全部, 图片, 视频等*/
-    internal var jokeType: Int = 1
-    
+    internal var jokeType: String = "1" {
+        didSet {
+//            if oldValue != jokeType {
+                self.setupUI()
+//            }
+        }
+    }
 
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        self.backgroundColor = UIColor.hj_randomColor()
     }
 
     func setupUI() {
         self.contentView.addSubview(tableView)
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {[unowned self] () -> Void in
             //下拉刷新
-            //
-            var parameter = [String: AnyObject]()
-//            parameter.updateValue("recommend", forKey: "a")
-//            parameter.updateValue("user", forKey: "c")
-//            parameter.updateValue(self.jokeType, forKey: "type")
-            self.getNetworkData(parameter)
+            self.getDownData()
         })
         
-        tableView.mj_header.beginRefreshing()
+        if 0 == self.modelArray.count {
+            tableView.mj_header.beginRefreshing()
+        }
+        
         tableView.registerClass(HJEssenceTCell.self, forCellReuseIdentifier: identifier)
         tableView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(self)
         }
         tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {[unowned self] () -> Void in
             //上拉刷新
-            var parameter = [String: AnyObject]()
-//            parameter.updateValue("list", forKey: "a")
-//            parameter.updateValue(self.jokeType, forKey: "type")
-//            parameter.updateValue("data", forKey: "c")
-//            parameter.updateValue(self.modelArray.count / 20, forKey: "page")
-//            parameter.updateValue(self.maxtime, forKey: "maxtime")
-            self.getNetworkData(parameter)
+            self.getMoreData()
         })
     }
     //获取网络数据
-    func getNetworkData(param: [String: AnyObject]) {
-
-        httpRequestJSON(.GET, URLString: homeRecommend, parameters: param, success: {[unowned self] (object) -> Void in
-            self.maxtime = object["info"]["maxtime"].stringValue
-            var temp = [JokeModel]()
-            for item in object["list"].array! {
-//                temp.append(JokeModel(dic: item.dictionaryObject!))
-                let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
-                temp.append(model)
+    func getMoreData() {
+        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: self.maxtime), success: {[unowned self] (object) -> Void in
+            self.maxtime = object["info"]["np"].stringValue
+            if let array = object["list"].array {
+                var temp = [JokeModel]()
+                for item in array {
+                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+                    temp.append(model)
+                }
+                self.modelArray.appendContentsOf(temp)
             }
-            self.modelArray.appendContentsOf(temp)
             self.tableView.mj_header.endRefreshing()
             self.tableView.mj_footer.endRefreshing()
             }) {[unowned self] (error) -> Void in
@@ -89,17 +84,35 @@ class HJEssenceCCell: UICollectionViewCell {
         }
     }
 
+    //下拉刷新
+    func getDownData() {
+        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: "0"), success: {[unowned self] (object) -> Void in
+            self.maxtime = object["info"]["np"].stringValue
+            if let array = object["list"].array {
+                var temp = [JokeModel]()
+                for item in array {
+                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+                    temp.append(model)
+                }
+                self.modelArray = temp
+            }
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            }) {[unowned self] (error) -> Void in
+                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
+        }
+    }
 
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: CGRectZero, style: UITableViewStyle.Plain)
         table.showsVerticalScrollIndicator = true
+        table.separatorStyle = .None
         table.delegate = self
         table.dataSource = self
         return table

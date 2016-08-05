@@ -10,12 +10,13 @@ import UIKit
 
 
 //段子类型
-enum JOKEType: Int {
-    case All = 1
-    case Video = 41
-    case Sound = 31
-    case Picture = 10
-    case Word = 29
+enum JOKEType: String {
+    case Video = "video"
+    case Html = "html"
+    case Gif = "gif"
+    case Image = "image"
+    case Text = "text"
+    case None = "未知类型"
 }
 
 class JokeModel: NSObject {
@@ -31,30 +32,33 @@ class JokeModel: NSObject {
 
     
     /***/
-    var bookmark: Int?
+    var bookmark: String = ""
     /**评论*/
-    var comment: Int?
+    var comment: String = ""
     /**踩*/
-    var down: Int?
-    var forward: Int?
-    var id: UInt32?
+    var down: String = ""
+    /**顶*/
+    var up: String = ""
+    /**分享*/
+    var forward: String = ""
+    
+    var id: String = ""
     /**创建时间*/
-    var passtime: String?
+    var passtime: String = ""
     /**分享url*/
-    var share_url: String?
-    var status: Int?
+    var share_url: String = ""
+    var status: String = ""
     /**标签*/
     var tags: [Tags]?
     /**正文*/
-    var text: String?
+    var text: String = ""
     /**热评*/
     var top_comments: Top_comments?
     /**用户信息*/
     var u: User?
-    /**顶*/
-    var up: UInt32?
-    /**类型vedio, image, gif, text等*/
-    var type: String?
+    
+    /**类型vedio, image, gif, text, html等*/
+    var type: String = ""
     /**video信息*/
     var video: Video?
     /**图片信息*/
@@ -63,64 +67,115 @@ class JokeModel: NSObject {
     var gif: Gif?
     var precmt: Precmt? 
 
+    //计算属性:类型
+    var jokeType: JOKEType {
+        if let temp = JOKEType(rawValue: type) {
+            return temp
+        }
+        return .None
+    }
+
     
+    //计算属性:大小
+    var middleSize: CGSize {
+        var tempWidth: CGFloat = 0
+        var tempHeight: CGFloat = 0
+        let maxWidth = kHJMainScreenWidth - 2 * 20
+        if let temp = gif {
+            tempWidth = CGFloat(Int(temp.width)!)
+            tempHeight = CGFloat(Int(temp.height)!)
+        } else if let temp = image {
+            tempWidth = CGFloat(Int(temp.width)!)
+            tempHeight = CGFloat(Int(temp.height)!)
+        }else if let temp = video {
+            tempWidth = CGFloat(Int(temp.width)!)
+            tempHeight = CGFloat(Int(temp.height)!)
+        } else {
+            tempWidth = maxWidth
+            tempHeight = maxWidth
+        }
+        
+        if tempWidth != maxWidth {
+            tempHeight = maxWidth * tempHeight / tempWidth
+            tempWidth = maxWidth
+            if tempHeight > 800 {
+                tempHeight = tempWidth  //超过800就等于宽度
+                isLongPicture = true
+            }
+        }
+        return CGSize(width: tempWidth, height: tempHeight)
+    }
+    /**是否长图*/
+    var isLongPicture: Bool = false
 }
 
 /**标签*/
 class Tags: NSObject {
-    var id: UInt32?
-    var name: String?
+    var id: String = ""
+    var name: String = ""
 }
 
 class User: NSObject {
     /**头像数组*/
     var header: [String]?
     /**是否大v*/
-    var is_v: Bool?
+    var is_v: String = ""
     /**是否vip*/
-    var is_vip: Bool?
+    var is_vip: String = ""
     /**用户名称*/
-    var name: String?
+    var name: String = ""
     /**用户id*/
-    var uid: UInt32?
-    var sex: String?
+    var uid: String = ""
+    var sex: String = ""
 }
 
 class Video: NSObject {
     /**下载地址*/
     var download: [String]?
     /**时长*/
-    var duration: UInt32?
+    var duration: String = "0"
+    var videoDuration: String  {
+        let value = Int(duration)!
+        switch value {
+        case 0..<60:
+            return String(format: "00:%02d", value)
+        case 60..<3600:
+            return String(format: "%02d:%02d", value / 60, value % 60)
+        default:
+            return "N/A"
+        }
+    }
     /**高*/
-    var height: UInt32?
+    var height: String = ""
     /**宽*/
-    var width: UInt32?
+    var width: String = ""
     /**播放次数*/
-    var playcount: UInt32?
+    var playcount: String = ""
     /**收藏次数*/
-    var playfcount: UInt32?
+    var playfcount: String = ""
     /**图片*/
     var thumbnail: [String]?
     var video: [String]?
+    
 }
 
 class Top_comments: NSObject {
-    var content: String?
-    var id: UInt32?
-    var like_count: UInt32?
-    var passtime: String?
-    var precid: UInt32?
-    var preuid: UInt32?
+    var content: String = ""
+    var id: String = ""
+    var like_count: String = ""
+    var passtime: String = ""
+    var precid: String = ""
+    var preuid: String = ""
     var u: User?
-    var voicetime: UInt32?
-    var voiceuri: String?
+    var voicetime: String = ""
+    var voiceuri: String = ""
 }
 
 class Image: NSObject {
     var big: [String]?
     var download: [String]?
-    var height: UInt32?
-    var width: UInt32?
+    var height: String = ""
+    var width: String = ""
     var medium: [String]?
     var small: [String]?
 }
@@ -129,18 +184,18 @@ class Gif: NSObject {
     var download_url: [String]?
     var gif_thumbnail: [String]?
     var images: [String]?
-    var height: UInt32?
-    var width: UInt32?
+    var height: String = ""
+    var width: String = ""
 }
 
 class Precmt: NSObject {
-    var content: String?
-    var id: UInt32?
-    var like_count: UInt32?
-    var passtime: String?
-    var precid: UInt32?
-    var preuid: UInt32?
+    var content: String = ""
+    var id: String = ""
+    var like_count: String = ""
+    var passtime: String = ""
+    var precid: String = ""
+    var preuid: String = ""
     var u: User?
-    var voicetime: UInt32?
-    var voiceuri: String?
+    var voicetime: String = ""
+    var voiceuri: String = ""
 }
