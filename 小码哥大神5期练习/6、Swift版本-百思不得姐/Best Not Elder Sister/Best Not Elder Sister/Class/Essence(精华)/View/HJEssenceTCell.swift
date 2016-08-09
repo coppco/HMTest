@@ -16,7 +16,7 @@ class HJEssenceTCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         for view in self.contentView.subviews {
-//            view.snp_removeConstraints()
+            view.snp_removeConstraints()
             view.removeFromSuperview()
         }
         self.contentView.setNeedsUpdateConstraints()
