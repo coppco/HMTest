@@ -41,69 +41,16 @@ class HJEssenceCCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.hj_randomColor()
+        self.setupUI()
     }
 
     func setupUI() {
         self.contentView.addSubview(tableView)
-        tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {[unowned self] () -> Void in
-            //下拉刷新
-            self.getDownData()
-        })
-        
-        if 0 == self.modelArray.count {
-            tableView.mj_header.beginRefreshing()
-        }
-        
         tableView.registerClass(HJEssenceTCell.self, forCellReuseIdentifier: identifier)
         tableView.snp_makeConstraints { (make) -> Void in
             make.edges.equalTo(self)
         }
-        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock: {[unowned self] () -> Void in
-            //上拉刷新
-            self.getMoreData()
-        })
     }
-    //获取网络数据
-    func getMoreData() {
-        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: self.maxtime), success: {[unowned self] (object) -> Void in
-            self.maxtime = object["info"]["np"].stringValue
-            if let array = object["list"].array {
-                var temp = [JokeModel]()
-                for item in array {
-                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
-                    temp.append(model)
-                }
-                self.modelArray.appendContentsOf(temp)
-            }
-            self.tableView.mj_header.endRefreshing()
-            self.tableView.mj_footer.endRefreshing()
-            }) {[unowned self] (error) -> Void in
-                self.tableView.mj_header.endRefreshing()
-                self.tableView.mj_footer.endRefreshing()
-        }
-    }
-
-    //下拉刷新
-    func getDownData() {
-        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: "0"), success: {[unowned self] (object) -> Void in
-            self.maxtime = object["info"]["np"].stringValue
-            if let array = object["list"].array {
-                var temp = [JokeModel]()
-                for item in array {
-                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
-                    temp.append(model)
-                }
-                self.modelArray = temp
-            }
-            self.tableView.mj_header.endRefreshing()
-            self.tableView.mj_footer.endRefreshing()
-            }) {[unowned self] (error) -> Void in
-                self.tableView.mj_header.endRefreshing()
-                self.tableView.mj_footer.endRefreshing()
-        }
-    }
-
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

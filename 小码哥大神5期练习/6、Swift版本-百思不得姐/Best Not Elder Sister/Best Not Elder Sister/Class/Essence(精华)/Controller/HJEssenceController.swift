@@ -24,7 +24,52 @@ class HJEssenceController: HJBaseTableVController {
         //MARK: 需要完善
         HJLog("需要完善")
     }
+    //类型
+    private var jokeType1: String = "1" {
+        didSet {
+        }
+    }
     
+//    //获取网络数据
+//    func getMoreData() {
+//        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: self.maxtime), success: {[unowned self] (object) -> Void in
+//            self.maxtime = object["info"]["np"].stringValue
+//            if let array = object["list"].array {
+//                var temp = [JokeModel]()
+//                for item in array {
+//                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+//                    temp.append(model)
+//                }
+//                self.modelArray.appendContentsOf(temp)
+//            }
+//            self.tableView.mj_header.endRefreshing()
+//            self.tableView.mj_footer.endRefreshing()
+//            }) {[unowned self] (error) -> Void in
+//                self.tableView.mj_header.endRefreshing()
+//                self.tableView.mj_footer.endRefreshing()
+//        }
+//    }
+//    
+//    //下拉刷新
+//    func getDownData() {
+//        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: "0"), success: {[unowned self] (object) -> Void in
+//            self.maxtime = object["info"]["np"].stringValue
+//            if let array = object["list"].array {
+//                var temp = [JokeModel]()
+//                for item in array {
+//                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+//                    temp.append(model)
+//                }
+//                //                self.modelArray = temp
+//            }
+//            self.tableView.mj_header.endRefreshing()
+//            self.tableView.mj_footer.endRefreshing()
+//            }) {[unowned self] (error) -> Void in
+//                self.tableView.mj_header.endRefreshing()
+//                self.tableView.mj_footer.endRefreshing()
+//        }
+//    }
+//    
     override func changeTitle(title title: String, index: Int) {
         self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.None, animated: false)
     }
