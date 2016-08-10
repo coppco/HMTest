@@ -92,6 +92,7 @@ extension HJEssenceController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! HJEssenceCCell
         cell.jokeType = self.jokeType[indexPath.item]
+        print(cell)
         return cell
     }
     
