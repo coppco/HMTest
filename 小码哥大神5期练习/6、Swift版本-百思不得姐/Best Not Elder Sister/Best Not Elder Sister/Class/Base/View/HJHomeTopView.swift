@@ -21,7 +21,7 @@ class HJHomeTopView: UIView {
     }
 
     
-    func setupUI() {
+    private func setupUI() {
          self.backgroundColor =  UIColor.hj_colorFromImage("tabbar-light")
         addSubview(self.scrollView)
         
@@ -33,7 +33,8 @@ class HJHomeTopView: UIView {
             let button = UIButton(type: UIButtonType.Custom)
             button.setTitle(title, forState: .Normal)
             button.setTitleColor(UIColor.lightGrayColor(), forState: .Normal)
-            button.addTarget(self, action: "selectButton:", forControlEvents: UIControlEvents.TouchUpInside)
+//            button.addTarget(self, action: "selectButton:", forControlEvents: UIControlEvents.TouchUpInside)
+            button.addTarget(self, action: Selector("selectButton:"), forControlEvents: UIControlEvents.TouchUpInside)
             scrollView.addSubview(button)
             if let temp = tempButton {
                 button.snp_makeConstraints(closure: { (make) -> Void in
@@ -82,7 +83,7 @@ class HJHomeTopView: UIView {
     }
     
     //点击按钮 方法
-    func selectButton(sender: UIButton) {
+    @objc private func selectButton(sender: UIButton) {
         if let title = sender.currentTitle {
             if let index = self.titleList.indexOf(title) {
                 hasSelectButton(title, index)
@@ -97,7 +98,7 @@ class HJHomeTopView: UIView {
     
     //MARK:  private
     /**顶部数组*/
-    var titleList: [String]
+    private var titleList: [String]
     private lazy var scrollView: UIScrollView = {
         let scroll = UIScrollView(frame: CGRectZero)
         scroll.showsHorizontalScrollIndicator = false
@@ -134,7 +135,7 @@ class HJHomeTopView: UIView {
     
     
     /**点击按钮闭包*/
-    internal var hasSelectButton: (String, Int) -> Void
+    private var hasSelectButton: (String, Int) -> Void
     
     deinit {
         HJLog("\(self.classForCoder)释放了")

@@ -26,4 +26,15 @@ func HJLog(items: Any..., fileName: String = __FILE__, functionName: String = __
     }
     print(string)
     #endif
+    
 }
+
+let product_name: String? = {
+    guard let temp = NSBundle.mainBundle().infoDictionary else {
+        return nil
+    }
+    guard let value = temp["CFBundleExecutable"] as? String else {
+        return nil
+    }
+    return value
+}()

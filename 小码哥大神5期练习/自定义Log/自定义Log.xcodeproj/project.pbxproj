@@ -492,6 +492,7 @@
 				445A00691D5A1D8A002772CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		445A006A1D5A1D8A002772CE /* Build configuration list for PBXNativeTarget "自定义LogTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +501,7 @@
 				445A006C1D5A1D8A002772CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		445A006D1D5A1D8A002772CE /* Build configuration list for PBXNativeTarget "自定义LogUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +510,7 @@
 				445A006F1D5A1D8A002772CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

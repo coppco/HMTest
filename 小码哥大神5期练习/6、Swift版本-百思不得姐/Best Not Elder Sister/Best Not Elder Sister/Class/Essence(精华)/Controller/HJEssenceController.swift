@@ -71,7 +71,7 @@ class HJEssenceController: HJBaseTableVController {
 //    }
 //    
     override func changeTitle(title title: String, index: Int) {
-        self.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: index, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.None, animated: false)
+        HJLog(title, index)
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,12 +92,11 @@ extension HJEssenceController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(identifier, forIndexPath: indexPath) as! HJEssenceCCell
         cell.jokeType = self.jokeType[indexPath.item]
-        print(cell)
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.topView.titleList.count
+        return self.topArray.count
     }
 }
 //MARK: UICollectionViewDelegate

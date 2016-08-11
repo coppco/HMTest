@@ -16,7 +16,6 @@ class HJEssenceCCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.modelArray.removeAll()
-        print("c重用")
     }
     
     /**cell重用标识*/

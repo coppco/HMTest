@@ -21,7 +21,6 @@ class HJEssenceTCell: UITableViewCell {
         }
         self.contentView.setNeedsUpdateConstraints()
         self.contentView.updateConstraintsIfNeeded()
-        print("重用")
     }
 
     
@@ -32,7 +31,7 @@ class HJEssenceTCell: UITableViewCell {
                 //设置子控件和约束
                 setSubviewAndAutoLayout(new)
             } else {
-                print("空值")
+                HJLog("空值")
             }
         }
     }

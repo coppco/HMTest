@@ -45,15 +45,23 @@ let systemVersion: Float = (UIDevice.currentDevice().systemVersion as NSString).
 /**是否第一次登陆*/
 let is_First:String = "isFirst"
 
-//Swift2.2后使用#line #file #function #column替换__LINE__等
-//这里文件名file和行数line使用参数,并且给它默认值__FILE__等,这样在哪里调用就是哪个文件名和行数.而不能直接在函数中使用__FILE__等,不然打印出来都是HJLog所在的文件名和行数
-func HJLog(items: Any..., file:String = __FILE__, line:Int = __LINE__, function:String = __FUNCTION__) {
+
+/**
+自定义Log
+- 需要在Build Setting --->  custom flags ---> Other Swift Flags ---->  Debug 里面添加 -D DEBUG, 当发布release版本的时候不会打印, DEBUG模式才会输出!
+
+- parameter items:        需要打印的参数, 多参数,Any类型
+- parameter fileName:     文件名, 使用默认值
+- parameter functionName: 函数名称, 使用默认值
+- parameter lineNumber:   行数, 使用默认值
+*/
+func HJLog(items: Any..., fileName: String = __FILE__, functionName: String = __FUNCTION__, lineNumber: Int = __LINE__) {
     #if DEBUG
-        var fileString = "======时间:\(NSDate())" + "🔥文件名:\((file as NSString).lastPathComponent)" + "🔥函数名:\(function)" + "🔥行数:\(line)======\n"
+        var string = "时间: \(NSDate()) 文件:\((fileName as NSString).lastPathComponent) 方法:\(functionName) [\(lineNumber)行]"
         for item in items {
-            fileString += (String(item) + " ")
+            string.appendContentsOf(" \(item)")
         }
-        print(fileString)
+        print(string)
     #else
     #endif
 }

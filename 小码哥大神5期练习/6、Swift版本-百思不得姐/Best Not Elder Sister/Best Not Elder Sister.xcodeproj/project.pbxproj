@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E664BADDF4D7FCFC55ADC0D /* Pods_Best_Not_Elder_Sister.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA9141A3207B70702EE88F9C /* Pods_Best_Not_Elder_Sister.framework */; };
+		442023421D5B643600F16841 /* HJTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442023411D5B643600F16841 /* HJTopicController.swift */; };
 		4452D0E51D44473D00708BDA /* HJNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D0E41D44473D00708BDA /* HJNavigationController.swift */; };
 		447150921D42EB7A002493DC /* HJDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447150911D42EB7A002493DC /* HJDefine.swift */; };
 		447EE3661D46CE0000405A22 /* HJLoginRegistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EE3631D46CE0000405A22 /* HJLoginRegistController.swift */; };
@@ -92,6 +93,7 @@
 
 /* Begin PBXFileReference section */
 		3E038FFA57812BB49F1AD1F8 /* Pods-Best Not Elder Sister.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Best Not Elder Sister.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Best Not Elder Sister/Pods-Best Not Elder Sister.debug.xcconfig"; sourceTree = "<group>"; };
+		442023411D5B643600F16841 /* HJTopicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJTopicController.swift; sourceTree = "<group>"; };
 		4452D0E41D44473D00708BDA /* HJNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNavigationController.swift; sourceTree = "<group>"; };
 		447150911D42EB7A002493DC /* HJDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJDefine.swift; sourceTree = "<group>"; };
 		447EE3631D46CE0000405A22 /* HJLoginRegistController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJLoginRegistController.swift; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				CC3C09A01D45A20A00D9DB48 /* HJEssenceController.swift */,
+				442023411D5B643600F16841 /* HJTopicController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				CC54B47A1D4860C300DD8DD4 /* RequestDefine.swift in Sources */,
 				CC3C099F1D45A19400D9DB48 /* HJBaseTableVController.swift in Sources */,
 				CC1596611D4231F10097718D /* HJMyController.swift in Sources */,
+				442023421D5B643600F16841 /* HJTopicController.swift in Sources */,
 				CC3C09A11D45A20A00D9DB48 /* HJEssenceController.swift in Sources */,
 				CCF6D1FD1D52178200449FE9 /* HJVideoView.swift in Sources */,
 				CC5918E11D4F0AF6008C4C8D /* NSObject+HJExtension.swift in Sources */,
