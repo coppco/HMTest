@@ -61,13 +61,13 @@
 		CC54B47A1D4860C300DD8DD4 /* RequestDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */; };
 		CC54B47C1D487FB700DD8DD4 /* HJHttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */; };
 		CC54B47E1D48975000DD8DD4 /* HJSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47D1D48975000DD8DD4 /* HJSquare.swift */; };
-		CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */; };
 		CC54B4841D48B55E00DD8DD4 /* HJHomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4831D48B55E00DD8DD4 /* HJHomeTopView.swift */; };
 		CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54B4861D48BA7000DD8DD4 /* NSString+HJExtension.swift */; };
 		CC5918E11D4F0AF6008C4C8D /* NSObject+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5918E01D4F0AF6008C4C8D /* NSObject+HJExtension.swift */; };
 		CC84CEDD1D4A099B00DA52A5 /* HJPictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84CEDC1D4A099B00DA52A5 /* HJPictureView.swift */; };
 		CC84CEE11D4A337200DA52A5 /* HJEssenceCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84CEDF1D4A337200DA52A5 /* HJEssenceCCell.swift */; };
 		CC84CEE21D4A337200DA52A5 /* HJEssenceTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84CEE01D4A337200DA52A5 /* HJEssenceTCell.swift */; };
+		CC9298AB1D5C90BA0053D39D /* HJListAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9298AA1D5C90BA0053D39D /* HJListAppBar.swift */; };
 		CCB781CE1D49D29F0010BEBA /* HJJokeToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB781CD1D49D29F0010BEBA /* HJJokeToolBar.swift */; };
 		CCCE57761D46F97300A5899C /* HJNamePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE57751D46F97300A5899C /* HJNamePasswordView.swift */; };
 		CCCE57791D476C3700A5899C /* UITextField+HJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE57781D476C3700A5899C /* UITextField+HJExtension.swift */; };
@@ -154,13 +154,13 @@
 		CC54B4791D4860C300DD8DD4 /* RequestDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestDefine.swift; sourceTree = "<group>"; };
 		CC54B47B1D487FB700DD8DD4 /* HJHttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHttpRequest.swift; sourceTree = "<group>"; };
 		CC54B47D1D48975000DD8DD4 /* HJSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJSquare.swift; sourceTree = "<group>"; };
-		CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJGetRequest.swift; sourceTree = "<group>"; };
 		CC54B4831D48B55E00DD8DD4 /* HJHomeTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJHomeTopView.swift; sourceTree = "<group>"; };
 		CC54B4861D48BA7000DD8DD4 /* NSString+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSString+HJExtension.swift"; path = "Best Not Elder Sister/Class/Base/View/NSString+HJExtension.swift"; sourceTree = SOURCE_ROOT; };
 		CC5918E01D4F0AF6008C4C8D /* NSObject+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+HJExtension.swift"; sourceTree = "<group>"; };
 		CC84CEDC1D4A099B00DA52A5 /* HJPictureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJPictureView.swift; sourceTree = "<group>"; };
 		CC84CEDF1D4A337200DA52A5 /* HJEssenceCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceCCell.swift; sourceTree = "<group>"; };
 		CC84CEE01D4A337200DA52A5 /* HJEssenceTCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJEssenceTCell.swift; sourceTree = "<group>"; };
+		CC9298AA1D5C90BA0053D39D /* HJListAppBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJListAppBar.swift; sourceTree = "<group>"; };
 		CCB781CD1D49D29F0010BEBA /* HJJokeToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJJokeToolBar.swift; sourceTree = "<group>"; };
 		CCCE57751D46F97300A5899C /* HJNamePasswordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HJNamePasswordView.swift; sourceTree = "<group>"; };
 		CCCE57781D476C3700A5899C /* UITextField+HJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+HJExtension.swift"; sourceTree = "<group>"; };
@@ -381,7 +381,7 @@
 		CC15960E1D41EAFD0097718D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC54B47F1D48B04600DD8DD4 /* HJGetRequest.swift */,
+				CC9298AA1D5C90BA0053D39D /* HJListAppBar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -853,7 +853,7 @@
 				CC54B4871D48BA7000DD8DD4 /* NSString+HJExtension.swift in Sources */,
 				CC546AE71D49931F00D4878C /* JokeModel.swift in Sources */,
 				CCB781CE1D49D29F0010BEBA /* HJJokeToolBar.swift in Sources */,
-				CC54B4801D48B04600DD8DD4 /* HJGetRequest.swift in Sources */,
+				CC9298AB1D5C90BA0053D39D /* HJListAppBar.swift in Sources */,
 				44EC51711D44AF9C0094F298 /* UIView+HJExtension.swift in Sources */,
 				447EE3681D46CFDE00405A22 /* HJLoginBotomView.swift in Sources */,
 				CC1596571D4218340097718D /* HJTabBarController.swift in Sources */,

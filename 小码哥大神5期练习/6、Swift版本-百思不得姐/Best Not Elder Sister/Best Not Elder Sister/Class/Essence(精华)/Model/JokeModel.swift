@@ -27,7 +27,7 @@ class JokeModel: NSObject {
     }
     /**数组中存放model*/
     override class func CustomerInArray() ->  [String: String]?{
-        return ["tags":"Tags", ]
+        return ["tags":"Tags"]
     }
 
     

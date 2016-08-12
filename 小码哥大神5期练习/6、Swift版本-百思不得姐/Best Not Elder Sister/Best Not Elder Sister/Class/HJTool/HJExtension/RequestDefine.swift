@@ -7,17 +7,8 @@
 //
 
 import Foundation
-/**推荐*/
-//func homeRecommendUrl(timeStamp: String) -> String {
-//    return jokeUrlForType(type: "1", timeStamp: timeStamp)
-//}
-
-
-///**视频*/
-//func vedioUrl(timeStamp: String) -> String {
-//    return jokeUrlForType(type: "41", timeStamp: timeStamp)
-//}
-
+/**获取精华和最新标签*/
+ let get_list_appbar = "http://s.budejie.com/public/list-appbar/bs0315-iphone-4.3"
 
 /**baseURL*/ 
 func jokeUrlForType(type type: String, timeStamp: String) -> String {

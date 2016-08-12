@@ -10,6 +10,50 @@ import UIKit
 
 class HJTabBarController: UITabBarController {
 
+    
+    private var appListBar: [HJListAppBar] = [HJListAppBar]() {
+        willSet {
+            if 1 <= newValue.count {
+                for (index, item) in newValue.enumerate() {
+                    guard let array = item.submenus else {
+                        return
+                    }
+                    for submenu in array {
+                        if 0 == index {
+                            essenceVC.topArray.append(submenu.name)
+                        }
+                        if 1 == index {
+                            lastestVC.topArray.append(submenu.name)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private let essenceVC = HJEssenceController()
+    private let lastestVC = HJLastestController()
+    
+    /**获取精华和最新的上方标题栏*/
+    private func getListAppBar() {
+        print("获取")
+        httpRequestJSON(.GET, URLString: get_list_appbar, success: { (object) -> Void in
+            guard let array = object["menus"].array else {
+                HJLog("获取信息失败")
+                return
+            }
+            var temp: [HJListAppBar] = [HJListAppBar]()
+            for item in array {
+                let model: HJListAppBar = HJListAppBar.dictionaryToModel(item.dictionaryObject!) as! HJListAppBar
+                temp.append(model)
+            }
+            self.appListBar = temp
+            }) { (error) -> Void in
+                HJLog("获取信息失败")
+        }
+    }
+
+    
     override class func initialize() {
         //统一设置,一般在控件添加之前设置,在它之前已经显示的控件,需要先remove再添加
         let tabBarItem = UITabBarItem.appearance()
@@ -30,11 +74,11 @@ class HJTabBarController: UITabBarController {
     /**
      添加子控制器
      */
-    func setup() {
+    private func setup() {
         
-        settingController(HJEssenceController(), title: "精华", image: "tabBar_essence_icon", selectImage: "tabBar_essence_click_icon")
+        settingController(essenceVC, title: "精华", image: "tabBar_essence_icon", selectImage: "tabBar_essence_click_icon")
         
-        settingController(HJLastestController(), title: "最新", image: "tabBar_new_icon", selectImage: "tabBar_new_click_icon")
+        settingController(lastestVC, title: "最新", image: "tabBar_new_icon", selectImage: "tabBar_new_click_icon")
         
         settingController(HJConcernController(), title: "关注", image: "tabBar_friendTrends_icon", selectImage: "tabBar_friendTrends_click_icon")
         
@@ -48,7 +92,7 @@ class HJTabBarController: UITabBarController {
 
     }
     
-    func settingController(controller: UIViewController, title: String, image: String, selectImage: String) {
+    private func settingController(controller: UIViewController, title: String, image: String, selectImage: String) {
         controller.tabBarItem.title = title
         controller.tabBarItem.image = UIImage(named: image)
         //选择图片,默认选中的时候会有蓝色  方法1:原始图片(代码)  方法2:在Assets.xcassets中选中图片,  把Render as  选择original(Xcode)

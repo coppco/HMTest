@@ -7,89 +7,104 @@
 //
 
 import UIKit
+import MJRefresh
+
+
 
 class HJTopicController: UITableViewController {
-
+    /**cell重用标识*/
+    private let identifier = "HJEssenceTCell"
+    
+    internal var jokeType = "1"
+    private var maxtime = ""
+    private var modelArray: [JokeModel] = [JokeModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.configUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func configUI() {
+        self.tableView.registerClass(HJEssenceTCell.self, forCellReuseIdentifier: identifier)
+        self.tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { () -> Void in
+            self.getDownData()
+        })
+        if 0 == self.modelArray.count {
+            self.tableView.mj_header.beginRefreshing()
+        }
+        
+        self.tableView.mj_footer = MJRefreshAutoFooter(refreshingBlock: { () -> Void in
+            self.getDownData()
+        })
     }
+    
+    //获取网络数据
+    func getMoreData() {
+        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: self.maxtime), success: {[unowned self] (object) -> Void in
+            self.maxtime = object["info"]["np"].stringValue
+            if let array = object["list"].array {
+                var temp = [JokeModel]()
+                for item in array {
+                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+                    temp.append(model)
+                }
+                self.modelArray.appendContentsOf(temp)
+            }
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            }) {[unowned self] (error) -> Void in
+                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
+        }
+    }
+    
+    //下拉刷新
+    func getDownData() {
+        httpRequestJSON(.GET, URLString: jokeUrlForType(type: self.jokeType, timeStamp: "0"), success: {[unowned self] (object) -> Void in
+            self.maxtime = object["info"]["np"].stringValue
+            if let array = object["list"].array {
+                var temp = [JokeModel]()
+                for item in array {
+                    let model: JokeModel = JokeModel.dictionaryToModel(item.dictionaryObject!) as! JokeModel
+                    temp.append(model)
+                }
+                self.modelArray = temp
+            }
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            }) {[unowned self] (error) -> Void in
+                self.tableView.mj_header.endRefreshing()
+                self.tableView.mj_footer.endRefreshing()
+        }
+    }
+    
+
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.modelArray.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        let model = self.modelArray[indexPath.row]
+        let cell: HJEssenceTCell = tableView.dequeueReusableCellWithIdentifier(identifier) as! HJEssenceTCell
+        cell.tModel = model
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let height = tableView.fd_heightForCellWithIdentifier(identifier, cacheByIndexPath: indexPath, configuration: {[unowned self] (cell) -> Void in
+            let model = self.modelArray[indexPath.row]
+            (cell as! HJEssenceTCell).tModel = model
+            })
+        return height
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

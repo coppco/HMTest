@@ -6,7 +6,6 @@
 //  Copyright © 2016年 M-coppco. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 /**主屏幕*/
@@ -45,6 +44,7 @@ let systemVersion: Float = (UIDevice.currentDevice().systemVersion as NSString).
 /**是否第一次登陆*/
 let is_First:String = "isFirst"
 
+let kHJAppDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
 /**
 自定义Log
