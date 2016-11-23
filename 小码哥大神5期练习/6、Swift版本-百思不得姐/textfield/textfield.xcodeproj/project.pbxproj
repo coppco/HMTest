@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2224BA1D63082F00B47249 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2224B91D63082F00B47249 /* SecondController.swift */; };
 		CC56D1BF1D5833CD005B33C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56D1BE1D5833CD005B33C7 /* AppDelegate.swift */; };
 		CC56D1C11D5833CD005B33C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC56D1C01D5833CD005B33C7 /* ViewController.swift */; };
 		CC56D1C41D5833CD005B33C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC56D1C21D5833CD005B33C7 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC2224B91D63082F00B47249 /* SecondController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		CC56D1BB1D5833CD005B33C7 /* textfield.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textfield.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC56D1BE1D5833CD005B33C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC56D1C01D5833CD005B33C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				CC56D1EC1D5834BB005B33C7 /* UITextField+HJExtension.swift */,
 				CC56D1F01D5836A1005B33C7 /* HJTextField.swift */,
 				CC56D1C21D5833CD005B33C7 /* Main.storyboard */,
+				CC2224B91D63082F00B47249 /* SecondController.swift */,
 				CC56D1C51D5833CD005B33C7 /* Assets.xcassets */,
 				CC56D1C71D5833CD005B33C7 /* LaunchScreen.storyboard */,
 				CC56D1CA1D5833CD005B33C7 /* Info.plist */,
@@ -266,6 +269,7 @@
 				CC56D1C11D5833CD005B33C7 /* ViewController.swift in Sources */,
 				CC56D1BF1D5833CD005B33C7 /* AppDelegate.swift in Sources */,
 				CC56D1F11D5836A1005B33C7 /* HJTextField.swift in Sources */,
+				CC2224BA1D63082F00B47249 /* SecondController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +496,7 @@
 				CC56D1E51D5833CD005B33C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC56D1E61D5833CD005B33C7 /* Build configuration list for PBXNativeTarget "textfieldTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +505,7 @@
 				CC56D1E81D5833CD005B33C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC56D1E91D5833CD005B33C7 /* Build configuration list for PBXNativeTarget "textfieldUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +514,7 @@
 				CC56D1EB1D5833CD005B33C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

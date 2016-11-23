@@ -30,10 +30,10 @@
             </objects>
             <point key="canvasLocation" x="1152" y="355"/>
         </scene>
-        <!--View Controller-->
+        <!--Second Controller-->
         <scene sceneID="Snb-AR-rny">
             <objects>
-                <viewController id="ruj-L4-CYf" sceneMemberID="viewController">
+                <viewController id="ruj-L4-CYf" customClass="SecondController" customModule="textfield" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wu4-sL-wjp"/>
                         <viewControllerLayoutGuide type="bottom" id="k1U-OM-I3Q"/>
@@ -42,20 +42,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入11位手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUX-Mj-qvB" customClass="HJTextField" customModule="textfield" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入11位手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUX-Mj-qvB">
                                 <rect key="frame" x="80" y="144" width="440" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K9l-qS-V0E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="hj_textLength">
-                                        <integer key="value" value="11"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入6-16位密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2J4-Cd-afQ" customClass="HJTextField" customModule="textfield" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入6-16位密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2J4-Cd-afQ">
                                 <rect key="frame" x="80" y="224" width="440" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -72,6 +67,10 @@
                             <constraint firstItem="2J4-Cd-afQ" firstAttribute="width" secondItem="hUX-Mj-qvB" secondAttribute="width" id="wxz-9q-g5B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameT" destination="hUX-Mj-qvB" id="sZW-RF-i90"/>
+                        <outlet property="passwordT" destination="2J4-Cd-afQ" id="xHO-2c-pIR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qu6-qm-MZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
